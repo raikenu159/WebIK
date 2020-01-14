@@ -15,12 +15,12 @@ Leaderboards pagina
 <img src="https://i.imgur.com/DC73y4T.png" alt="https://i.imgur.com/DC73y4T.png">
 
 ## Features
-1.  Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.
-1. De vragen in de quizzes komen uit Open Trivia 1. Database (https://opentdb.com)
+1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën. Per categorie krijgt elke gebruiker een vast aantal vragen aangeboden in de quiz.
+1. De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
 1. De quizzes zijn multiple choice.
 1. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-<li>Gebruikers behalen punten met elke goed beantwoorde vraag.</li>
-<li>Elke categorie heeft een eigen leaderboards-pagina waarin de gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.</li>
+1. Gebruikers behalen punten met elke goed beantwoorde vraag.
+1. Elke categorie heeft een eigen leaderboards-pagina waarin de gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
 <li>Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
 <ul>
 <li>Hierbij zijn er voor alle startwaardes eigen leaderboards.</li>
@@ -39,5 +39,5 @@ Leaderboards pagina
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODEyODg3ODddfQ==
+eyJoaXN0b3J5IjpbLTY2NDM1MDkwNV19
 -->
