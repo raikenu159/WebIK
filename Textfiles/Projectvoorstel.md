@@ -75,7 +75,7 @@ Deze functie haalt de top 10 op plus de gegevens van de gebruiker en, rendert de
 Flask is een van de beste [micro-frameworks](https://en.wikipedia.org/wiki/Microframework), omdat het weinig tot geen afhankelijkheden heeft van externe bibliotheken.
 
 - Uit application.py (in Finance)
-```
+```python
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 from flask_session import Session
 ```
@@ -87,8 +87,8 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcyMzEwMzA1LC0xODg0OTY1NjI3LDYyMD
-g2NTAzNSwxNDE1NTgyMzM0LC00MzkwNDQxMzAsNDUxNjgxNDg1
-LC00ODE0ODM5MDksMTAwNDYyNDIzOSwtMjQ2NjA4MCw5MjcyNj
-M2NjksNTc4MzE3MjM3XX0=
+eyJoaXN0b3J5IjpbMTAyOTA2NTY1LDI3MjMxMDMwNSwtMTg4ND
+k2NTYyNyw2MjA4NjUwMzUsMTQxNTU4MjMzNCwtNDM5MDQ0MTMw
+LDQ1MTY4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0Nj
+YwODAsOTI3MjYzNjY5LDU3ODMxNzIzN119
 -->
