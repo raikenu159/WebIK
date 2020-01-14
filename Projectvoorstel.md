@@ -43,7 +43,9 @@ Uitgaande hiervan zijn onze gekozen features voor een minimum viable product vol
 
 ## Controllers
 De controller is application.py. In dit bestand worden de volgende functies uitgevoerd:
-###  Routes:
+###  Routes
+#### index
+Deze functie roept de homepage (index.html) aan.
 ```py
 @app.route("/")
 def homepage():
@@ -51,7 +53,9 @@ def homepage():
     # deze functie laadt alleen de homepage
     return render_template("index.html")
 ```
-Deze functie roept de homepage (index.html) aan.
+#### ```py
+@app.route("/")
+```
 ```py
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
@@ -141,6 +145,6 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNDM5NDc0OSwtMTk2NDQ2NzYwMiwtNj
+eyJoaXN0b3J5IjpbMTYzNzkyNjYwMCwtMTk2NDQ2NzYwMiwtNj
 EzMTkyMDE4LDQwNDk2ODE2MF19
 -->
