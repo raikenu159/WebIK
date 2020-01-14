@@ -50,10 +50,10 @@ def homepage():
     """Homepage"""
     # deze functie laadt alleen de homepage
     return render_template("index.html")
+    
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
     """Take quiz"""
-
     if request.method == "POST":
         # nadat de check functie is uitgevoerd worden de username(als de gebruiker in de top 10 zit) en de score gesubmit
         # deze functie voegt deze dan toe aan de database zodat deze op de leaderboard weergegeven kunnen worden
@@ -67,6 +67,11 @@ def quiz():
         db.execute("INSERT INTO scores (id, username, scoreTotaal, score1, score2, etc., date) VALUES (:sessionid, :username, :score)",
 
         return render_template("leaderboard.html")
+	else:
+	        # voordat de quiz begint word er een row binnen de database met daarin een user id aangemaakt voor de gebruiker
+	        # daarna word een request gestuurd naar de api voor de vragen die in de quiz moeten komen (50 per categorie, 5 categorieen)
+	        # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke catagorie krijgt
+	        return render_template("quiz.html")
 ```
 
 Deze functie rendert de homepage
@@ -110,5 +115,5 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc4NzAyNzA3LDQwNDk2ODE2MF19
+eyJoaXN0b3J5IjpbLTE2NzY4ODMwMDEsNDA0OTY4MTYwXX0=
 -->
