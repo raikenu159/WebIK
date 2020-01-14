@@ -5,17 +5,14 @@
  - https://bootswatch.com/
  - https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css
  
-
-**Flask:**
+### Flask
 
 [Flask](https://flask.palletsprojects.com/) is een webraamwerk dat tools, bibliotheken en technologieën biedt die geschikt zijn om een webapplicatie te bouwen. Deze webapplicatie kan komen in de vorm van webpagina's, blogs, of zelfs een uitgebreide webgebaseerde agenda-app of een commerciële site.
 Flask is een van de beste [micro-frameworks](https://en.wikipedia.org/wiki/Microframework), omdat het weinig tot geen afhankelijkheden heeft van externe bibliotheken.
 
-In application.py (uit Finance)
-
-<![if !supportLists]>- <![endif]>from flask import Flask, flash, jsonify, redirect, render_template, request, session
-
-<![if !supportLists]>- <![endif]>from flask_session import Session
+- Uit application.py (in Finance)
+	>from flask import Flask, flash, jsonify, redirect, render_template, request, session
+from flask_session import Session
 ### Socket.io
 
 <![if !supportLists]>- <![endif]>Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt realtime bidirectionele communicatie tussen webclients en servers mogelijk.
@@ -35,6 +32,6 @@ In application.py (uit Finance)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4ODY4ODgzMCw3NTgxMTk1MTAsMjAwND
-A2ODYyNV19
+eyJoaXN0b3J5IjpbNjU1ODQzOCw3NTgxMTk1MTAsMjAwNDA2OD
+YyNV19
 -->
