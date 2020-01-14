@@ -44,7 +44,12 @@ def quiz():
         score2 = request.form.get('score2')
         # etc. (catagorieen nog te bepalen)
         db.execute("INSERT INTO scores (id, username, scoreTotaal, score1, score2, etc., date) VALUES (:sessionid, :username, :score)",
-
+            id = id,
+            username = username,
+            scoreTotaal = scoreTotaal,
+            score1 = score1,
+            score2 = score2,
+            etc)
         return render_template("leaderboard.html")
 
     else:
