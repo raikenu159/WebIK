@@ -1,11 +1,6 @@
 # Projectvoorstel IK02 Trivia spel
-### ---
-
-
----
-
-<h1 id="projectvoorstel-ik02-trivia-spel">Projectvoorstel IK`enter code here`02 Trivia spel</h1>
-<h3 id="projectleden-daan-van-baarsen-una-garcia-sem-kjaer-soufiane-zouli">Projectleden: Daan van Baarsen, Una Garcia, Sem Kjaer, Soufiane Zouli
+### Projectleden 
+* Daan van Baarsen, Una Garcia, Sem Kjaer, Soufiane Zouli
 
 ## </h3>
 <h2 id="samenvatting">Samenvatting
@@ -125,6 +120,6 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNDYyNDIzOSwtMjQ2NjA4MCw5MjcyNj
-M2NjksNTc4MzE3MjM3XX0=
+eyJoaXN0b3J5IjpbODYxNTA2NjA2LDEwMDQ2MjQyMzksLTI0Nj
+YwODAsOTI3MjYzNjY5LDU3ODMxNzIzN119
 -->
