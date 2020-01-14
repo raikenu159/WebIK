@@ -4,7 +4,7 @@
 
 ---
 
-<h1 id="projectvoorstel-ik02-trivia-spel">Projectvoorstel IK02 Trivia spel</h1>
+<h1 id="projectvoorstel-ik02-trivia-spel">Projectvoorstel IK`enter code here`02 Trivia spel</h1>
 <h3 id="projectleden-daan-van-baarsen-una-garcia-sem-kjaer-soufiane-zouli">Projectleden: Daan van Baarsen, Una Garcia, Sem Kjaer, Soufiane Zouli
 
 ## </h3>
@@ -125,6 +125,6 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NjYwODAsOTI3MjYzNjY5LDU3ODMxNz
-IzN119
+eyJoaXN0b3J5IjpbMTAwNDYyNDIzOSwtMjQ2NjA4MCw5MjcyNj
+M2NjksNTc4MzE3MjM3XX0=
 -->
