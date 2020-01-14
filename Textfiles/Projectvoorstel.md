@@ -1,6 +1,7 @@
 # Projectvoorstel IK02 Trivia spel
 ### Projectleden 
-* Daan van Baarsen, 
+*
+ Daan van Baarsen, 
 * Una Garcia, 
 * Sem Kjaer, 
 * Soufiane Zouli
@@ -122,6 +123,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5LC0yND
-Y2MDgwLDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
+eyJoaXN0b3J5IjpbNDUxNjgxNDg1LC00ODE0ODM5MDksMTAwND
+YyNDIzOSwtMjQ2NjA4MCw5MjcyNjM2NjksNTc4MzE3MjM3XX0=
+
 -->
