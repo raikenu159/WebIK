@@ -44,8 +44,8 @@ Uitgaande hiervan zijn onze gekozen features voor een minimum viable product vol
 ## Controllers
 De controller is application.py. In dit bestand worden de volgende functies uitgevoerd:
 ###  Routes
-#### index
-Deze functie roept de homepage (index.html) aan.
+#### @app.route("/")
+Deze route roept de homepage (index.html) aan.
 ```py
 @app.route("/")
 def homepage():
@@ -53,9 +53,8 @@ def homepage():
     # deze functie laadt alleen de homepage
     return render_template("index.html")
 ```
-#### ```py
-@app.route("/")
-```
+#### @app.route("/quiz", methods=["GET", "POST"])
+Deze route rendert de quiz, hierna zal de rest van de quiz via javascript uitgevoerd worden. Nadat de quiz af is zal deze functie de database updaten met de behaalde score (totaal en per categorie), en mits de gebruiker in de top 10 beland ook met een username. Als laatste roept dit de leaderboard() functie op.
 ```py
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
@@ -86,7 +85,7 @@ def quiz():
 	        # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke categorie krijgt
 	        return render_template("quiz.html")
 ```
-Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitgevoerd worden. Nadat de quiz af is zal deze functie de database updaten met de behaalde score (totaal en per categorie), en mits de gebruiker in de top 10 beland ook met een username. Als laatste roept dit de leaderboard()functie op.
+
 
 
 ```py
@@ -145,6 +144,6 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzkyNjYwMCwtMTk2NDQ2NzYwMiwtNj
+eyJoaXN0b3J5IjpbMTI0NzMyNTQ1NywtMTk2NDQ2NzYwMiwtNj
 EzMTkyMDE4LDQwNDk2ODE2MF19
 -->
