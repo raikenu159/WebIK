@@ -16,11 +16,13 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 **Quizvraag pagina type 1 meerkeuze**
 ![Quizvraag pagina meerkeuze](https://i.imgur.com/YLaX3YG.png)
 **Quizvraag pagina type 2 true/false**
-![Quizvraag pagina](https://i.imgur.com/YPbNbEU.png)
+![Quizvraag pagina true/false](https://i.imgur.com/YPbNbEU.png)
+**Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben**
 ![Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben](https://i.imgur.com/xBnqQpH.png)
+**Quizvraag pagina tijd verlopen top 10 score behaald**
 ![Quizvraag pagina tijd verlopen top 10 score behaald](https://i.imgur.com/OW1MBkK.png)
 **Leaderboards pagina**
-![Leaderboards pagina](https://i.imgur.com/DC73y4T.png)
+![Leaderboards pagina](https://i.imgur.com/e6srWBE.png)
 
 ## Features
 1.  De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
@@ -155,6 +157,6 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjkxNDg5NTIsLTEwMTQ1NDkwNywtMT
+eyJoaXN0b3J5IjpbLTE3Mjg0MDY2ODcsLTEwMTQ1NDkwNywtMT
 k2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2ODE2MF19
 -->
