@@ -10,7 +10,7 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 
 ## Schetsen
 **Homepagina**
-![Homepagina](epginahttps://i.imgur.com/m2AtHsf.png
+![Homepagina](https://i.imgur.com/m2AtHsf.png)
 
 **Quizvraag pagina**
 ![Quizvraag pagina]("https://i.imgur.c
@@ -101,7 +101,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NDIyNjk1MiwtNDM5MDQ0MTMwLDQ1MT
+eyJoaXN0b3J5IjpbLTIwNzY0Mzk1NSwtNDM5MDQ0MTMwLDQ1MT
 Y4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0NjYwODAs
 OTI3MjYzNjY5LDU3ODMxNzIzN119
 -->
