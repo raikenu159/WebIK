@@ -34,9 +34,6 @@ De projecteisen zoals ze in de studiewijzer staan voor een trivia site, zijn:
 
 Uitgaande hiervan zijn onze gekozen features voor een minimum viable product voldoende voor de projecteisen.
 
-<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
-</blockquote>
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc2OTI2OTY2XX0=
+eyJoaXN0b3J5IjpbLTE1MTM2NzczNDVdfQ==
 -->
