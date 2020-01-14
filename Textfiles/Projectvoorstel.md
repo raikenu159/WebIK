@@ -26,13 +26,14 @@ Leaderboards pagina
 9. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
  
 ## Minimum viable product
-Voor een minimum viable product willen we in ieder geval de features 1, 2, 3, 4,5 en 6 implementeren.
-<h2 id="sanity-check">Sanity check</h2>
-<p>De projecteisen zoals ze in de studiewijzer staan voor een trivia site, zijn: “<strong>Trivia</strong>. Gebruikers kunnen triviavragen beantwoorden en op die manier punten scoren. Er is een interessant systeem om van andere gebruikers te winnen. De vragen komen uit een online triviadatabase zoals <a href="http://jservice.io">http://jservice.io</a>” (WebIK Syllabus, 2020). Uitgaande hiervan zijn onze gekozen features voor een minimum viable product voldoende voor de projecteisen.</p>
+Voor een minimum viable product willen we in ieder geval de features 1 t/m 9 implementeren.
+
+## Sanity check
+De projecteisen zoals ze in de studiewijzer staan voor een trivia site, zijn: “<strong>Trivia</strong>. Gebruikers kunnen triviavragen beantwoorden en op die manier punten scoren. Er is een interessant systeem om van andere gebruikers te winnen. De vragen komen uit een online triviadatabase zoals <a href="http://jservice.io">http://jservice.io</a>” (WebIK Syllabus, 2020). Uitgaande hiervan zijn onze gekozen features voor een minimum viable product voldoende voor de projecteisen.</p>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk1ODI5OTAwXX0=
+eyJoaXN0b3J5IjpbLTEzNTAxNjY0NzZdfQ==
 -->
