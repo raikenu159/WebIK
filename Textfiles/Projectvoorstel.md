@@ -3,7 +3,7 @@
 
 ---
 
-<h1 id="projectvoorstel-ik02-trivia-spel">Projectvoorstel IK02 Trivia spel</h1>
+#Projectvoorstel IK02 Trivia spel</h1>
 <h3 id="projectleden-daan-van-baarsen-una-garcia-sem-kjaer-soufiane-zouli">Projectleden: Daan van Baarsen, Una Garcia, Sem Kjaer, Soufiane Zouli</h3>
 <h2 id="samenvatting">Samenvatting</h2>
 <p>Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.</p>
@@ -34,3 +34,6 @@
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTk2Njg1MTIwNl19
+-->
