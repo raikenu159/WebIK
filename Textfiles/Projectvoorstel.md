@@ -7,16 +7,16 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 ## Schetsen
 Homepagina
 <img src="https://i.imgur.com/m2AtHsf.png" alt="https://i.imgur.com/m2AtHsf.png">
-Quizvraag
+
+Quizvraag pagina
 <img src="https://i.imgur.com/AWXJi1A.png" alt="https://i.imgur.com/AWXJi1A.png">
 
-Leaderboards
+Leaderboards pagina
 <img src="https://i.imgur.com/DC73y4T.png" alt="https://i.imgur.com/DC73y4T.png">
 
 ## Features
-<ol>
-<li>Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.</li>
-<li>De vragen in de quizzes komen uit een online trivia database (<a href="https://opentdb.com/">https://opentdb.com/</a> of <a href="http://jservice.io/">http://jservice.io/</a> of iets anders)</li>
+1.  Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.
+1. De vragen in de quizzes komen uit een online trivia database (https://opentdb.com/ of <a href="http://jservice.io/">http://jservice.io/</a> of iets anders)</li>
 <li>De quizzes zijn multiple choice.</li>
 <li>Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.</li>
 <li>Gebruikers behalen punten met elke goed beantwoorde vraag.</li>
@@ -39,5 +39,5 @@ Leaderboards
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NjIyODkzMl19
+eyJoaXN0b3J5IjpbLTE4MzcyMDU1MjddfQ==
 -->
