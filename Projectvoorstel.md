@@ -85,9 +85,8 @@ def quiz():
 	        # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke categorie krijgt
 	        return render_template("quiz.html")
 ```
-
-
-
+#### @app.route("/check", methods=["GET"])
+Deze route checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
 ```py
 @app.route("/check", methods=["GET"])
 def check():
@@ -112,9 +111,7 @@ def check():
     return jsonify(True)
 ```
 
-Deze functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
-
->@app.route("/leaderboard")
+#### @app.route("/leaderboard")
 Leaderboard():
 
 Deze functie haalt de top 10 op plus de gegevens van de gebruiker en, rendert de leaderboard.html met deze gegevens.
@@ -144,6 +141,6 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NzMyNTQ1NywtMTk2NDQ2NzYwMiwtNj
-EzMTkyMDE4LDQwNDk2ODE2MF19
+eyJoaXN0b3J5IjpbLTE2Nzg0MjUxMDcsLTE5NjQ0Njc2MDIsLT
+YxMzE5MjAxOCw0MDQ5NjgxNjBdfQ==
 -->
