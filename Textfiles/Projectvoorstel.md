@@ -1,9 +1,11 @@
 # Projectvoorstel IK02 Trivia spel
 ### Projectleden 
-* Daan van Baarsen, Una Garcia, Sem Kjaer, Soufiane Zouli
+* Daan van Baarsen, 
+* Una Garcia, 
+* Sem Kjaer, 
+* Soufiane Zouli
 
-## </h3>
-<h2 id="samenvatting">Samenvatting
+## Samenvatting
 </h2>
 <p>Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
 
@@ -120,6 +122,6 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYxNTA2NjA2LDEwMDQ2MjQyMzksLTI0Nj
-YwODAsOTI3MjYzNjY5LDU3ODMxNzIzN119
+eyJoaXN0b3J5IjpbLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5LC0yND
+Y2MDgwLDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
 -->
