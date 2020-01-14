@@ -19,26 +19,24 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 ![Leaderboards pagina](https://i.imgur.com/DC73y4T.png)
 
 ## Features
-1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Opentriviadatabase (zie feature 2)
-2. De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
-3. De quizzes zijn multiple choice.
-4. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-5. Elke quiz begint met een tijdslimiet van een minuut.
-6. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-7. Gebruikers behalen punten met elke goed beantwoorde vraag.
-8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
-10. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
+1.  De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
+2. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database (zie feature 2).
+4. De quizzes zijn multiple choice.
+5. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+6. Elke quiz begint met een tijdslimiet van een minuut.
+7. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
+8. Gebruikers behalen punten met elke goed beantwoorde vraag.
+9. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+10. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
+11. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
 
 
 ## Minimum viable product
-Voor een minimum viable product willen we in ieder geval de features 1 t/m 9 implementeren.
+Voor een minimum viable product willen we in ieder geval de features 1 t/m 10 implementeren.
 
-## </p>
-<h2 id="sanity-check">Sanity check
-</h2>
-<p>De projecteisen zoals ze in de studiewijzer staan voor een trivia site, zijn: 
->"**Trivia**“<strong>Trivia</strong>. Gebruikers kunnen triviavragen beantwoorden en op die manier punten scoren. Er is een interessant systeem om van andere gebruikers te winnen. De vragen komen uit een online triviadatabase zoals <a href="http://jservice.io">http://jservice.io</a>” (WebIK Syllabus, 2020). 
+## Sanity check
+De projecteisen zoals ze in de studiewijzer staan voor een trivia site, zijn: 
+>"**Trivia** Gebruikers kunnen triviavragen beantwoorden en op die manier punten scoren. Er is een interessant systeem om van andere gebruikers te winnen. De vragen komen uit een online triviadatabase zoals <a href="http://jservice.io">http://jservice.io</a>” (WebIK Syllabus, 2020). 
 
 Uitgaande hiervan zijn onze gekozen features voor een minimum viable product voldoende voor de projecteisen.
 
@@ -102,7 +100,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MzYxNDA4NiwtNDM5MDQ0MTMwLDQ1MT
-Y4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0NjYwODAs
-OTI3MjYzNjY5LDU3ODMxNzIzN119
+eyJoaXN0b3J5IjpbLTE2MTM2NjU3MTIsLTQzOTA0NDEzMCw0NT
+E2ODE0ODUsLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5LC0yNDY2MDgw
+LDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
 -->
