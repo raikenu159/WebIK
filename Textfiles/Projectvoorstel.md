@@ -29,7 +29,7 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
 9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
 10. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
-11. I
+11. In de result-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
 
 
 ## Minimum viable product
@@ -88,7 +88,7 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2ODE4MDA3MSwxMDI5MDY1NjUsMjcyMz
+eyJoaXN0b3J5IjpbMTI4NDM2ODAzOCwxMDI5MDY1NjUsMjcyMz
 EwMzA1LC0xODg0OTY1NjI3LDYyMDg2NTAzNSwxNDE1NTgyMzM0
 LC00MzkwNDQxMzAsNDUxNjgxNDg1LC00ODE0ODM5MDksMTAwND
 YyNDIzOSwtMjQ2NjA4MCw5MjcyNjM2NjksNTc4MzE3MjM3XX0=
