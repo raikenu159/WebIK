@@ -44,7 +44,7 @@ Uitgaande hiervan zijn onze gekozen features voor een minimum viable product vol
 ## Controllers
 De controller is application.py. In dit bestand worden de volgende functies uitgevoerd:
 ###  Functies:
-```python
+```py
 @app.route("/")
 def homepage():
     """Homepage"""
@@ -52,7 +52,7 @@ def homepage():
     return render_template("index.html")
 ```
 Deze functie roept de homepage (index.html) aan.
-```    
+```py
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
     """Take quiz"""
@@ -62,7 +62,7 @@ def quiz():
         id = session["user_id"]
         username = request.form.get('username')
         scoreTotaal = request.form.get('scoreTotaal')
-        # ook voegen de de score per catagorie toe om de gebruiker inzicht te gevenen in zijn prestaties per catagorie
+        # ook voegen de de score per categorie toe om de gebruiker inzicht te gevenen in zijn prestaties per catagorie
         score1 = request.form.get('score1')
         score2 = request.form.get('score2')
         # etc. (catagorieen nog te bepalen)
@@ -75,11 +75,6 @@ def quiz():
 	        # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke catagorie krijgt
 	        return render_template("quiz.html")
 ```
-
-
-
->@app.route("/quiz", methods=["GET", "POST"])
-Quiz
 Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitgevoerd worden. Nadat de quiz af is zal deze functie de database updaten met de behaalde score (totaal en per categorie), en mits de gebruiker in de top 10 beland ook met een username. Als laatste roept dit de leaderboard()functie op.
 
 >@app.route("/check", methods=["GET"])
@@ -117,5 +112,5 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNjMxOTU5OSw0MDQ5NjgxNjBdfQ==
+eyJoaXN0b3J5IjpbLTIwNTEyMTcxMTAsNDA0OTY4MTYwXX0=
 -->
