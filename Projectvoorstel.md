@@ -112,9 +112,19 @@ def check():
 ```
 
 #### @app.route("/leaderboard")
-Leaderboard():
+Deze route haalt de top 10 op plus de gegevens van de gebruiker en, rendert de leaderboard.html met deze gegevens.
+```py
+@app.route("/leaderboard")
+def leaderboard():
+    """Display the current leaderboard and some statistics about the users performance"""
+    # hier halen we de data op uit de database, die we nodig hebben om de leaderboard en de statistieken te laten zien
+    top10 = db.execute("SELECT TOP 10 username, scoreTotaal FROM scores ORDERED BY score")
+    userdata = db.execute('SELECT * FROM scores WHERE id = :id')
+    # deze geven we mee wanneer we de leaderboard pagina renderen
+    return render_template('leaderboard.html', top10, userdata)
+```
 
-Deze functie haalt de top 10 op plus de gegevens van de gebruiker en, rendert de leaderboard.html met deze gegevens.
+## Frameworks & Plugins
 
 ### Bootstrap
  - Bootstrap is een gratis open source CSS framework oorspronkelijk ontwikkeld voor intern gebruik door de ontwikkelaars van Twitter. Het framework heeft standaard al een boel standaard functies waardoor het ontwikkelen van een responsive website zeer snel gaat.
@@ -141,6 +151,6 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzg0MjUxMDcsLTE5NjQ0Njc2MDIsLT
-YxMzE5MjAxOCw0MDQ5NjgxNjBdfQ==
+eyJoaXN0b3J5IjpbLTEwMTQ1NDkwNywtMTk2NDQ2NzYwMiwtNj
+EzMTkyMDE4LDQwNDk2ODE2MF19
 -->
