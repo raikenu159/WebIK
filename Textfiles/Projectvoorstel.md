@@ -19,7 +19,7 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 ![Leaderboards pagina](https://i.imgur.com/DC73y4T.png)
 
 ## Features
-1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën. Per categorie krijgt elke gebruiker een vast aantal vragen aangeboden in de quiz.
+1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Opentriviadatabase.
 2. Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.
 3. De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
 4. De quizzes zijn multiple choice.
@@ -31,7 +31,7 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 10. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
 
 ## Minimum viable product
-Voor een minimum viable product willen we in ieder geval de features 1 t/m 9, 2, 3, 5 en 6 implementeren.
+Voor een minimum viable product willen we in ieder geval de features 1 t/m 9 implementeren.
 
 ## </p>
 <h2 id="sanity-check">Sanity check
@@ -101,7 +101,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzI2OTY1OTYsLTQzOTA0NDEzMCw0NT
+eyJoaXN0b3J5IjpbLTIwMTI3MzgzMzgsLTQzOTA0NDEzMCw0NT
 E2ODE0ODUsLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5LC0yNDY2MDgw
 LDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
 -->
