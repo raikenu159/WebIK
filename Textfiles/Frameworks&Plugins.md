@@ -2,14 +2,13 @@
 **Bootstrap:**
 
  - Bootstrap is een gratis open source CSS framework oorspronkelijk ontwikkeld voor intern gebruik door de ontwikkelaars van Twitter. Het framework heeft standaard al een boel standaard functies waardoor het ontwikkelen van een responsive website zeer snel gaat.
-
  - In layout.html (uit Finance)
-
- - http://getbootstrap.com/docs/4.1/](http://getbootstrap.com/docs/4.1/),
-
-<![if !supportLists]>- <![endif]>[https://bootswatch.com/](https://bootswatch.com/)
-
-<![if !supportLists]>- <![endif]>[https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css](https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css)
+ - http://getbootstrap.com/docs/4.1/
+ - http://getbootstrap.com/docs/4.1/
+ - https://bootswatch.com/
+ - https://bootswatch.com/
+ - https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css
+ - https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css)
 
 **Flask:**
 
@@ -42,5 +41,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIxNzY1Mzk0XX0=
+eyJoaXN0b3J5IjpbLTk3NDE2ODUyMl19
 -->
