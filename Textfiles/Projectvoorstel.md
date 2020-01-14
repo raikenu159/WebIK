@@ -21,14 +21,15 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 ## Features
 1.  De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
 2. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database (zie feature 2).
-4. De quizzes zijn multiple choice.
-5. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-6. Elke quiz begint met een tijdslimiet van een minuut.
-7. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-8. Gebruikers behalen punten met elke goed beantwoorde vraag.
-9. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-10. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
-11. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
+3. De quizzes zijn multiple choice.
+4. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+5. Elke quiz begint met een tijdslimiet van een minuut.
+6. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
+7. Gebruikers behalen punten met elke goed beantwoorde vraag.
+8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
+10. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
+11. I
 
 
 ## Minimum viable product
@@ -87,8 +88,9 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyOTA2NTY1LDI3MjMxMDMwNSwtMTg4ND
-k2NTYyNyw2MjA4NjUwMzUsMTQxNTU4MjMzNCwtNDM5MDQ0MTMw
-LDQ1MTY4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0Nj
-YwODAsOTI3MjYzNjY5LDU3ODMxNzIzN119
+eyJoaXN0b3J5IjpbLTI2ODE4MDA3MSwxMDI5MDY1NjUsMjcyMz
+EwMzA1LC0xODg0OTY1NjI3LDYyMDg2NTAzNSwxNDE1NTgyMzM0
+LC00MzkwNDQxMzAsNDUxNjgxNDg1LC00ODE0ODM5MDksMTAwND
+YyNDIzOSwtMjQ2NjA4MCw5MjcyNjM2NjksNTc4MzE3MjM3XX0=
+
 -->
