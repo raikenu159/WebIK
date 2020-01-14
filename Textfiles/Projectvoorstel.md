@@ -19,16 +19,16 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 ![Leaderboards pagina](https://i.imgur.com/DC73y4T.png)
 
 ## Features
-1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Opentriviadatabase.
+1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Opentriviadatabase (zie feature 2)
 2. De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
 3. De quizzes zijn multiple choice.
-4. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-5. Gebruikers behalen punten met elke goed beantwoorde vraag.
-6. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-7. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
-8. Elke quiz begint met een tijdslimiet van een minuut.
-9. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-10.  
+4. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+5. Elke quiz begint met een tijdslimiet van een minuut.
+6. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
+7. Gebruikers behalen punten met elke goed beantwoorde vraag.
+8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
+10. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
 
 
 ## Minimum viable product
@@ -102,7 +102,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MDg4NTIxMiwtNDM5MDQ0MTMwLDQ1MT
+eyJoaXN0b3J5IjpbLTg2MzYxNDA4NiwtNDM5MDQ0MTMwLDQ1MT
 Y4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0NjYwODAs
 OTI3MjYzNjY5LDU3ODMxNzIzN119
 -->
