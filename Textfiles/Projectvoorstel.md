@@ -20,7 +20,7 @@ Leaderboards pagina
 1. De quizzes zijn multiple choice.
 1. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
 1. Gebruikers behalen punten met elke goed beantwoorde vraag.
-1. Elke categorie heeft een eigen leaderboards-pagina waarin de gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
+1. Er is een leaderboards pagina met dewaarin de gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
 <li>Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
 <ul>
 <li>Hierbij zijn er voor alle startwaardes eigen leaderboards.</li>
@@ -39,5 +39,5 @@ Leaderboards pagina
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NDM1MDkwNV19
+eyJoaXN0b3J5IjpbMTM5NTE3MTg0XX0=
 -->
