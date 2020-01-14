@@ -80,6 +80,7 @@ def check():
 def leaderboard():
     """Display the current leaderboard and some statistics about the users performance"""
     # hier halen we de data op uit de database, die we nodig hebben om de leaderboard en de statistieken te laten zien
-    top10 = db.execute("SELECT TOP 10 * FROM scores ORDERED BY score")
+    top10 = db.execute("SELECT TOP 10 username, scoreTotaal FROM scores ORDERED BY score")
+    userdata = db.execute('SELECT * FROM scores WHERE id = :id')
     # deze geven we mee wanneer we de leaderboard pagina renderen
-    return render_template('leaderboard.html', top10)
+    return render_template('leaderboard.html', top10, userdata)
