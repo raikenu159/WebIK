@@ -16,9 +16,9 @@ Leaderboards pagina
 
 ## Features
 1.  Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.
-1. De vragen in de quizzes komen uit een online trivia database (https://opentdb.com/ of <a href="http://jservice.io/">http://jservice.io/</a> of iets anders)</li>
-<li>De quizzes zijn multiple choice.</li>
-<li>Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.</li>
+1. De vragen in de quizzes komen uit Open Trivia 1. Database (https://opentdb.com)
+1. De quizzes zijn multiple choice.
+1. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
 <li>Gebruikers behalen punten met elke goed beantwoorde vraag.</li>
 <li>Elke categorie heeft een eigen leaderboards-pagina waarin de gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.</li>
 <li>Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
@@ -39,5 +39,5 @@ Leaderboards pagina
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzcyMDU1MjddfQ==
+eyJoaXN0b3J5IjpbLTExODEyODg3ODddfQ==
 -->
