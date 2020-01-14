@@ -11,36 +11,27 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 ## Schetsen
 **Homepagina**
 ![Homepagina](epginahttps://i.imgur.com/m2AtHsf.png
-Quizvraag pagina**
+
+**Quizvraag pagina**
 ![Quizvraag pagina]("https://i.imgur.c
 
 **Leaderboards pagina**
 ![Leaderboards pagom/DC73y4T.png
+
 ## Features
 1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën. Per categorie krijgt elke gebruiker een vast aantal vragen aangeboden in de quiz.
-2. Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
-1. De quizzes zijn multiple choice.
-1. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-1. Gebruikers behalen punten met elke goed beantwoorde vraag.
-1. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-1. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
-1. Elke quiz begint met een tijdslimiet van een minuut.
-Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-. </li>
-<li>Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
-<ul>
-<li>Hierbij zijn er voor alle startwaardes eigen leaderboards.</li>
-</ul>
-</li>
-<li>Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.</li>
-<li>We gebruiken een online trivia database waaruit we onze vragen halen.</li>
-<li>
- 
-## </li>
-</ol>
-<h2 id="minimum-viable-product">Minimum viable product
-</h2>
-<p>Voor een minimum viable product willen we in ieder geval de features 1 t/m 9, 2, 3, 5 en 6 implementeren.
+2. Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.
+3. De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
+4. De quizzes zijn multiple choice.
+5. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
+6. Gebruikers behalen punten met elke goed beantwoorde vraag.
+7. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+8. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
+9. Elke quiz begint met een tijdslimiet van een minuut.
+10. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+
+## Minimum viable product
+Voor een minimum viable product willen we in ieder geval de features 1 t/m 9, 2, 3, 5 en 6 implementeren.
 
 ## </p>
 <h2 id="sanity-check">Sanity check
@@ -110,7 +101,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTg4OTc2MTAsLTQzOTA0NDEzMCw0NT
-E2ODE0ODUsLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5LC0yNDY2MDgw
-LDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
+eyJoaXN0b3J5IjpbMTE1NDIyNjk1MiwtNDM5MDQ0MTMwLDQ1MT
+Y4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0NjYwODAs
+OTI3MjYzNjY5LDU3ODMxNzIzN119
 -->
