@@ -1,0 +1,20 @@
+
+
+    <script>
+        function checkScore(){
+            var score = document.querySelectorAll("finalScore");
+
+            $.get("/check?score=" + score,
+                function(data){
+                    if (data == true){
+                        document.getElementById("registerForm").submit();
+                        prompt("Enter a username.")
+                    }
+
+                    else {
+                        alert("Username in use or contains less than two characters!");
+                    }
+                }
+            );
+        }
+    </script>
