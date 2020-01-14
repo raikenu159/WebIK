@@ -1,4 +1,44 @@
-g
+<![endif]-->
+
+**Bootstrap:**
+
+<![if !supportLists]>- <![endif]>Bootstrap is een gratis open source CSS framework oorspronkelijk ontwikkeld voor intern gebruik door de ontwikkelaars van Twitter. Het framework heeft standaard al een boel standaard functies waardoor het ontwikkelen van een responsive website zeer snel gaat.
+
+<![if !supportLists]>- <![endif]>In layout.html (uit Finance)
+
+<![if !supportLists]>- <![endif]>[http://getbootstrap.com/docs/4.1/](http://getbootstrap.com/docs/4.1/),
+
+<![if !supportLists]>- <![endif]>[https://bootswatch.com/](https://bootswatch.com/)
+
+<![if !supportLists]>- <![endif]>[https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css](https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css)
+
+**Flask:**
+
+<![if !supportLists]>- <![endif]>[Flask](https://flask.palletsprojects.com/) is een webraamwerk dat tools, bibliotheken en technologieën biedt die geschikt zijn om een webapplicatie te bouwen. Deze webapplicatie kan komen in de vorm van webpagina's, blogs, of zelfs een uitgebreide webgebaseerde agenda-app of een commerciële site.
+
+<![if !supportLists]>- <![endif]>Flask is een van de beste [micro-frameworks](https://en.wikipedia.org/wiki/Microframework), omdat het weinig tot geen afhankelijkheden heeft van externe bibliotheken.
+
+<![if !supportLists]>- <![endif]>In application.py (uit Finance)
+
+<![if !supportLists]>- <![endif]>from flask import Flask, flash, jsonify, redirect, render_template, request, session
+
+<![if !supportLists]>- <![endif]>from flask_session import Session
+
+**Socket.io:**
+
+<![if !supportLists]>- <![endif]>Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt realtime bidirectionele communicatie tussen webclients en servers mogelijk.
+
+<![if !supportLists]>- <![endif]>Kan misschien pop-ups genereren, push meldingen versturen naar de gebruikers.
+
+<![if !supportLists]>- <![endif]>A.s. vrijdag 17 januari meer over vragen aan begeleiders.
+
+**Datetime.now:**
+
+<![if !supportLists]>- <![endif]>Genereert de datum van het moment van spelen van de trivia game
+
+<![if !supportLists]>- <![endif]>Voor de datum in de leaderboards
+
+<![if !supportLists]>- <![endif]>In application.py (uit Finance)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NTc2ODM4M119
+eyJoaXN0b3J5IjpbMTAyNzY0Mjg3Ml19
 -->
