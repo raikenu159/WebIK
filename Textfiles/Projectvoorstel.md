@@ -20,15 +20,16 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 
 ## Features
 1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Opentriviadatabase.
-2. Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.
-3. De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
-4. De quizzes zijn multiple choice.
-5. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-6. Gebruikers behalen punten met elke goed beantwoorde vraag.
-7. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-8. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
-9. Elke quiz begint met een tijdslimiet van een minuut.
-10. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+2. De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
+3. De quizzes zijn multiple choice.
+4. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
+5. Gebruikers behalen punten met elke goed beantwoorde vraag.
+6. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+7. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
+8. Elke quiz begint met een tijdslimiet van een minuut.
+9. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+10.  
+
 
 ## Minimum viable product
 Voor een minimum viable product willen we in ieder geval de features 1 t/m 9 implementeren.
@@ -101,7 +102,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTI3MzgzMzgsLTQzOTA0NDEzMCw0NT
-E2ODE0ODUsLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5LC0yNDY2MDgw
-LDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
+eyJoaXN0b3J5IjpbLTY0MDg4NTIxMiwtNDM5MDQ0MTMwLDQ1MT
+Y4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0NjYwODAs
+OTI3MjYzNjY5LDU3ODMxNzIzN119
 -->
