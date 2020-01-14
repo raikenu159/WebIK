@@ -9,30 +9,26 @@
 Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
 
 ## Schetsen
-Homepagina
+**Homepagina**
 ![Homepagina](epginahttps://i.imgur.com/m2AtHsf.png
-Quizvraag pagina
+Quizvraag pagina**
 ![Quizvraag pagina]("https://i.imgur.c
-Leaderboards pagina
+
+**Leaderboards pagina**
 ![Leaderboards pagom/DC73y4T.png
 ## Features
 1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën. Per categorie krijgt elke gebruiker een vast aantal vragen aangeboden in de quiz.
-2. </p>
-<h2 id="features">Features</h2>
-<ol>
-<li>Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.</li>
-<li>De vragen in de quizzes komen uit Opeen Tonline trivia Ddatabase (<a href="https://opentdb.com)
-3. /">https://opentdb.com/</a> of <a href="http://jservice.io/">http://jservice.io/</a> of iets anders)</li>
+2. Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.De vragen in de quizzes komen uit Open Trivia Database (. /">https://opentdb.com/</a> of <a href="http://jservice.io/">http://jservice.io/</a> of iets anders)</li>
 <li>De quizzes zijn multiple choice.
-4. </li>
+. </li>
 <li>Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-5. </li>
+. </li>
 <li>Gebruikers behalen punten met elke goed beantwoorde vraag.
-6. Er is e</li>
+. Er is e</li>
 <li>Elke categorie heeft een eigen leaderboards -pagina met dwaarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
-7. Elke quiz begint met een tijdslimiet van een minuut.
-8. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-9. </li>
+. Elke quiz begint met een tijdslimiet van een minuut.
+. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+. </li>
 <li>Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
 <ul>
 <li>Hierbij zijn er voor alle startwaardes eigen leaderboards.</li>
@@ -116,7 +112,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzOTA0NDEzMCwxMDE5MzI5MjQ2LDQ1MT
+eyJoaXN0b3J5IjpbLTE0NzU0MDIyMSwtNDM5MDQ0MTMwLDQ1MT
 Y4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0NjYwODAs
 OTI3MjYzNjY5LDU3ODMxNzIzN119
 -->
