@@ -11,11 +11,11 @@ Methoden: get
 Deze functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returned het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
 
 def leaderboard():
-Deze functie haalt de top 10 op plus de gegevens van de gebruiker en rendered de leaderboard met deze 
+Deze functie haalt de top 10 op plus de gegevens van de gebruiker, rendered de leaderboard en g
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNzU3MzE0NywtMTUzMjQyMDA2OSwtMT
+eyJoaXN0b3J5IjpbMTU3NTIxMTA4NCwtMTUzMjQyMDA2OSwtMT
 k1NTMxMDUxNV19
 -->
