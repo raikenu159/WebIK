@@ -18,14 +18,12 @@ Quizvraag pagina**
 ![Leaderboards pagom/DC73y4T.png
 ## Features
 1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën. Per categorie krijgt elke gebruiker een vast aantal vragen aangeboden in de quiz.
-2. Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.De vragen in de quizzes komen uit Open Trivia Database (. /">https://opentdb.com/</a> of <a href="http://jservice.io/">http://jservice.io/</a> of iets anders)</li>
-<li>De quizzes zijn multiple choice.
-. </li>
-<li>Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-. </li>
-<li>Gebruikers behalen punten met elke goed beantwoorde vraag.
-. Er is e</li>
-<li>Elke categorie heeft een eigen leaderboards -pagina met dwaarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
+2. Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
+1. De quizzes zijn multiple choice.
+1. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
+1. Gebruikers behalen punten met elke goed beantwoorde vraag.
+1. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+1. Elke categorie heeft een eigen leaderboards -pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
 . Elke quiz begint met een tijdslimiet van een minuut.
 . Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
 . </li>
@@ -36,7 +34,7 @@ Quizvraag pagina**
 </li>
 <li>Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.</li>
 <li>We gebruiken een online trivia database waaruit we onze vragen halen.</li>
-<li>Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+<li>
  
 ## </li>
 </ol>
@@ -112,7 +110,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzU0MDIyMSwtNDM5MDQ0MTMwLDQ1MT
-Y4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0NjYwODAs
-OTI3MjYzNjY5LDU3ODMxNzIzN119
+eyJoaXN0b3J5IjpbLTE3OTQ1Nzk4ODgsLTQzOTA0NDEzMCw0NT
+E2ODE0ODUsLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5LC0yNDY2MDgw
+LDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
 -->
