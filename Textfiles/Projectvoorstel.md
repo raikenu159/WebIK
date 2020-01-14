@@ -36,7 +36,7 @@ Voor een minimum viable product willen we in ieder geval de features 1 t/m 10 im
 
 ## Sanity check
 De projecteisen zoals ze in de studiewijzer staan voor een trivia site, zijn: 
->"**Trivia** Gebruikers kunnen triviavragen beantwoorden en op die manier punten scoren. Er is een interessant systeem om van andere gebruikers te winnen. De vragen komen uit een online triviadatabase zoals <a href="http://jservice.io">http://jservice.io</a>” (WebIK Syllabus, 2020). 
+>"**Trivia.** Gebruikers kunnen triviavragen beantwoorden en op die manier punten scoren. Er is een interessant systeem om van andere gebruikers te winnen. De vragen komen uit een online triviadatabase zoals http://jservice.io” (WebIK Syllabus, 2020). 
 
 Uitgaande hiervan zijn onze gekozen features voor een minimum viable product voldoende voor de projecteisen.
 
@@ -55,9 +55,7 @@ Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitg
 >@app.route("/check", methods=["GET"])
 Check()
 
-Deze 
-
-functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
+Deze functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
 
 >@app.route("/leaderboard")
 Leaderboard():
@@ -100,7 +98,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTM2NjU3MTIsLTQzOTA0NDEzMCw0NT
-E2ODE0ODUsLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5LC0yNDY2MDgw
-LDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
+eyJoaXN0b3J5IjpbMTQxNTU4MjMzNCwtNDM5MDQ0MTMwLDQ1MT
+Y4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0NjYwODAs
+OTI3MjYzNjY5LDU3ODMxNzIzN119
 -->
