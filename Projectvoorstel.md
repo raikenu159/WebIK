@@ -62,17 +62,17 @@ def quiz():
         id = session["user_id"]
         username = request.form.get('username')
         scoreTotaal = request.form.get('scoreTotaal')
-        # ook voegen de de score per categorie toe om de gebruiker inzicht te gevenen in zijn prestaties per catagorie
+        # ook voegen de de score per categorie toe om de gebruiker inzicht te gevenen in zijn prestaties per categorie
         score1 = request.form.get('score1')
         score2 = request.form.get('score2')
-        # etc. (catagorieen nog te bepalen)
+        # etc. (categorieen nog te bepalen)
         db.execute("INSERT INTO scores (id, username, scoreTotaal, score1, score2, etc., date) VALUES (:sessionid, :username, :score)",
 
         return render_template("leaderboard.html")
 	else:
 	        # voordat de quiz begint word er een row binnen de database met daarin een user id aangemaakt voor de gebruiker
 	        # daarna word een request gestuurd naar de api voor de vragen die in de quiz moeten komen (50 per categorie, 5 categorieen)
-	        # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke catagorie krijgt
+	        # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke categorie krijgt
 	        return render_template("quiz.html")
 ```
 Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitgevoerd worden. Nadat de quiz af is zal deze functie de database updaten met de behaalde score (totaal en per categorie), en mits de gebruiker in de top 10 beland ook met een username. Als laatste roept dit de leaderboard()functie op.
@@ -112,5 +112,5 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTEyMTcxMTAsNDA0OTY4MTYwXX0=
+eyJoaXN0b3J5IjpbLTYxMzE5MjAxOCw0MDQ5NjgxNjBdfQ==
 -->
