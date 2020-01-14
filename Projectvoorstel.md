@@ -56,17 +56,24 @@ Deze functie roept de homepage (index.html) aan.
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
     """Take quiz"""
+
     if request.method == "POST":
         # nadat de check functie is uitgevoerd worden de username(als de gebruiker in de top 10 zit) en de score gesubmit
         # deze functie voegt deze dan toe aan de database zodat deze op de leaderboard weergegeven kunnen worden
         id = session["user_id"]
         username = request.form.get('username')
         scoreTotaal = request.form.get('scoreTotaal')
-        # ook voegen de de score per categorie toe om de gebruiker inzicht te gevenen in zijn prestaties per categorie
+        # ook voegen de de score per catagorie toe om de gebruiker inzicht te gevenen in zijn prestaties per catagorie
         score1 = request.form.get('score1')
         score2 = request.form.get('score2')
-        # etc. (categorieen nog te bepalen)
+        # etc. (catagorieen nog te bepalen)
         db.execute("INSERT INTO scores (id, username, scoreTotaal, score1, score2, etc., date) VALUES (:sessionid, :username, :score)",
+            id = id,
+            username = username,
+            scoreTotaal = scoreTotaal,
+            score1 = score1,
+            score2 = score2,
+            etc)
 
         return render_template("leaderboard.html")
 	else:
@@ -112,5 +119,6 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMzE5MjAxOCw0MDQ5NjgxNjBdfQ==
+eyJoaXN0b3J5IjpbLTE5NjQ0Njc2MDIsLTYxMzE5MjAxOCw0MD
+Q5NjgxNjBdfQ==
 -->
