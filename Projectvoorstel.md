@@ -46,7 +46,10 @@ De controller is application.py. In dit bestand worden de volgende functies uitg
 ###  Functies:
 ```python
 @app.route("/")
-Homepage():`
+def homepage():
+    """Homepage"""
+    # deze functie laadt alleen de homepage
+    return render_template("quiz.html")
 ```
 
 Deze functie rendert de homepage
@@ -90,5 +93,5 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2MDI0ODQ0NF19
+eyJoaXN0b3J5IjpbNDA0OTY4MTYwXX0=
 -->
