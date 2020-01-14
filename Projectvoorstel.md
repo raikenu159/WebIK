@@ -50,7 +50,9 @@ def homepage():
     """Homepage"""
     # deze functie laadt alleen de homepage
     return render_template("index.html")
-    
+```
+Deze functie roept de homepage (index.html) aan.
+```    
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
     """Take quiz"""
@@ -74,7 +76,7 @@ def quiz():
 	        return render_template("quiz.html")
 ```
 
-Deze functie rendert de homepage
+
 
 >@app.route("/quiz", methods=["GET", "POST"])
 Quiz
@@ -115,5 +117,5 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzY4ODMwMDEsNDA0OTY4MTYwXX0=
+eyJoaXN0b3J5IjpbMTIyNjMxOTU5OSw0MDQ5NjgxNjBdfQ==
 -->
