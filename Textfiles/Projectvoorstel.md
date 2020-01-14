@@ -5,7 +5,14 @@
 Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
 
 ## Schetsen
-<img src="https://i.imgur.com/m2AtHsf.png" alt="https://i.imgur.com/m2AtHsf.png"><img src="https://i.imgur.com/AWXJi1A.png" alt="https://i.imgur.com/AWXJi1A.png"><img src="https://i.imgur.com/DC73y4T.png" alt="https://i.imgur.com/DC73y4T.png"></p>
+Homepagina
+<img src="https://i.imgur.com/m2AtHsf.png" alt="https://i.imgur.com/m2AtHsf.png">
+Quizvraag
+<img src="https://i.imgur.com/AWXJi1A.png" alt="https://i.imgur.com/AWXJi1A.png">
+
+Leaderboards
+<img src="https://i.imgur.com/DC73y4T.png" alt="https://i.imgur.com/DC73y4T.png">
+
 ## Features
 <ol>
 <li>Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.</li>
@@ -32,5 +39,5 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzOTg2OTk4MF19
+eyJoaXN0b3J5IjpbMTA2NjIyODkzMl19
 -->
