@@ -23,9 +23,9 @@ Quizvraag pagina**
 1. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
 1. Gebruikers behalen punten met elke goed beantwoorde vraag.
 1. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-1. Elke categorie heeft een eigen leaderboards -pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
-. Elke quiz begint met een tijdslimiet van een minuut.
-. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+1. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
+1. Elke quiz begint met een tijdslimiet van een minuut.
+Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
 . </li>
 <li>Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
 <ul>
@@ -110,7 +110,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTQ1Nzk4ODgsLTQzOTA0NDEzMCw0NT
+eyJoaXN0b3J5IjpbLTE2NTg4OTc2MTAsLTQzOTA0NDEzMCw0NT
 E2ODE0ODUsLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5LC0yNDY2MDgw
 LDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
 -->
