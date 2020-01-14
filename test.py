@@ -35,14 +35,17 @@ categorieen = [{'id': 9, 'name': 'General Knowledge'}, {'id': 10, 'name': 'Enter
 
 # er waren best veel categorieen met tussen de 45 en 50 vragen en t verschil lijkt me niet relevant dus ik heb een lijstje gemaakt van categorieen
 # waar meer dan 45 vragen in zitten, ik denk dat we uit deze moeten kiezen
+print('aantal vragen per catagorie')
+print('ID  Total, ez, med, hard')
 meerDan45 = []
 for i in range(9, 33):
     r = requests.get("https://opentdb.com/api_count.php?category=" + str(i)).json()
     c = r['category_question_count']
-    # print(str(r['category_id']) + '    ', c['total_question_count'], c['total_easy_question_count'], c['total_medium_question_count'], c['total_hard_question_count'])
+    print(str(r['category_id']) + '    ', c['total_question_count'], c['total_easy_question_count'], c['total_medium_question_count'], c['total_hard_question_count'])
     if c['total_question_count'] > 45:
         meerDan45.append(r['category_id'])
-
+print()
+print('categorieen met meer dan 45 vragen:')
 categorieenMeerDan45 = []
 for categorie in categorieen:
     if categorie['id'] in meerDan45:
