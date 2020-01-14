@@ -13,10 +13,10 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 ![Homepagina](https://i.imgur.com/m2AtHsf.png)
 
 **Quizvraag pagina**
-![Quizvraag pagina]("https://i.imgur.c
+![Quizvraag pagina](https://i.imgur.com/AWXJi1A.png)
 
 **Leaderboards pagina**
-![Leaderboards pagom/DC73y4T.png
+![Leaderboards pagina](https://i.imgur.com/DC73y4T.png)
 
 ## Features
 1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën. Per categorie krijgt elke gebruiker een vast aantal vragen aangeboden in de quiz.
@@ -101,7 +101,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzY0Mzk1NSwtNDM5MDQ0MTMwLDQ1MT
-Y4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0NjYwODAs
-OTI3MjYzNjY5LDU3ODMxNzIzN119
+eyJoaXN0b3J5IjpbLTE1NzI2OTY1OTYsLTQzOTA0NDEzMCw0NT
+E2ODE0ODUsLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5LC0yNDY2MDgw
+LDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
 -->
