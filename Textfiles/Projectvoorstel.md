@@ -37,7 +37,7 @@ Uitgaande hiervan zijn onze gekozen features voor een minimum viable product vol
 ## Controllers
 De controller is application.py. In dit bestand worden de volgende functies uitgevoerd:
 ###  Functies:
-`@app.route("/")
+@app.route("/")
 Homepage():`
 
 Deze functie rendert de homepage
@@ -91,5 +91,5 @@ Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc4MzE3MjM3XX0=
+eyJoaXN0b3J5IjpbOTI3MjYzNjY5LDU3ODMxNzIzN119
 -->
