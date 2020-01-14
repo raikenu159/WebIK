@@ -1,15 +1,12 @@
----
+# Projectvoorstel IK02 Trivia spel
+### Projectleden: Daan van Baarsen, Una Garcia, Sem Kjaer, Soufiane Zouli
 
+## Samenvatting
+Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
 
----
-
-#Projectvoorstel IK02 Trivia spel</h1>
-<h3 id="projectleden-daan-van-baarsen-una-garcia-sem-kjaer-soufiane-zouli">Projectleden: Daan van Baarsen, Una Garcia, Sem Kjaer, Soufiane Zouli</h3>
-<h2 id="samenvatting">Samenvatting</h2>
-<p>Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.</p>
-<h2 id="schetsen">Schetsen</h2>
-<p><img src="https://i.imgur.com/m2AtHsf.png" alt="https://i.imgur.com/m2AtHsf.png"><img src="https://i.imgur.com/AWXJi1A.png" alt="https://i.imgur.com/AWXJi1A.png"><img src="https://i.imgur.com/DC73y4T.png" alt="https://i.imgur.com/DC73y4T.png"></p>
-<h2 id="features">Features</h2>
+## Schetsen
+<img src="https://i.imgur.com/m2AtHsf.png" alt="https://i.imgur.com/m2AtHsf.png"><img src="https://i.imgur.com/AWXJi1A.png" alt="https://i.imgur.com/AWXJi1A.png"><img src="https://i.imgur.com/DC73y4T.png" alt="https://i.imgur.com/DC73y4T.png"></p>
+## Features
 <ol>
 <li>Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.</li>
 <li>De vragen in de quizzes komen uit een online trivia database (<a href="https://opentdb.com/">https://opentdb.com/</a> of <a href="http://jservice.io/">http://jservice.io/</a> of iets anders)</li>
@@ -35,5 +32,5 @@
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2Njg1MTIwNl19
+eyJoaXN0b3J5IjpbMjEzOTg2OTk4MF19
 -->
