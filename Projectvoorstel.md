@@ -43,7 +43,7 @@ Uitgaande hiervan zijn onze gekozen features voor een minimum viable product vol
 
 ## Controllers
 De controller is application.py. In dit bestand worden de volgende functies uitgevoerd:
-###  Functies:
+###  Routes:
 ```py
 @app.route("/")
 def homepage():
@@ -84,8 +84,30 @@ def quiz():
 ```
 Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitgevoerd worden. Nadat de quiz af is zal deze functie de database updaten met de behaalde score (totaal en per categorie), en mits de gebruiker in de top 10 beland ook met een username. Als laatste roept dit de leaderboard()functie op.
 
->@app.route("/check", methods=["GET"])
-Check()
+
+```py
+@app.route("/check", methods=["GET"])
+def check():
+    """Return true if achieved score is in top 10"""
+    # voordat de quiz.html de score submit checken we of de gebruiker in de top 10 van gebruikers zit
+    # we returnen dan True/False naar de quiz.html, deze zal de gebruiker om een naam vragen als hij
+    # in de top 10 zit zodat we die kunnen laten zien op de leaderboard en anders een pop up geven dat de quiz voorbij is
+    top10 = db.execute("SELECT TOP 10 * FROM scores ORDERED BY score")
+
+    username = request.args.get("username")
+
+    # Set result to false if username is one character or less
+    if len(username) <= 1:
+        return jsonify(False)
+
+    # Check if username is in use
+    usernameFound = db.execute("SELECT * FROM users WHERE username = :username",
+                        username = username)
+    if usernameFound:
+        return jsonify(False)
+
+    return jsonify(True)
+```
 
 Deze functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
 
@@ -119,6 +141,6 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjQ0Njc2MDIsLTYxMzE5MjAxOCw0MD
-Q5NjgxNjBdfQ==
+eyJoaXN0b3J5IjpbLTgyNDM5NDc0OSwtMTk2NDQ2NzYwMiwtNj
+EzMTkyMDE4LDQwNDk2ODE2MF19
 -->
