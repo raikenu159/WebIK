@@ -49,7 +49,24 @@ De controller is application.py. In dit bestand worden de volgende functies uitg
 def homepage():
     """Homepage"""
     # deze functie laadt alleen de homepage
-    return render_template("quiz.html")
+    return render_template("index.html")
+@app.route("/quiz", methods=["GET", "POST"])
+def quiz():
+    """Take quiz"""
+
+    if request.method == "POST":
+        # nadat de check functie is uitgevoerd worden de username(als de gebruiker in de top 10 zit) en de score gesubmit
+        # deze functie voegt deze dan toe aan de database zodat deze op de leaderboard weergegeven kunnen worden
+        id = session["user_id"]
+        username = request.form.get('username')
+        scoreTotaal = request.form.get('scoreTotaal')
+        # ook voegen de de score per catagorie toe om de gebruiker inzicht te gevenen in zijn prestaties per catagorie
+        score1 = request.form.get('score1')
+        score2 = request.form.get('score2')
+        # etc. (catagorieen nog te bepalen)
+        db.execute("INSERT INTO scores (id, username, scoreTotaal, score1, score2, etc., date) VALUES (:sessionid, :username, :score)",
+
+        return render_template("leaderboard.html")
 ```
 
 Deze functie rendert de homepage
@@ -93,5 +110,5 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA0OTY4MTYwXX0=
+eyJoaXN0b3J5IjpbMjc4NzAyNzA3LDQwNDk2ODE2MF19
 -->
