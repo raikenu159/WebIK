@@ -62,25 +62,21 @@ Leaderboard():
 
 Deze functie haalt de top 10 op plus de gegevens van de gebruiker en, rendert de leaderboard.html met deze gegevens.
 
-
-## Frameworks & Plugins
 ### Bootstrap
- - Bootstrap is een gratis open source CSS framework oorspronkelijk ontwikkeld voor in</p>
-<blockquote>
-<p>Writtern gebruik door de ontwikkelaars van Twitter. Het framework heeft standaard al een boel standaard functies waardoor het ontwikkelen van een responsive website zeer snel gaat.
+ - Bootstrap is een gratis open source CSS framework oorspronkelijk ontwikkeld voor intern gebruik door de ontwikkelaars van Twitter. Het framework heeft standaard al een boel standaard functies waardoor het ontwikkelen van een responsive website zeer snel gaat.
  - In layout.html (uit Finance)
  - http://getbootstrap.com/docs/4.1/
  - https://bootswatch.com/
  - https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css
  
 ### Flask
+
 [Flask](https://flask.palletsprojects.com/) is een webraamwerk dat tools, bibliotheken en technologieën biedt die geschikt zijn om een webapplicatie te bouwen. Deze webapplicatie kan komen in de vorm van webpagina's, blogs, of zelfs een uitgebreide webgebaseerde agenda-app of een commerciële site.
 Flask is een van de beste [micro-frameworks](https://en.wikipedia.org/wiki/Microframework), omdat het weinig tot geen afhankelijkheden heeft van externe bibliotheken.
 
 - Uit application.py (in Finance)
-	>from flask import Flask, flash, jsonify, redirect, 
-	render_template, request, session
-	from flask_session import Session
+	`from flask import Flask, flash, jsonify, redirect, render_template, request, session
+	from flask_session import Session`
 ### Socket.io
 
 Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt realtime bidirectionele communicatie tussen webclients en servers mogelijk.
@@ -93,12 +89,8 @@ Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - Voor de datum in de leaderboards
 - In application.py (uit Finance)
 
-
-with <a href="https://stackedit.io/">StackEdit</a>.</p>
-</blockquote>
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNTU4MjMzNCwtNDM5MDQ0MTMwLDQ1MT
-Y4MTQ4NSwtNDgxNDgzOTA5LDEwMDQ2MjQyMzksLTI0NjYwODAs
-OTI3MjYzNjY5LDU3ODMxNzIzN119
+eyJoaXN0b3J5IjpbMTI2Njg0ODc3OSwxNDE1NTgyMzM0LC00Mz
+kwNDQxMzAsNDUxNjgxNDg1LC00ODE0ODM5MDksMTAwNDYyNDIz
+OSwtMjQ2NjA4MCw5MjcyNjM2NjksNTc4MzE3MjM3XX0=
 -->
