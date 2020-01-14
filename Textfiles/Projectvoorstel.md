@@ -1,12 +1,22 @@
 # Projectvoorstel IK02 Trivia spel
-### Projectleden: Daan van Baarsen, Una Garcia, Sem Kjaer, Soufiane Zouli
+### ---
 
-## Samenvatting
-Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
+
+---
+
+<h1 id="projectvoorstel-ik02-trivia-spel">Projectvoorstel IK02 Trivia spel</h1>
+<h3 id="projectleden-daan-van-baarsen-una-garcia-sem-kjaer-soufiane-zouli">Projectleden: Daan van Baarsen, Una Garcia, Sem Kjaer, Soufiane Zouli
+
+## </h3>
+<h2 id="samenvatting">Samenvatting
+</h2>
+<p>Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
 
 ## Schetsen
 Homepagina
-<img src="https://i.imgur.com/m2AtHsf.png" alt="https://i.imgur.com/m2AtHsf.png">
+</p>
+<h2 id="schetsen">Schetsen</h2>
+<p><img src="https://i.imgur.com/m2AtHsf.png" alt="https://i.imgur.com/m2AtHsf.png">
 
 Quizvraag pagina
 <img src="https://i.imgur.com/AWXJi1A.png" alt="https://i.imgur.com/AWXJi1A.png">
@@ -16,21 +26,42 @@ Leaderboards pagina
 
 ## Features
 1.  Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën. Per categorie krijgt elke gebruiker een vast aantal vragen aangeboden in de quiz.
-2. De vragen in de quizzes komen uit Open Trivia Database (https://opentdb.com)
-3. De quizzes zijn multiple choice.
-4. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-5. Gebruikers behalen punten met elke goed beantwoorde vraag.
-6. Er is een leaderboards pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
+2. </p>
+<h2 id="features">Features</h2>
+<ol>
+<li>Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.</li>
+<li>De vragen in de quizzes komen uit Opeen Tonline trivia Ddatabase (<a href="https://opentdb.com)
+3. /">https://opentdb.com/</a> of <a href="http://jservice.io/">http://jservice.io/</a> of iets anders)</li>
+<li>De quizzes zijn multiple choice.
+4. </li>
+<li>Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
+5. </li>
+<li>Gebruikers behalen punten met elke goed beantwoorde vraag.
+6. Er is e</li>
+<li>Elke categorie heeft een eigen leaderboards -pagina met dwaarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
 7. Elke quiz begint met een tijdslimiet van een minuut.
 8. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-9. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+9. </li>
+<li>Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
+<ul>
+<li>Hierbij zijn er voor alle startwaardes eigen leaderboards.</li>
+</ul>
+</li>
+<li>Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.</li>
+<li>We gebruiken een online trivia database waaruit we onze vragen halen.</li>
+<li>Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
  
-## Minimum viable product
-Voor een minimum viable product willen we in ieder geval de features 1 t/m 9 implementeren.
+## </li>
+</ol>
+<h2 id="minimum-viable-product">Minimum viable product
+</h2>
+<p>Voor een minimum viable product willen we in ieder geval de features 1 t/m 9, 2, 3, 5 en 6 implementeren.
 
-## Sanity check
-De projecteisen zoals ze in de studiewijzer staan voor een trivia site, zijn: 
->"**Trivia**. Gebruikers kunnen triviavragen beantwoorden en op die manier punten scoren. Er is een interessant systeem om van andere gebruikers te winnen. De vragen komen uit een online triviadatabase zoals http://jservice.io (WebIK Syllabus, 2020). 
+## </p>
+<h2 id="sanity-check">Sanity check
+</h2>
+<p>De projecteisen zoals ze in de studiewijzer staan voor een trivia site, zijn: 
+>"**Trivia**“<strong>Trivia</strong>. Gebruikers kunnen triviavragen beantwoorden en op die manier punten scoren. Er is een interessant systeem om van andere gebruikers te winnen. De vragen komen uit een online triviadatabase zoals <a href="http://jservice.io">http://jservice.io</a>” (WebIK Syllabus, 2020). 
 
 Uitgaande hiervan zijn onze gekozen features voor een minimum viable product voldoende voor de projecteisen.
 
@@ -61,7 +92,9 @@ Deze functie haalt de top 10 op plus de gegevens van de gebruiker en, rendert de
 
 ## Frameworks & Plugins
 ### Bootstrap
- - Bootstrap is een gratis open source CSS framework oorspronkelijk ontwikkeld voor intern gebruik door de ontwikkelaars van Twitter. Het framework heeft standaard al een boel standaard functies waardoor het ontwikkelen van een responsive website zeer snel gaat.
+ - Bootstrap is een gratis open source CSS framework oorspronkelijk ontwikkeld voor in</p>
+<blockquote>
+<p>Writtern gebruik door de ontwikkelaars van Twitter. Het framework heeft standaard al een boel standaard functies waardoor het ontwikkelen van een responsive website zeer snel gaat.
  - In layout.html (uit Finance)
  - http://getbootstrap.com/docs/4.1/
  - https://bootswatch.com/
@@ -88,8 +121,10 @@ Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - In application.py (uit Finance)
 
 
-
+with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI3MjYzNjY5LDU3ODMxNzIzN119
+eyJoaXN0b3J5IjpbLTI0NjYwODAsOTI3MjYzNjY5LDU3ODMxNz
+IzN119
 -->
