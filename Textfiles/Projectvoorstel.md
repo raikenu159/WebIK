@@ -1,23 +1,18 @@
 # Projectvoorstel IK02 Trivia spel
 ### Projectleden 
-*
- Daan van Baarsen, 
+* Daan van Baarsen, 
 * Una Garcia, 
 * Sem Kjaer, 
 * Soufiane Zouli
 
 ## Samenvatting
-</h2>
-<p>Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
+Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
 
 ## Schetsen
 Homepagina
-</p>
-<h2 id="schetsen">Schetsen</h2>
-<p><img src="https://i.imgur.com/m2AtHsf.png" alt="https://i.imgur.com/m2AtHsf.png">
-
+![Homepagina](https://i.imgur.com/m2AtHsf.png)
 Quizvraag pagina
-<img src="https://i.imgur.com/AWXJi1A.png" alt="https://i.imgur.com/AWXJi1A.png">
+"https://i.imgur.com/AWXJi1A.png">
 
 Leaderboards pagina
 <img src="https://i.imgur.com/DC73y4T.png" alt="https://i.imgur.com/DC73y4T.png">
@@ -123,7 +118,7 @@ with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUxNjgxNDg1LC00ODE0ODM5MDksMTAwND
-YyNDIzOSwtMjQ2NjA4MCw5MjcyNjM2NjksNTc4MzE3MjM3XX0=
-
+eyJoaXN0b3J5IjpbLTIwNDIwNjY1ODMsNDUxNjgxNDg1LC00OD
+E0ODM5MDksMTAwNDYyNDIzOSwtMjQ2NjA4MCw5MjcyNjM2Njks
+NTc4MzE3MjM3XX0=
 -->
