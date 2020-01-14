@@ -1,6 +1,6 @@
-Functies:
+## Functies:
 
-@app.route("/")
+# @app.route("/")
 Homepage():
 Deze functie rendered de homepage
 
@@ -15,6 +15,6 @@ C functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen
 Leaderboard():
 Deze functie haalt de top 10 op plus de gegevens van de gebruiker en, rendered de leaderboard.html met deze gegevens.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc4MzE3ODgxLC04MjU2MDAxNjAsLTE0Nz
+eyJoaXN0b3J5IjpbLTQ0NjY1MjE2MCw4NzgzMTc4ODEsLTE0Nz
 I4MzM3OTcsLTE1MzI0MjAwNjksLTE5NTUzMTA1MTVdfQ==
 -->
