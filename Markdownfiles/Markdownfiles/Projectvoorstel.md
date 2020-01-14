@@ -8,7 +8,7 @@
 Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
 
 ## Schetsen
-![Homepage](https://i.imgur.com/m2AtHsf.png)
+![Homepage](https://i.imgur.com/m2AtHsf.png)![Quiz question](https://i.imgur.com/AWXJi1A.png)
 
 ## Features
 
@@ -32,6 +32,6 @@ Voor een minimum viable product willen we in ieder geval de features 1, 2, 3, 5 
 
 De projecteisen zoals ze in de studiewijzer staan voor een trivia site, zijn: “**Trivia**. Gebruikers kunnen triviavragen beantwoorden en op die manier punten scoren. Er is een interessant systeem om van andere gebruikers te winnen. De vragen komen uit een online triviadatabase zoals [http://jservice.io](http://jservice.io)” (WebIK Syllabus, 2020). Uitgaande hiervan zijn onze gekozen features voor een minimum viable product voldoende voor de projecteisen.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0ODYxMDE3MSwtMTU2MjY0NDIwMCw3Mz
+eyJoaXN0b3J5IjpbLTI2NzQzNjk3MCwtMTU2MjY0NDIwMCw3Mz
 A5OTgxMTZdfQ==
 -->
