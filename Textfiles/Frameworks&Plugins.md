@@ -24,12 +24,11 @@ Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 ### Datetime.now
 - Genereert de datum van het moment van spelen van de trivia game
 - Voor de datum in de leaderboards
-
-<![if !supportLists]>- <![endif]>In application.py (uit Finance)
+- In application.py (uit Finance)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM5NzM4MzAyLDc1ODExOTUxMCwyMDA0MD
-Y4NjI1XX0=
+eyJoaXN0b3J5IjpbLTExNjQ0NTIwNiw3NTgxMTk1MTAsMjAwND
+A2ODYyNV19
 -->
