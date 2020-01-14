@@ -3,6 +3,7 @@ import os
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 from flask_session import Session
+from datetime import datetime
 
 
 # Configure application
@@ -23,44 +24,44 @@ def after_request(response):
 db = SQL("sqlite:///triviasite.db")
 
 @app.route("/")
-def index():
+def homepage():
     """Homepage"""
-
+    # deze functie laadt alleen de homepage
     return render_template("quiz.html")
 
-@app.route("/quiz", methods=["GET", "POST"]):
+@app.route("/quiz", methods=["GET", "POST"])
 def quiz():
     """Take quiz"""
+
     if request.method == "POST":
-        # Run quiz
+        # nadat de check functie is uitgevoerd worden de username(als de gebruiker in de top 10 zit) en de score gesubmit
+        # deze functie voegt deze dan toe aan de database zodat deze op de leaderboard weergegeven kunnen worden
+        id = session["user_id"]
+        username = request.form.get('username')
+        scoreTotaal = request.form.get('scoreTotaal')
+        # ook voegen de de score per catagorie toe om de gebruiker inzicht te gevenen in zijn prestaties per catagorie
+        score1 = request.form.get('score1')
+        score2 = request.form.get('score2')
+        # etc. (catagorieen nog te bepalen)
+        db.execute("INSERT INTO scores (id, username, scoreTotaal, score1, score2, etc., date) VALUES (:sessionid, :username, :score)",
 
+        return render_template("leaderboard.html")
 
-        #End of quiz sequence (timer = 0):
-            # Get final score
-
-            # Add score to database after checking if user achieved top 10 score
-            db.execute("INSERT INTO scores (id, username, score, date) VALUES (:sessionid, :username, :score)",
-
-                    score = request.args.get("finalscore"),)
-
-
-
-        return redirect("/leaderboard.html")
     else:
-        # Create session_id
-        # G
-
+        # voordat de quiz begint word er een row binnen de database met daarin een user id aangemaakt voor de gebruiker
+        # daarna word een request gestuurd naar de api voor de vragen die in de quiz moeten komen (50 per categorie, 5 categorieen)
+        # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke catagorie krijgt
         return render_template("quiz.html")
 
 
 @app.route("/check", methods=["GET"])
 def check():
-
+    """Return true if achieved score is in top 10"""
+    # voordat de quiz.html de score submit checken we of de gebruiker in de top 10 van gebruikers zit
+    # we returnen dan True/False naar de quiz.html, deze zal de gebruiker om een naam vragen als hij
+    # in de top 10 zit zodat we die kunnen laten zien op de leaderboard en anders een pop up geven dat de quiz voorbij is
     top10 = db.execute("SELECT TOP 10 * FROM scores ORDERED BY score")
 
-    """Return true if achieved score is in top 10"""
-
-    # Get
     username = request.args.get("username")
 
     # Set result to false if username is one character or less
@@ -75,6 +76,10 @@ def check():
 
     return jsonify(True)
 
-@app.route("/leaderboard", methods=["GET"]):
-def check():
+@app.route("/leaderboard")
+def leaderboard():
+    """Display the current leaderboard and some statistics about the users performance"""
+    # hier halen we de data op uit de database, die we nodig hebben om de leaderboard en de statistieken te laten zien
     top10 = db.execute("SELECT TOP 10 * FROM scores ORDERED BY score")
+    # deze geven we mee wanneer we de leaderboard pagina renderen
+    return render_template('leaderboard.html', top10)
