@@ -84,13 +84,9 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - Kan misschien pop-ups genereren, push meldingen versturen naar de gebruikers.
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
-### Datetime.now
-- Genereert de datum van het moment van spelen van de trivia game
-- Voor de datum in de leaderboards
-- In application.py (uit Finance)
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIwODY1MDM1LDE0MTU1ODIzMzQsLTQzOT
-A0NDEzMCw0NTE2ODE0ODUsLTQ4MTQ4MzkwOSwxMDA0NjI0MjM5
-LC0yNDY2MDgwLDkyNzI2MzY2OSw1NzgzMTcyMzddfQ==
+eyJoaXN0b3J5IjpbLTE4ODQ5NjU2MjcsNjIwODY1MDM1LDE0MT
+U1ODIzMzQsLTQzOTA0NDEzMCw0NTE2ODE0ODUsLTQ4MTQ4Mzkw
+OSwxMDA0NjI0MjM5LC0yNDY2MDgwLDkyNzI2MzY2OSw1NzgzMT
+cyMzddfQ==
 -->
