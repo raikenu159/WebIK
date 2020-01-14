@@ -1,6 +1,4 @@
-
-**Bootstrap:**
-
+### Bootstrap
  - Bootstrap is een gratis open source CSS framework oorspronkelijk ontwikkeld voor intern gebruik door de ontwikkelaars van Twitter. Het framework heeft standaard al een boel standaard functies waardoor het ontwikkelen van een responsive website zeer snel gaat.
  - In layout.html (uit Finance)
  - http://getbootstrap.com/docs/4.1/
@@ -18,8 +16,7 @@ In application.py (uit Finance)
 <![if !supportLists]>- <![endif]>from flask import Flask, flash, jsonify, redirect, render_template, request, session
 
 <![if !supportLists]>- <![endif]>from flask_session import Session
-
-**Socket.io:**
+### Socket.io
 
 <![if !supportLists]>- <![endif]>Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt realtime bidirectionele communicatie tussen webclients en servers mogelijk.
 
@@ -38,5 +35,6 @@ In application.py (uit Finance)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU4MTE5NTEwLDIwMDQwNjg2MjVdfQ==
+eyJoaXN0b3J5IjpbMjA4ODY4ODgzMCw3NTgxMTk1MTAsMjAwND
+A2ODYyNV19
 -->
