@@ -77,6 +77,9 @@ Flask is een van de beste [micro-frameworks](https://en.wikipedia.org/wiki/Micro
 - Uit application.py (in Finance)
 	`from flask import Flask, flash, jsonify, redirect, render_template, request, session
 	from flask_session import Session`
+
+`from flask import Flask, flash, jsonify, redirect, render_template, request, session
+f`
 ### Socket.io
 
 Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt realtime bidirectionele communicatie tussen webclients en servers mogelijk.
@@ -90,7 +93,7 @@ Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - In application.py (uit Finance)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2Njg0ODc3OSwxNDE1NTgyMzM0LC00Mz
+eyJoaXN0b3J5IjpbMTczOTU5NzA4MCwxNDE1NTgyMzM0LC00Mz
 kwNDQxMzAsNDUxNjgxNDg1LC00ODE0ODM5MDksMTAwNDYyNDIz
 OSwtMjQ2NjA4MCw5MjcyNjM2NjksNTc4MzE3MjM3XX0=
 -->
