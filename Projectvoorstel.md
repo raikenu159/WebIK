@@ -11,13 +11,14 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 ## Schetsen
 **Homepagina**
 ![Homepagina](https://i.imgur.com/QP6Ov9Y.png)
+**Uitlegpagina quiz**
 ![Uitlegpagina quiz](https://i.imgur.com/SyRuodO.png)
-**Quizvraag pagina type 1**
-![Quizvraag pagina](https://i.imgur.com/YLaX3YG.png)
-**Quizvraag pagina type 2**
+**Quizvraag pagina type 1 meerkeuze**
+![Quizvraag pagina meerkeuze](https://i.imgur.com/YLaX3YG.png)
+**Quizvraag pagina type 2 true/false**
 ![Quizvraag pagina](https://i.imgur.com/YPbNbEU.png)
 ![Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben](https://i.imgur.com/xBnqQpH.png)
-
+![Quizvraag pagina tijd verlopen top 10 score behaald](https://i.imgur.com/OW1MBkK.png)
 **Leaderboards pagina**
 ![Leaderboards pagina](https://i.imgur.com/DC73y4T.png)
 
@@ -154,6 +155,6 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0OTcwOTg4NSwtMTAxNDU0OTA3LC0xOT
-Y0NDY3NjAyLC02MTMxOTIwMTgsNDA0OTY4MTYwXX0=
+eyJoaXN0b3J5IjpbLTEyNjkxNDg5NTIsLTEwMTQ1NDkwNywtMT
+k2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2ODE2MF19
 -->
