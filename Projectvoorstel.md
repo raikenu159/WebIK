@@ -111,6 +111,10 @@ def quiz():
 ```
 #### @app.route("/check", methods=["GET"])
 Deze route checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
+```
+x = 3
+```
+
 ```py
 @app.route("/check", methods=["GET"])
 def check():
@@ -191,7 +195,7 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NjA0NzgwNiwtMTcyODQwNjY4NywtMT
-AxNDU0OTA3LC0xOTY0NDY3NjAyLC02MTMxOTIwMTgsNDA0OTY4
-MTYwXX0=
+eyJoaXN0b3J5IjpbLTEzMDA1MjMwODgsLTE3Mjg0MDY2ODcsLT
+EwMTQ1NDkwNywtMTk2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2
+ODE2MF19
 -->
