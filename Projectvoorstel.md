@@ -34,8 +34,7 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 8. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
 8. Gebruikers behalen punten met elke goed beantwoorde vraag.
 9. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-10. Er is e</li>
-<li>Elke categorie heeft een eigen leaderboards-pagina met dwaarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
+10. Er is een leaderboards-pagina met dwaarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
 11. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
 12. In de result-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
 
@@ -175,7 +174,7 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNTQ5NTU5MiwtMTI1NTI2OTkwNywxMj
-g2MDQ3ODA2LC0xNzI4NDA2Njg3LC0xMDE0NTQ5MDcsLTE5NjQ0
-Njc2MDIsLTYxMzE5MjAxOCw0MDQ5NjgxNjBdfQ==
+eyJoaXN0b3J5IjpbLTE3Mjk4NTQxOTYsLTEyNTUyNjk5MDcsMT
+I4NjA0NzgwNiwtMTcyODQwNjY4NywtMTAxNDU0OTA3LC0xOTY0
+NDY3NjAyLC02MTMxOTIwMTgsNDA0OTY4MTYwXX0=
 -->
