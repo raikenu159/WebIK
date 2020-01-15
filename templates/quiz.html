@@ -36,7 +36,7 @@ fetch('https://opentdb.com/api.php?amount=1&category=9') // request api
     document.getElementById('answer1').innerHTML = answers[0];
     document.getElementById('answer2').innerHTML = answers[1];
 
-    if (answers.length == 2) { // block 3rd and 4th button if True/False question
+    if (answers.length == 2) { // remove the 3rd and 4th button if True/False question
     document.getElementById('answer3').style.display = "none";
     document.getElementById('answer4').style.display = "none";
     }

@@ -57,6 +57,7 @@ def quiz():
         # voordat de quiz begint word er een row binnen de database met daarin een user id aangemaakt voor de gebruiker
         # daarna word een request gestuurd naar de api voor de vragen die in de quiz moeten komen (50 per categorie, 5 categorieen)
         # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke catagorie krijgt
+    else:
         return render_template("quiz.html")
 
 
