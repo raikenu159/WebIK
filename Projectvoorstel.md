@@ -25,27 +25,22 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 ![Leaderboards pagina](https://i.imgur.com/e6srWBE.png)
 
 ## Features
-1.  </p>
-<h2 id="schetsen">Schetsen</h2>
-<p><img src="https://i.imgur.com/m2AtHsf.png" alt="https://i.imgur.com/m2AtHsf.png"><img src="https://i.imgur.com/AWXJi1A.png" alt="https://i.imgur.com/AWXJi1A.png"><img src="https://i.imgur.com/DC73y4T.png" alt="https://i.imgur.com/DC73y4T.png"></p>
-<h2 id="features">Features</h2>
-<ol>
-<li>Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.</li>
-<li>De vragen in de quizzes komen uit Opeen Tonline trivia Ddatabase (<a href="https://opentdb.com)
-2. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database (zie feature 2).
-3. De quizzes zijn multiple choice.
-4. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-5. Elke quiz begint met een tijdslimiet van een minuut.
-6. /">https://opentdb.com/</a> of <a href="http://jservice.io/">http://jservice.io/</a> of iets anders)</li>
+1. Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.
+2. De vragen in de quizzes komen uit Opeen Tonline trivia Ddatabase (<a href="https://opentdb.com)
+3. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database (zie feature 2).
+4. De quizzes zijn multiple choice.
+5. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+6. Elke quiz begint met een tijdslimiet van een minuut.
+7. /">https://opentdb.com/</a> of http://jservice.io/</a> of iets anders)</li>
 <li>De quizzes zijn multiple choice.</li>
 <li>Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-7. </li>
+8. </li>
 <li>Gebruikers behalen punten met elke goed beantwoorde vraag.
-8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-9. Er is e</li>
+9. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+10. Er is e</li>
 <li>Elke categorie heeft een eigen leaderboards-pagina met dwaarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
-10. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
-11. In de result-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
+11. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
+12. In de result-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
 
 
 ## Minimum viable product
@@ -183,7 +178,7 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDA2NDk2ODAsMTI4NjA0NzgwNiwtMT
+eyJoaXN0b3J5IjpbLTEyNTUyNjk5MDcsMTI4NjA0NzgwNiwtMT
 cyODQwNjY4NywtMTAxNDU0OTA3LC0xOTY0NDY3NjAyLC02MTMx
 OTIwMTgsNDA0OTY4MTYwXX0=
 -->
