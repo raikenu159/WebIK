@@ -1,20 +1,52 @@
+{% extends "layout.html" %}
 
 
-    <script>
-        function checkScore(){
-            var score = document.querySelectorAll("finalScore");
+{% block main %}
 
-            $.get("/check?score=" + score,
-                function(data){
-                    if (data == true){
-                        document.getElementById("registerForm").submit();
-                        prompt("Enter a username.")
-                    }
+<html lang="en">
+    <p><center>Quiz</center></p>
 
-                    else {
-                        alert("Username in use or contains less than two characters!");
-                    }
-                }
-            );
-        }
-    </script>
+    <center><p id = "question"></p></center>
+
+    <div>
+      <p><center><button id='answer1' type="submit" class="btn btn-primary"></center></button></p>
+      <p><center><button id='answer2' type="submit" class="btn btn-succes"></center></button></p>
+      <p><center><button id='answer3' type="submit" class="btn btn-info"></center></button></p>
+      <p><center><button id='answer4' type="submit" class="btn btn-warning"></center></button></p>
+    </div>
+
+</html>
+
+<script>
+
+fetch('https://opentdb.com/api.php?amount=1&category=9') // request api
+  .then((response) => {
+    return response.json();
+  })
+
+  .then((data) => {
+    Question = data.results[0];
+    let answers = Question.incorrect_answers; // creates an array with all the anwers correct and incorrect
+    answers.push(Question.correct_answer);
+    answers.sort(() => Math.random() - 0.5); // randomize answer order
+    console.log(answers);
+
+    document.getElementById('question').innerHTML = Question.question;
+    document.getElementById('answer1').innerHTML = answers[0];
+    document.getElementById('answer2').innerHTML = answers[1];
+
+    if (answers.length == 2) { // block 3rd and 4th button if True/False question
+    document.getElementById('answer3').style.display = "none";
+    document.getElementById('answer4').style.display = "none";
+    }
+
+    else {
+    document.getElementById('answer3').innerHTML = answers[2];
+    document.getElementById('answer4').innerHTML = answers[3];
+    }
+
+  });
+
+</script>
+
+{% endblock %}
