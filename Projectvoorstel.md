@@ -30,11 +30,9 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 4. De quizzes zijn multiple choice.
 5. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
 6. Elke quiz begint met een tijdslimiet van een minuut.
-7. /">https://opentdb.com/</a> of http://jservice.io/</a> of iets anders)</li>
-<li>De quizzes zijn multiple choice.</li>
-<li>Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-8. </li>
-<li>Gebruikers behalen punten met elke goed beantwoorde vraag.
+7. De quizzes zijn multiple choice.
+8. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
+8. Gebruikers behalen punten met elke goed beantwoorde vraag.
 9. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
 10. Er is e</li>
 <li>Elke categorie heeft een eigen leaderboards-pagina met dwaarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald getoond worden.
@@ -177,7 +175,7 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0MTg0NDUyOCwtMTI1NTI2OTkwNywxMj
+eyJoaXN0b3J5IjpbLTkzNTQ5NTU5MiwtMTI1NTI2OTkwNywxMj
 g2MDQ3ODA2LC0xNzI4NDA2Njg3LC0xMDE0NTQ5MDcsLTE5NjQ0
 Njc2MDIsLTYxMzE5MjAxOCw0MDQ5NjgxNjBdfQ==
 -->
