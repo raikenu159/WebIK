@@ -154,16 +154,12 @@ from flask_session import Session
 Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt realtime bidirectionele communicatie tussen webclients en servers mogelijk.
 
 - Kan misschien pop-ups genereren, push meldingen versturen naar de gebruikers.
-- A.s. vrijdag 17 januari meer over vragen aan begeleiders.</li>
-<li>Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
-<ul>
-<li>Hierbij zijn er voor alle startwaardes eigen leaderboards.</li>
-</ul>
-</li>
-<li>Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.</li>
-<li>We gebruiken een online trivia database waaruit we onze vragen halen.</li>
-<li>Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.</li>
-</ol>
+- A.s. vrijdag 17 januari meer over vragen aan begeleiders.
+- Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
+- Hierbij zijn er voor alle startwaardes eigen leaderboards.
+- Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+- We gebruiken een online trivia database waaruit we onze vragen halen.
+- Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
 <h2 id="minimum-viable-product">Minimum viable product</h2>
 <p>Voor een minimum viable product willen we in ieder geval de features 1, 2, 3, 5 en 6 implementeren.</p>
 <h2 id="sanity-check">Sanity check</h2>
@@ -173,8 +169,8 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTY3NjAxOCwtNjEwMjAyNjU4LC0xMj
-U1MjY5OTA3LDEyODYwNDc4MDYsLTE3Mjg0MDY2ODcsLTEwMTQ1
-NDkwNywtMTk2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2ODE2MF
-19
+eyJoaXN0b3J5IjpbNzUyNTk0MDUzLC0xMjU2NzYwMTgsLTYxMD
+IwMjY1OCwtMTI1NTI2OTkwNywxMjg2MDQ3ODA2LC0xNzI4NDA2
+Njg3LC0xMDE0NTQ5MDcsLTE5NjQ0Njc2MDIsLTYxMzE5MjAxOC
+w0MDQ5NjgxNjBdfQ==
 -->
