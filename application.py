@@ -58,6 +58,7 @@ def quiz():
         # daarna word een request gestuurd naar de api voor de vragen die in de quiz moeten komen (50 per categorie, 5 categorieen)
         # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke catagorie krijgt
     else:
+        db.execute("INSERT INTO scores (score) VALUES (0)")
         return render_template("quiz.html")
 
 

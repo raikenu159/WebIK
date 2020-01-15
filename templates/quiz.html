@@ -9,16 +9,15 @@
     <center><p id = "question"></p></center>
 
     <div>
-      <p><center><button id='answer1' type="submit" class="btn btn-primary"></center></button></p>
-      <p><center><button id='answer2' type="submit" class="btn btn-succes"></center></button></p>
-      <p><center><button id='answer3' type="submit" class="btn btn-info"></center></button></p>
-      <p><center><button id='answer4' type="submit" class="btn btn-warning"></center></button></p>
+      <p><center><button id='answer1' type="button" class="btn btn-primary"></center></button></p>
+      <p><center><button id='answer2' type="button" class="btn btn-succes"></center></button></p>
+      <p><center><button id='answer3' type="button" class="btn btn-info"></center></button></p>
+      <p><center><button id='answer4' type="button" class="btn btn-warning"></center></button></p>
     </div>
 
 </html>
 
 <script>
-
 fetch('https://opentdb.com/api.php?amount=1&category=9') // request api
   .then((response) => {
     return response.json();
