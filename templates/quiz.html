@@ -31,6 +31,7 @@ fetch('https://opentdb.com/api.php?amount=1&category=9') // request api
     answers.sort(() => Math.random() - 0.5); // randomize answer order
     console.log(answers);
 
+    // displaying question and answers
     document.getElementById('question').innerHTML = Question.question;
     document.getElementById('answer1').innerHTML = answers[0];
     document.getElementById('answer2').innerHTML = answers[1];
