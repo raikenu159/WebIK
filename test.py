@@ -58,4 +58,5 @@ for i in range(50):
     questions.append(c[i])
     questions.append(d[i])
     questions.append(e[i])
-print(questions[:10])
+print(questions[:1][0])
+return render_template('quiz.html', questions)
