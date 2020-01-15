@@ -25,8 +25,7 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 ![Leaderboards pagina](https://i.imgur.com/e6srWBE.png)
 
 ## Features
-1. Gebruikers kunnen uit een aantal door ons gekozen categorieën kiezen voor het type trivia vragen die ze krijgen.
-2. De vragen in de quizzes komen uit Online Trivia Database (https://opentdb.com)
+1. De vragen in de quizzes komen uit Online Trivia Database (https://opentdb.com
 3. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database (zie feature 2).
 4. De quizzes zijn multiple choice.
 5. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
@@ -178,7 +177,7 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjcyODk1OTE3LC0xMjU1MjY5OTA3LDEyOD
-YwNDc4MDYsLTE3Mjg0MDY2ODcsLTEwMTQ1NDkwNywtMTk2NDQ2
-NzYwMiwtNjEzMTkyMDE4LDQwNDk2ODE2MF19
+eyJoaXN0b3J5IjpbMTg0MTg0NDUyOCwtMTI1NTI2OTkwNywxMj
+g2MDQ3ODA2LC0xNzI4NDA2Njg3LC0xMDE0NTQ5MDcsLTE5NjQ0
+Njc2MDIsLTYxMzE5MjAxOCw0MDQ5NjgxNjBdfQ==
 -->
