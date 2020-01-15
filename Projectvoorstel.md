@@ -1,20 +1,12 @@
 # Projectvoorstel IK02 Trivia spel
-### ---
-
-
----
-
-<h1 id="projectvoorstel-ik02-trivia-spel">Projectvoorstel IK02 Trivia spel</h1>
-<h3 id="projectleden-daan-van-baarsen-una-garcia-sem-kjaer-soufiane-zouli">Projectleden 
-*: Daan van Baarsen, 
+### Projectleden 
+* Daan van Baarsen, 
 * Una Garcia, 
 * Sem Kjaer, 
 * Soufiane Zouli
 
-## </h3>
-<h2 id="samenvatting">Samenvatting
-</h2>
-<p>Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
+## Samenvatting
+Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
 
 ## Schetsen
 **Homepagina**
@@ -191,7 +183,7 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NjA0NzgwNiwtMTcyODQwNjY4NywtMT
-AxNDU0OTA3LC0xOTY0NDY3NjAyLC02MTMxOTIwMTgsNDA0OTY4
-MTYwXX0=
+eyJoaXN0b3J5IjpbLTIwNDA2NDk2ODAsMTI4NjA0NzgwNiwtMT
+cyODQwNjY4NywtMTAxNDU0OTA3LC0xOTY0NDY3NjAyLC02MTMx
+OTIwMTgsNDA0OTY4MTYwXX0=
 -->
