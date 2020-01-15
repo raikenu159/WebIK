@@ -160,17 +160,17 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
 - We gebruiken een online trivia database waaruit we onze vragen halen.
 - Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-<h2 id="minimum-viable-product">Minimum viable product</h2>
-<p>Voor een minimum viable product willen we in ieder geval de features 1, 2, 3, 5 en 6 implementeren.</p>
-<h2 id="sanity-check">Sanity check</h2>
+## Minimum viable product
+Voor een minimum viable product willen we in ieder geval de features 1, 2, 3, 5 en 6 implementeren.
+## Sanity check
 <p>De projecteisen zoals ze in de studiewijzer staan voor een trivia site, zijn: “<strong>Trivia</strong>. Gebruikers kunnen triviavragen beantwoorden en op die manier punten scoren. Er is een interessant systeem om van andere gebruikers te winnen. De vragen komen uit een online triviadatabase zoals <a href="http://jservice.io">http://jservice.io</a>” (WebIK Syllabus, 2020). Uitgaande hiervan zijn onze gekozen features voor een minimum viable product voldoende voor de projecteisen.</p>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUyNTk0MDUzLC0xMjU2NzYwMTgsLTYxMD
-IwMjY1OCwtMTI1NTI2OTkwNywxMjg2MDQ3ODA2LC0xNzI4NDA2
-Njg3LC0xMDE0NTQ5MDcsLTE5NjQ0Njc2MDIsLTYxMzE5MjAxOC
-w0MDQ5NjgxNjBdfQ==
+eyJoaXN0b3J5IjpbLTEyODEyMTcwMywtMTI1Njc2MDE4LC02MT
+AyMDI2NTgsLTEyNTUyNjk5MDcsMTI4NjA0NzgwNiwtMTcyODQw
+NjY4NywtMTAxNDU0OTA3LC0xOTY0NDY3NjAyLC02MTMxOTIwMT
+gsNDA0OTY4MTYwXX0=
 -->
