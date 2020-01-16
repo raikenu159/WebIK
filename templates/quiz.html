@@ -7,17 +7,33 @@
     <p><center>Quiz</center></p>
 
     <center><p id = "question"></p></center>
-
+    <p id='time'></p>
     <div>
-      <p><center><button id='answer1' type="button" class="btn btn-primary"></center></button></p>
-      <p><center><button id='answer2' type="button" class="btn btn-succes"></center></button></p>
-      <p><center><button id='answer3' type="button" class="btn btn-info"></center></button></p>
-      <p><center><button id='answer4' type="button" class="btn btn-warning"></center></button></p>
+      <center><p><button id='answer1' type="button" class="btn btn-primary" onclick='check(this.innerHTML)'></button></p></center>
+      <center><p><button id='answer2' type="button" class="btn btn-succes" onclick='check(this.innerHTML)'></button></p></center>
+      <center><p><button id='answer3' type="button" class="btn btn-info" onclick='check(this.innerHTML)'></button></p></center>
+      <center><p><button id='answer4' type="button" class="btn btn-warning" onclick='check(this.innerHTML)'></button></p></center>
     </div>
 
 </html>
 
 <script>
+var score = 0;
+var timer = 61;
+var correct_answer;
+function check(input) {
+  if (input == correct_answer) {
+  score++;
+  timer = timer + 1;
+  }
+}
+function addSecond() {
+  timer--;
+  document.getElementById('time').innerHTML = timer;
+
+}
+setInterval(addSecond, 1000);
+
 fetch('https://opentdb.com/api.php?amount=1&category=9') // request api
   .then((response) => {
     return response.json();
@@ -25,12 +41,20 @@ fetch('https://opentdb.com/api.php?amount=1&category=9') // request api
 
   .then((data) => {
     Question = data.results[0];
+    correct_answer = Question.correct_answer;
+    window.correct_answer = correct_answer;
     let answers = Question.incorrect_answers; // creates an array with all the anwers correct and incorrect
     answers.push(Question.correct_answer);
-    if (Question.incorrect_answers == 1) {
-    answers.sort(() => Math.random() - 0.5); // randomize answer order
+
+    // sort True/False question as True, False
+    if (answers.length == 2) {
+      answers.sort();
+      answers.reverse();
     }
-    console.log(answers);
+    // randomize multiple choice questions
+    else {
+    answers.sort(() => Math.random() - 0.5);
+    }
 
     // displaying question and answers
     document.getElementById('question').innerHTML = Question.question;
