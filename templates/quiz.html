@@ -27,7 +27,9 @@ fetch('https://opentdb.com/api.php?amount=1&category=9') // request api
     Question = data.results[0];
     let answers = Question.incorrect_answers; // creates an array with all the anwers correct and incorrect
     answers.push(Question.correct_answer);
+    if (Question.incorrect_answers == 1) {
     answers.sort(() => Math.random() - 0.5); // randomize answer order
+    }
     console.log(answers);
 
     // displaying question and answers
