@@ -81,20 +81,23 @@ def check():
     db.execute('INSERT INTO scores (score) VALUES (:score)', score=userScore)
     print(userScore)
     leaderboard= db.execute('SELECT score FROM scores')
+    print(leaderboard)
 
-    higherScores = 0
+    ranking = 0
     for score in leaderboard:
-        higherScores+= 1
-        if userScore > score['score']:
-            break
-    print(higherScores)
-    percentile = (1 - (higherScores / len(leaderboard))) * 100
-    print(percentile)
+        if userScore <= score['score']:
+            ranking+= 1
 
-    if higherScores < 10:
-        return jsonify(higherScores + 1)
-    else:
-        return jsonify(percentile)
+    percentile = ((1-(ranking / len(leaderboard))) * 100)
+
+    if ranking < 10:
+        return jsonify('Congratulations! you are number ' + str(ranking) + ' on the leaderboard.')
+    elif percentile > 50:
+        return jsonify('Well done you scored bettter than {0:.2f}% of previous users!'.format(percentile))
+    elif percentile >= 25:
+        return jsonify('You scored bettter than {0:.2f}% of previous users.'.format(percentile))
+    elif percentile < 25:
+        return jsonify('Better luck next time, you scored in the bottom quartile.')
 
 @app.route("/leaderboard")
 def leaderboard():

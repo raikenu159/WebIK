@@ -20,8 +20,8 @@
 
 <script>
 // initiate global variables
-var score = 0;
-var timer = 10;
+var score = 30;
+var timer = 1;
 var correct_answer;
 var answers_length;
 var difficulty_score;
@@ -54,13 +54,18 @@ function reset_color() { //
   document.getElementById("time").style.backgroundColor = "white";
 }
 
+var checked = false
 function countdown() {
   if (timer >= 0) {
-    timer--;
     document.getElementById('time').innerHTML = timer;
+    timer--;
+
   }
   else if (timer <= 0) {
-    check_score();
+    if (!executed) {
+      check_score();
+      var executed = true;
+    }
   }
 }
 
@@ -74,6 +79,7 @@ function check_score() {
 
     .then((data) => {
       alert(data)
+      location.replace("/leaderboard")
     });
   }
 }
