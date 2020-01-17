@@ -1,5 +1,5 @@
 import os
-import plotly.graph_objects as go
+import requests
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -93,8 +93,10 @@ def leaderboard():
     # top10 = db.execute("SELECT TOP 10 username, scoreTotaal FROM scores ORDERED BY score")
     # userdata = db.execute('SELECT * FROM scores WHERE id = :id')
     # deze geven we mee wanneer we de leaderboard pagina renderen
+
     scores = db.execute("SELECT * FROM scores")
-    db.execute("INSERT INTO leaderboard (username, score, date) VALUES (:username, :score, :date)", username=username, score=score, date=date)
+    # session["user_id"] = scores[0]["id"]
+    # print(session["user_id"])
 
     return render_template("leaderboard.html", scores=scores)#, top10, userdata)
 
