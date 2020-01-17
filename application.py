@@ -70,6 +70,7 @@ def quiz():
         # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke catagorie krijgt
     else:
         db.execute("INSERT INTO scores (score) VALUES (0)")
+
         return render_template("quiz.html")
 
 
@@ -80,8 +81,19 @@ def check():
     # we returnen dan True/False naar de quiz.html, deze zal de gebruiker om een naam vragen als hij
     # in de top 10 zit zodat we die kunnen laten zien op de leaderboard en anders een pop up geven dat de quiz voorbij is
     top10 = db.execute("SELECT TOP 10 * FROM scores ORDERED BY score")
+    score = request.args.get("score")
 
-    username = request.args.get("username")
+    10th_place = None
+
+    for user in top10:
+        if 10th_place == None or user["score"] < 10th_place:
+            10th_place = user["score"]
+
+    if score > 10th_place:
+        return jsonify(True)
+    else:
+        return jsonify(False)
+
 
     # Set result to false if username is one character or less
     if len(username) <= 1:

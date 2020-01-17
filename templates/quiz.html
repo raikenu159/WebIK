@@ -28,6 +28,8 @@ var category;
 document.getElementById('time').innerHTML = timer;
 document.getElementById('score').innerHTML = score;
 
+
+
 fetch_question();
 setInterval(countdown, 1000);
 
@@ -130,6 +132,11 @@ function fetch_question(){
 
 
     });
+
+
+$.get("/check?score=" + score);
+
+// "haal True of False op uit backend: "/check".
 
 }
 
