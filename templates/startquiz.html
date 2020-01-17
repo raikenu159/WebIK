@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+    <p><center>Quiznaam bedenken</center></p>
+    <form action="/quiz" method="get">
+        <p><center>**Spelregels hier uitleggen**</center></p>
+        <p><center><button type="submit" class="btn btn-primary">Start Quiz!</button></center></p>
+    </form>
+    <form action="/" method="get">
+        <p><center><button type="submit" class="btn btn-primary">Home</button></center></p>
+    </form>
+{% endblock %}
