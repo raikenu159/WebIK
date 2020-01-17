@@ -68,8 +68,6 @@ def quiz():
         # daarna word een request gestuurd naar de api voor de vragen die in de quiz moeten komen (50 per categorie, 5 categorieen)
         # dan worden de vragen om en om gesorteerd zodat de gebruiker ongeveer hetzelfde aantal vragen uit elke catagorie krijgt
     else:
-        db.execute("INSERT INTO scores (score) VALUES (0)")
-
         return render_template("quiz.html")
 
 
@@ -79,32 +77,24 @@ def check():
     # voordat de quiz.html de score submit checken we of de gebruiker in de top 10 van gebruikers zit
     # we returnen dan True/False naar de quiz.html, deze zal de gebruiker om een naam vragen als hij
     # in de top 10 zit zodat we die kunnen laten zien op de leaderboard en anders een pop up geven dat de quiz voorbij is
-    top10 = db.execute("SELECT TOP 10 * FROM scores ORDERED BY score")
-    score = request.args.get("score")
+    userScore = int(request.args.get("score"))
+    db.execute('INSERT INTO scores (score) VALUES (:score)', score=userScore)
+    print(userScore)
+    leaderboard= db.execute('SELECT score FROM scores')
 
-    10th_place = None
+    higherScores = 0
+    for score in leaderboard:
+        higherScores+= 1
+        if userScore > score['score']:
+            break
+    print(higherScores)
+    percentile = (1 - (higherScores / len(leaderboard))) * 100
+    print(percentile)
 
-    for user in top10:
-        if 10th_place == None or user["score"] < 10th_place:
-            10th_place = user["score"]
-
-    if score > 10th_place:
-        return jsonify(True)
+    if higherScores < 10:
+        return jsonify(higherScores + 1)
     else:
-        return jsonify(False)
-
-
-    # Set result to false if username is one character or less
-    if len(username) <= 1:
-        return jsonify(False)
-
-    # Check if username is in use
-    usernameFound = db.execute("SELECT * FROM users WHERE username = :username",
-                        username = username)
-    if usernameFound:
-        return jsonify(False)
-
-    return jsonify(True)
+        return jsonify(percentile)
 
 @app.route("/leaderboard")
 def leaderboard():

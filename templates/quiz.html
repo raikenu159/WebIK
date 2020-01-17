@@ -19,59 +19,62 @@
 </html>
 
 <script>
+// initiate global variables
 var score = 0;
-var timer = 61;
+var timer = 10;
 var correct_answer;
 var answers_length;
 var difficulty_score;
 var category;
+// display default values of the timer and score (60, 0)
 document.getElementById('time').innerHTML = timer;
 document.getElementById('score').innerHTML = score;
 
-
-
+// generate a question
 fetch_question();
+// decrement time every second
 setInterval(countdown, 1000);
 
-
+// check the answer
 function check(input) {
   if (input == correct_answer) {
-    score++;
-    timer = timer + difficulty_score;
-    document.getElementById("time").style.backgroundColor = "LawnGreen";
-    document.getElementById('score').innerHTML = score;
+    score++; // if correct increment score
+    timer = timer + difficulty_score; // add the amount of time appropriate for the difficulty of the question
+    document.getElementById("time").style.backgroundColor = "LawnGreen"; // turn the background of the time green to make the time increment visible
+    document.getElementById('score').innerHTML = score; // display the incremented score
   }
   else {
-    timer = timer + (difficulty_score - 4);
-    document.getElementById("time").style.backgroundColor = "red";
-    document.getElementById('score').innerHTML = score;
+    timer = timer + (difficulty_score - 4); // subract the amount of time
+    document.getElementById("time").style.backgroundColor = "red"; // make visible subraction to time
   }
-  fetch_question();
-  setTimeout(reset_color, 2000);
+  fetch_question(); // generate a new question
+  setTimeout(reset_color, 300); // return timer to default color after a short time
 }
-
-function reset_color() {
+function reset_color() { //
   document.getElementById("time").style.backgroundColor = "white";
 }
 
-
-
-
 function countdown() {
-  if (timer > 0) {
+  if (timer >= 0) {
     timer--;
     document.getElementById('time').innerHTML = timer;
   }
-  else if (timer > -1) {
-    timer--;
+  else if (timer <= 0) {
     check_score();
   }
 }
 
 
 function check_score() {
-  if (timer == -1) {
-    alert("Your time is up!");
+  if (timer < 0) {
+    document.getElementById('time').innerHTML = 0;
+    fetch('/check?score=' + score).then((response) => {
+      return response.json();
+    })
+
+    .then((data) => {
+      alert(data)
+    });
   }
 }
 
@@ -86,15 +89,14 @@ function fetch_question(){
     .then((data) => {
       Question = data.results[0];
       correct_answer = Question.correct_answer;
-      console.log(correct_answer)
       if (Question.difficulty == "easy") {
         difficulty_score = 1;
       }
       else if (Question.difficulty == 'medium') {
-        difficulty_score = 2
+        difficulty_score = 2;
       }
       else {
-        difficulty_score = 3
+        difficulty_score = 3;
       }
 
       category = Question.category;
@@ -113,11 +115,6 @@ function fetch_question(){
       else {
       answers.sort(() => Math.random() - 0.5);
       }
-
-      // displaying question and answers
-      document.getElementById('question').innerHTML = Question.question;
-      document.getElementById('answer1').innerHTML = answers[0];
-      document.getElementById('answer2').innerHTML = answers[1];
       if (answers_length == 2) { // remove the 3rd and 4th button if True/False question
         document.getElementById('answer3').style.display = "none";
         document.getElementById('answer4').style.display = "none";
@@ -126,17 +123,14 @@ function fetch_question(){
         document.getElementById('answer3').style.display = "block";
         document.getElementById('answer4').style.display = "block";
       }
+      // displaying question and answers
+      document.getElementById('question').innerHTML = Question.question;
+      document.getElementById('answer1').innerHTML = answers[0];
+      document.getElementById('answer2').innerHTML = answers[1];
       document.getElementById('answer3').innerHTML = answers[2];
       document.getElementById('answer4').innerHTML = answers[3];
 
-
-
     });
-
-
-$.get("/check?score=" + score);
-
-// "haal True of False op uit backend: "/check".
 
 }
 
