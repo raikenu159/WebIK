@@ -31,6 +31,15 @@ def homepage():
     # deze functie laadt alleen de homepage
     return render_template("index.html")
 
+
+
+@app.route("/startquiz", methods=["GET","POST"])
+def startquiz():
+    """Explain quiz and start"""
+    return render_template("startquiz.html")
+
+
+
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
     """Take quiz"""
