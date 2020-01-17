@@ -1,5 +1,4 @@
 import os
-import requests
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -112,8 +111,6 @@ def leaderboard():
 @app.route("/barchart")
 def barchart():
     """Display in a barchart the score per category"""
-
-
 
     return render_template("barchart.html")
 
