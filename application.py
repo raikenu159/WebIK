@@ -1,4 +1,5 @@
 import os
+import uuid
 
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -103,9 +104,11 @@ def check():
 def leaderboard():
     """Display the current leaderboard and some statistics about the users performance"""
 
-    scores = db.execute("SELECT * FROM scores ORDERED BY score")
+    #session["user_id"] = str(uuid.uuid4())
+    topscores = reversed(db.execute("SELECT * FROM scores ORDER BY score LIMIT 10"))
 
-    return render_template("leaderboard.html", scores=scores)#, top10, userdata)
+
+    return render_template("leaderboard.html", scores=topscores)
 
 @app.route("/barchart")
 def barchart():
