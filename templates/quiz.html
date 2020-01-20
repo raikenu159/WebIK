@@ -15,13 +15,20 @@
       <center><p><button id='answer3' type="button" class="btn btn-info" onclick='check(this.innerHTML)'></button></p></center>
       <center><p><button id='answer4' type="button" class="btn btn-warning" onclick='check(this.innerHTML)'></button></p></center>
     </div>
-
+    <hr style="width: 30%;">
+    <div>
+      <p>
+      <form action="/" method="get">
+        <p><center><button type="submit" class="btn btn-danger">Stop quiz</button></center></p>
+      </form>
+      </p>
+    </div>
 </html>
 
 <script>
 // initiate global variables
-var score = 0;
-var timer = 30;
+var score = 30;
+var timer = 0;
 var correct_answer;
 var answers_length;
 var difficulty_score;
@@ -139,6 +146,8 @@ function fetch_question(){
     });
 
 }
+
+
 
 </script>
 
