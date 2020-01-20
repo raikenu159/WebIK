@@ -102,14 +102,8 @@ def check():
 @app.route("/leaderboard")
 def leaderboard():
     """Display the current leaderboard and some statistics about the users performance"""
-    # hier halen we de data op uit de database, die we nodig hebben om de leaderboard en de statistieken te laten zien
-    # top10 = db.execute("SELECT TOP 10 username, scoreTotaal FROM scores ORDERED BY score")
-    # userdata = db.execute('SELECT * FROM scores WHERE id = :id')
-    # deze geven we mee wanneer we de leaderboard pagina renderen
 
-    scores = db.execute("SELECT * FROM scores")
-    # session["user_id"] = scores[0]["id"]
-    # print(session["user_id"])
+    scores = db.execute("SELECT * FROM scores ORDERED BY score")
 
     return render_template("leaderboard.html", scores=scores)#, top10, userdata)
 
