@@ -15,7 +15,14 @@
       <center><p><button id='answer3' type="button" class="btn btn-info" onclick='check(this.innerHTML)'></button></p></center>
       <center><p><button id='answer4' type="button" class="btn btn-warning" onclick='check(this.innerHTML)'></button></p></center>
     </div>
-
+    <hr style="width: 30%;">
+    <div>
+      <p>
+      <form action="/startquiz" method="get">
+        <p><center><button type="submit" class="btn btn-danger">Stop quiz</button></center></p>
+      </form>
+      </p>
+    </div>
 </html>
 
 <script>
@@ -139,6 +146,8 @@ function fetch_question(){
     });
 
 }
+
+
 
 </script>
 
