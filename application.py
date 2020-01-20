@@ -90,13 +90,12 @@ def check():
             ranking+= 1
 
     percentile = ((1-(ranking / len(leaderboard))) * 100)
-
     if ranking < 10:
-        return jsonify('Congratulations! you are number ' + str(ranking) + ' on the leaderboard.')
+        return jsonify(['Congratulations! you are number ' + str(ranking) + ' on the leaderboard.', True])
     elif percentile > 50:
-        return jsonify('Well done you scored bettter than {0:.2f}% of previous users!'.format(percentile))
+        return jsonify('Well done you scored better than {0:.2f}% of previous users!'.format(percentile))
     elif percentile >= 25:
-        return jsonify('You scored bettter than {0:.2f}% of previous users.'.format(percentile))
+        return jsonify('You scored better than {0:.2f}% of previous users.'.format(percentile))
     elif percentile < 25:
         return jsonify('Better luck next time, you scored in the bottom quartile.')
 

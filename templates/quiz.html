@@ -6,7 +6,7 @@
 <html lang="en">
     <p><center>Quiz</center></p>
 
-    <center><p id = "question"></p></center>
+    <center><p id="question"></p></center>
     <p id='time'></p>
     <p id='score'></p>
     <div>
@@ -15,6 +15,17 @@
       <center><p><button id='answer3' type="button" class="btn btn-info" onclick='check(this.innerHTML)'></button></p></center>
       <center><p><button id='answer4' type="button" class="btn btn-warning" onclick='check(this.innerHTML)'></button></p></center>
     </div>
+
+    <!--<hr style="width: 30%;">-->
+    <!--<div>-->
+    <!--  <p>-->
+    <!--  <form action="fetch_question()" method="get">-->
+    <!--    <p><center><button type="submit" class="btn btn-dark">Next Question</button></center></p>-->
+    <!--  </form>-->
+    <!--  </p>-->
+    <!--</div>-->
+    <!--<br>-->
+
     <hr style="width: 30%;">
     <div>
       <p>
@@ -23,24 +34,56 @@
       </form>
       </p>
     </div>
+
+    <div class="form-popup" id="top10form">
+      <form>
+        <h2>Congratulations! You made the top 10!</h2>
+
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter username" name="username" required>
+
+
+        <button type="submit" class="btn btn-success">See Results</button>
+        <hr>
+        <button type="submit" class="btn btn-secondary" onclick="closePopup()">Close</button>
+      </form>
+    </div>
 </html>
 
 <script>
 // initiate global variables
-var score = 30;
-var timer = 0;
+var score = 65;
+var timer = 4;
 var correct_answer;
 var answers_length;
 var difficulty_score;
 var category;
+
+// open popup if in top10
+function openPopup() {
+  document.getElementById("top10form").style.display = "block";
+  document.getElementById("question").style.display = "none";
+}
+
+//close popup
+function closePopup() {
+  document.getElementById("top10form").style.display = "none";
+}
+
 // display default values of the timer and score (60, 0)
 document.getElementById('time').innerHTML = timer;
 document.getElementById('score').innerHTML = score;
 
 // generate a question
 fetch_question();
+
+// close popup until needed
+closePopup();
+
 // decrement time every second
 setInterval(countdown, 1000);
+
+
 
 // check the answer
 function check(input) {
@@ -85,12 +128,17 @@ function check_score() {
     })
 
     .then((data) => {
-      alert(data)
-      location.replace("/leaderboard")
+      // var check_executed == True;
+      if (data.length == 2) {
+        openPopup();
+      }
+      else {
+        alert(data);
+        location.replace("/leaderboard");
+      }
     });
   }
 }
-
 
 
 function fetch_question(){
