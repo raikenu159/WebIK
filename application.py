@@ -105,8 +105,7 @@ def leaderboard():
     """Display the current leaderboard and some statistics about the users performance"""
 
     #session["user_id"] = str(uuid.uuid4())
-    topscores = reversed(db.execute("SELECT * FROM scores ORDER BY score LIMIT 10"))
-
+    topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
     return render_template("leaderboard.html", scores=topscores)
 
