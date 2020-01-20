@@ -4,16 +4,16 @@
 {% block main %}
 
 <html lang="en">
-    <p>Quiz</p>
+    <h1>Kwik Kwiz</h1>
 
     <p id="question"></p>
     <p id='time'></p>
     <p id='score'></p>
     <div>
-      <p><button id='answer1' type="button" class="btn btn-primary" onclick='check(this.innerHTML)'></button></p>
-      <p><button id='answer2' type="button" class="btn btn-succes" onclick='check(this.innerHTML)'></button></p>
-      <p><button id='answer3' type="button" class="btn btn-info" onclick='check(this.innerHTML)'></button></p>
-      <p><button id='answer4' type="button" class="btn btn-warning" onclick='check(this.innerHTML)'></button></p>
+      <button id='answer1' type="button" class="btn btn-primary" onclick='check(this.innerHTML)'></button>
+      <button id='answer2' type="button" class="btn btn-succes" onclick='check(this.innerHTML)'></button>
+      <button id='answer3' type="button" class="btn btn-info" onclick='check(this.innerHTML)'></button>
+      <button id='answer4' type="button" class="btn btn-warning" onclick='check(this.innerHTML)'></button>
     </div>
 
     <!--<hr style="width: 30%;">-->
@@ -28,11 +28,9 @@
 
     <hr style="width: 30%;">
     <div>
-      <p>
       <form action="/" method="get">
-        <p><button type="submit" class="btn btn-danger">Stop quiz</button></p>
+        <button type="submit" class="btn btn-danger">Stop quiz</button>
       </form>
-      </p>
     </div>
 
     <div class="form-popup" id="top10form">

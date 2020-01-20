@@ -2,15 +2,20 @@
 
 
 {% block main %}
-    <p>Kwik Kwiz</p>
+    <div class="jumbotron">
+        <h1 id="quizTitle">Kwik Kwiz</h1>
+    </div>
+
     <form action="/quiz" method="get">
-        <p><button type="submit" class="btn btn-primary">Go to Quiz!</button></p>
+        <button type="submit" class="btn btn-primary">Go to Quiz!</button>
     </form>
+
     <form action="/leaderboard" method="get">
-        <p><button type="submit" class="btn btn-info">Leaderboard</button></p>
+        <button type="submit" class="btn btn-info">Leaderboard</button>
     </form>
+
     <form action="/startquiz" method="get">
-        <p><button type="submit" class="btn btn-danger">How to play</button></p>
+        <button type="submit" class="btn btn-danger" margin="20px">How to play</button>
     </form>
 
 

@@ -2,9 +2,21 @@
 
 
 {% block main %}
-    <p>Quiznaam bedenken</p>
+    <h1 id="quizTitle">Kwik Kwiz</h1>
     <form action="/quiz" method="get">
-        <p>**Spelregels hier uitleggen**</p>
+        <div id="quizGuide" >
+            <p>
+                Each quiz contains questions from five categories: General Knowledge, Computer science, Geography, History and Animals
+                and each question can be of easy, medium or hard difficulty. You start with a one minute timer. Giving a correct answer grants extra time, based on the difficulty of the question.
+                On the other hand, giving a wrong answer costs you time, the amount also depending on the difficulty of the question.
+                The distribution of given time based on question difficulty is as follows:
+            </p>
+            <ul>
+                <li><b>Easy questions.</b> Correct answers grant one extra second. Wrong answers deduct three seconds.</li>
+                <li><b>Medium questions.</b> Correct answers grant two extra seconds. Wrong answers deduct two seconds.</li>
+                <li><b>Hard questions.</b> Correct answers grant three extra seconds. Wrong answers deduct one seconds.</li>
+            </ul>
+        </div>
         <p><button type="submit" class="btn btn-primary">Start Quiz!</button></p>
     </form>
     <form action="/" method="get">
