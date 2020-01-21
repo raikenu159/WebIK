@@ -117,6 +117,7 @@ def load_questions():
     # creating pseudo-random question order
     questions = []
     for i in range(50):
+        b[i]['category'] = 'Computer Science'
         temp = []
         temp.append(a[i])
         temp.append(b[i])
