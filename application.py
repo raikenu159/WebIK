@@ -101,11 +101,11 @@ def barchart():
 @app.route("/load_questions", methods=["GET"])
 def load_questions():
     """fetches questions"""
-    a = requests.get("https://opentdb.com/api.php?amount=50&category=9").json()['results'] # general knowledge
-    b = requests.get("https://opentdb.com/api.php?amount=50&category=18").json()['results'] # computer science
-    c = requests.get("https://opentdb.com/api.php?amount=50&category=22").json()['results'] # geopraphy
-    d = requests.get("https://opentdb.com/api.php?amount=50&category=23").json()['results'] # history
-    e = requests.get("https://opentdb.com/api.php?amount=50&category=27").json()['results'] # animals
+    a = requests.get("https://opentdb.com/api.php?amount=5&category=9").json()['results'] # general knowledge
+    b = requests.get("https://opentdb.com/api.php?amount=5&category=18").json()['results'] # computer science
+    c = requests.get("https://opentdb.com/api.php?amount=5&category=22").json()['results'] # geopraphy
+    d = requests.get("https://opentdb.com/api.php?amount=5&category=23").json()['results'] # history
+    e = requests.get("https://opentdb.com/api.php?amount=5&category=27").json()['results'] # animals
 
     questions = []
     for i in range(50):
