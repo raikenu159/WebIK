@@ -9,6 +9,7 @@
     <div id="difficulty"></div>
     <h4 id='score'></h4>
     <h3 id='time'></h3>
+    <h5 id='category'></h235>
     <h2 id="question"></h2>
 
 
@@ -74,7 +75,7 @@ function openPopup() {
 
 
 // display default values of the timer and score (60, 0)
-document.getElementById('time').innerHTML = timer;
+document.getElementById('time').innerHTML = 60;
 document.getElementById('score').innerHTML = score;
 
 // generate a question
@@ -83,7 +84,6 @@ load_questions();
 
 // decrement time every second
 setInterval(countdown, 1000);
-
 
 
 // check the answer
@@ -122,12 +122,14 @@ function check(input) {
 function reset_color() {
   document.getElementById("time").style.backgroundColor = "white";
 }
-
+// decrement timer if page loaded or end quiz if time is up
 function countdown() {
-  if (timer >= 0) {
+  if (!document.getElementById('answer4').innerHTML) {
+    return;
+  }
+  else if (timer >= 0) {
     document.getElementById('time').innerHTML = timer;
     timer--;
-
   }
   else if (timer <= 0) {
     if (!checked) {
@@ -172,7 +174,7 @@ function load_questions() {
 }
 function next(data) {
     Question = data[question_index];
-    console.log(Question);
+
     if (Question.difficulty == "easy") {
       difficulty_score = 1;
       document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_easy.png' alt='difficulty_easy icon' style='width: 150px; height:100px;'>";
@@ -204,6 +206,7 @@ function next(data) {
     document.getElementById('answer2').innerHTML = answers[1];
     document.getElementById('answer3').innerHTML = answers[2];
     document.getElementById('answer4').innerHTML = answers[3];
+    document.getElementById('category').innerHTML = 'Category: ' + Question.category;
 }
 
 function skip_question() {
