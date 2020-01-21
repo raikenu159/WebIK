@@ -115,4 +115,55 @@ def barchart():
 
     return render_template("barchart.html")
 
+<<<<<<< HEAD
+=======
+@app.route("/load_questions", methods=["GET"])
+def load_questions():
+    """fetches questions"""
+    a = requests.get("https://opentdb.com/api.php?amount=5&category=9").json()['results'] # general knowledge
+    b = requests.get("https://opentdb.com/api.php?amount=5&category=18").json()['results'] # computer science
+    c = requests.get("https://opentdb.com/api.php?amount=5&category=22").json()['results'] # geopraphy
+    d = requests.get("https://opentdb.com/api.php?amount=5&category=23").json()['results'] # history
+    e = requests.get("https://opentdb.com/api.php?amount=5&category=27").json()['results'] # animals
+
+    questions = []
+    for i in range(5):
+        questions.append(a[i])
+        questions.append(b[i])
+        questions.append(c[i])
+        questions.append(d[i])
+        questions.append(e[i])
+
+    questions_js = []
+    correct_answers = []
+    for question in questions:
+        answers = question['incorrect_answers']
+        answers.append(question['correct_answer'])
+        random.shuffle(answers)
+
+        questions_js.append({
+            'answers' : answers,
+            'question' : question['question'],
+            'difficulty' : question['difficulty'],
+            'category' : question['category'],
+            'type' : question['type'],
+        })
+
+        correct_answers.append(question['correct_answer'])
+
+    session['correct_answers'] = correct_answers
+
+    return jsonify(questions_js)
+
+
+@app.route("/check_answer")
+def check_answer():
+    answer = request.args.get('answer');
+    correct_answer = session['correct_answers'][0]
+    session['correct_answers'].remove(session['correct_answers'][0])
+    if answer == correct_answer:
+
+        return jsonify(True)
+    else:
+>>>>>>> ce6120282382a3b4705047b83a0972c54e0debbf
 
