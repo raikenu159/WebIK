@@ -29,7 +29,7 @@
     <hr style="width: 30%;">
     <div>
       <form action="/" method="get">
-        <button type="submit" class="btn btn-danger">Stop quiz</button>
+        <button id="stop" type="submit" class="btn btn-danger">Stop quiz</button>
       </form>
     </div>
 
@@ -65,6 +65,7 @@ function openPopup() {
   document.getElementById("top10form").style.display = "block";
   document.getElementById("question").style.display = "none";
   document.getElementById("all_answers").style.display = "none";
+  document.getElementById("stop").style.display = "none";
 }
 
 
