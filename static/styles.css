@@ -25,5 +25,10 @@ main img{
 }
 
 button{
-    margin:20px;
+    margin: 5px;
+}
+
+#leaderboard{
+    overflow: scroll;
+    height: 65vh;
 }
