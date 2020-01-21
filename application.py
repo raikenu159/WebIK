@@ -32,6 +32,7 @@ db = SQL("sqlite:///triviasite.db")
 @app.route("/")
 def homepage():
     """Homepage"""
+    session.clear()
     # deze functie laadt alleen de homepage
     return render_template("index.html")
 
