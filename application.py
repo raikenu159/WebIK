@@ -43,7 +43,6 @@ def startquiz():
     return render_template("startquiz.html")
 
 
-
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
     """Take quiz"""
@@ -53,6 +52,7 @@ def quiz():
         db.execute("UPDATE scores SET username = :name WHERE id = :id", name=name, id=session["user_id"])
         topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
         return render_template("leaderboard.html", scores=topscores, played="Play Again!")
+
     else:
         return render_template("quiz.html")
 
@@ -90,7 +90,14 @@ def leaderboard():
 
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
-    return render_template("leaderboard.html", scores=topscores, played="Play Now!")
+    try:
+        session["user_id"]
+    except:
+        return render_template("leaderboard.html", scores=topscores, played="Play Now!")
+
+    else:
+        return render_template("leaderboard.html", scores=topscores, played="Try Again!")
+
 
 @app.route("/barchart")
 def barchart():
