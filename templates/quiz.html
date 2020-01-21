@@ -94,19 +94,27 @@ function check(input) {
 
   .then((data) => {
   if (data == true) {
-    score++; // if correct increment score
-    timer = timer + difficulty_score; // add the amount of time appropriate for the difficulty of the question
-    document.getElementById("time").style.backgroundColor = "LawnGreen"; // turn the background of the time green to make the time increment visible
-    document.getElementById('score').innerHTML = score; // display the incremented score
+    // if correct increment score
+    score++;
+    // add the amount of time appropriate for the difficulty of the question
+    timer = timer + difficulty_score;
+    // turn the background of the time green to make the time increment visible
+    document.getElementById("time").style.backgroundColor = "LawnGreen";
+    // display the incremented score
+    document.getElementById('score').innerHTML = score;
   }
   else {
-    timer = timer + (difficulty_score - 4); // subract the amount of time
-    document.getElementById("time").style.backgroundColor = "red"; // make visible subraction to time
+    // subract the amount of time
+    timer = timer + (difficulty_score - 4);
+    // make visible subraction to time
+    document.getElementById("time").style.backgroundColor = "red";
   }
   question_index++;
 
-  next(questions);// generate a new question
-  setTimeout(reset_color, 300); // return timer to default color after a short time
+  // generate a new question
+  next(questions);
+  // return timer to default color after a short time
+  setTimeout(reset_color, 300);
   });
 }
 
@@ -180,7 +188,8 @@ function next(data) {
     category = Question.category;
     let answers = Question.answers;
 
-    if (Question.answers.length == 2) { // remove the 3rd and 4th button if True/False question
+    // remove the 3rd and 4th button if True/False question
+    if (Question.answers.length == 2) {
       document.getElementById('answer3').style.display = "none";
       document.getElementById('answer4').style.display = "none";
     }
