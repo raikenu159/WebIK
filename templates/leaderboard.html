@@ -27,9 +27,15 @@
 </table>
 
 <form action="/quiz" method="get">
-    <p><button type="submit" class="btn btn-primary">Play Again!</button></p>
+    <p><button type="submit" class="btn btn-primary"> {{played}}</button></p>
 </form>
+
 <form action="/" method="get">
     <p><button type="submit" class="btn btn-danger">Home</button></p>
 </form>
+
+<script>
+  console.log(score);
+</script>
+
 {% endblock %}

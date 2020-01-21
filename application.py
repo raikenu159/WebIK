@@ -52,7 +52,7 @@ def quiz():
         name = request.form.get("username")
         db.execute("UPDATE scores SET username = :name WHERE id = :id", name=name, id=session["user_id"])
         topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
-        return render_template("leaderboard.html", scores=topscores)
+        return render_template("leaderboard.html", scores=topscores, played="Play Again!")
     else:
         return render_template("quiz.html")
 
@@ -90,7 +90,7 @@ def leaderboard():
 
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
-    return render_template("leaderboard.html", scores=topscores)
+    return render_template("leaderboard.html", scores=topscores, played="Play Now!")
 
 @app.route("/barchart")
 def barchart():
