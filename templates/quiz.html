@@ -8,6 +8,7 @@
 
     <p id="question"></p>
     <p id='time'></p>
+    <p id="difficulty"></p>
     <p id='score'></p>
     <div id='all_answers'>
       <button id='answer1' type="button" class="btn btn-primary" onclick='check(this.innerHTML)'></button>
@@ -50,8 +51,8 @@
 <script>
 // initiate global variables
 
-var score = 70;
-var timer = 20;
+var score = 0;
+var timer = 60;
 var question_index = 0;
 var questions;
 // var correct_answer;
@@ -162,6 +163,7 @@ function next(data) {
     Question = data[question_index];
     if (Question.difficulty == "easy") {
       difficulty_score = 1;
+      document.getElementById("difficulty").innerHTML = "<img src="static/difficulty_easy.png">";
     }
     else if (Question.difficulty == 'medium') {
       difficulty_score = 2;
