@@ -108,7 +108,7 @@ def load_questions():
     e = requests.get("https://opentdb.com/api.php?amount=5&category=27").json()['results'] # animals
 
     questions = []
-    for i in range(50):
+    for i in range(5):
         questions.append(a[i])
         questions.append(b[i])
         questions.append(c[i])
