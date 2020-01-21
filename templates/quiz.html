@@ -29,8 +29,9 @@
 
     <hr style="width: 30%;">
     <div>
+        <button id="skip_question" type="submit" class="btn btn-danger" onclick="skip_question()">Skip Question</button>
       <form action="/" method="get">
-        <button id="stop" type="submit" class="btn btn-danger">Stop quiz</button>
+        <button id="stop" type="submit" class="btn btn-danger">Stop Quiz</button>
       </form>
     </div>
 
@@ -189,6 +190,11 @@ function next(data) {
     document.getElementById('answer2').innerHTML = answers[1];
     document.getElementById('answer3').innerHTML = answers[2];
     document.getElementById('answer4').innerHTML = answers[3];
+}
+
+function skip_question() {
+  question_index++
+  next(questions)
 }
 
 </script>
