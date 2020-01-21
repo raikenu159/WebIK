@@ -163,6 +163,7 @@ function load_questions() {
 }
 function next(data) {
     Question = data[question_index];
+    console.log(Question);
     if (Question.difficulty == "easy") {
       difficulty_score = 1;
       document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_easy.png' alt='difficulty_easy icon' style='width: 150px; height:100px;'>";
