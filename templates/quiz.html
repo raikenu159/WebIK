@@ -5,14 +5,18 @@
 
 <html lang="en">
     <!--<h1>Kwik Kwiz</h1>-->
-    <h2 id="question"></h2>
-    <h3 id='time'></h3>
+    <h4>Question difficulty:</h4>
+    <div id="difficulty"></div>
     <h4 id='score'></h4>
+    <h3 id='time'></h3>
+    <h2 id="question"></h2>
+
+
     <div id='all_answers'>
-      <button id='answer1' type="button" class="btn btn-primary" onclick='check(this.innerHTML)'></button>
-      <button id='answer2' type="button" class="btn btn-succes" onclick='check(this.innerHTML)'></button>
-      <button id='answer3' type="button" class="btn btn-info" onclick='check(this.innerHTML)'></button>
-      <button id='answer4' type="button" class="btn btn-warning" onclick='check(this.innerHTML)'></button>
+      <button id='answer1' type="button" class="btn btn-primary btn-lg btn-block" onclick='check(this.innerHTML)'></button>
+      <button id='answer2' type="button" class="btn btn-danger btn-lg btn-block" onclick='check(this.innerHTML)'></button>
+      <button id='answer3' type="button" class="btn btn-info btn-lg btn-block" onclick='check(this.innerHTML)'></button>
+      <button id='answer4' type="button" class="btn btn-warning btn-lg btn-block" onclick='check(this.innerHTML)'></button>
     </div>
 
     <!--<hr style="width: 30%;">-->
@@ -50,8 +54,8 @@
 <script>
 // initiate global variables
 
-var score = 70;
-var timer = 20;
+var score = 0;
+var timer = 60;
 var question_index = 0;
 var questions;
 // var correct_answer;
@@ -91,19 +95,27 @@ function check(input) {
 
   .then((data) => {
   if (data == true) {
-    score++; // if correct increment score
-    timer = timer + difficulty_score; // add the amount of time appropriate for the difficulty of the question
-    document.getElementById("time").style.backgroundColor = "LawnGreen"; // turn the background of the time green to make the time increment visible
-    document.getElementById('score').innerHTML = score; // display the incremented score
+    // if correct increment score
+    score++;
+    // add the amount of time appropriate for the difficulty of the question
+    timer = timer + difficulty_score;
+    // turn the background of the time green to make the time increment visible
+    document.getElementById("time").style.backgroundColor = "LawnGreen";
+    // display the incremented score
+    document.getElementById('score').innerHTML = score;
   }
   else {
-    timer = timer + (difficulty_score - 4); // subract the amount of time
-    document.getElementById("time").style.backgroundColor = "red"; // make visible subraction to time
+    // subract the amount of time
+    timer = timer + (difficulty_score - 4);
+    // make visible subraction to time
+    document.getElementById("time").style.backgroundColor = "red";
   }
   question_index++;
 
-  next(questions);// generate a new question
-  setTimeout(reset_color, 300); // return timer to default color after a short time
+  // generate a new question
+  next(questions);
+  // return timer to default color after a short time
+  setTimeout(reset_color, 300);
   });
 }
 
@@ -160,20 +172,25 @@ function load_questions() {
 }
 function next(data) {
     Question = data[question_index];
+    console.log(Question);
     if (Question.difficulty == "easy") {
       difficulty_score = 1;
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_easy.png' alt='difficulty_easy icon' style='width: 150px; height:100px;'>";
     }
     else if (Question.difficulty == 'medium') {
       difficulty_score = 2;
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_medium.png' alt='difficulty_medium icon' style='width: 150px; height:100px;'>";
     }
     else {
       difficulty_score = 3;
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_hard.png' alt='difficulty_hard icon' style='width: 150px; height:100px;'>";
     }
 
     category = Question.category;
     let answers = Question.answers;
 
-    if (Question.answers.length == 2) { // remove the 3rd and 4th button if True/False question
+    // remove the 3rd and 4th button if True/False question
+    if (Question.answers.length == 2) {
       document.getElementById('answer3').style.display = "none";
       document.getElementById('answer4').style.display = "none";
     }
