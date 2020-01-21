@@ -37,7 +37,6 @@ def homepage():
     return render_template("index.html")
 
 
-
 @app.route("/startquiz", methods=["GET","POST"])
 def startquiz():
     """Explain quiz and start"""
