@@ -164,15 +164,15 @@ function next(data) {
     Question = data[question_index];
     if (Question.difficulty == "easy") {
       difficulty_score = 1;
-      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_easy.png'>";
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_easy.png' alt='difficulty_easy icon' style='width: 150px; height:100px;'>";
     }
     else if (Question.difficulty == 'medium') {
       difficulty_score = 2;
-      document.getElementById("difficulty").innerHTML = "<img src='/static/medium.png'>";
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_medium.png' alt='difficulty_medium icon' style='width: 150px; height:100px;'>";
     }
     else {
       difficulty_score = 3;
-      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_hard.png'>";
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_hard.png' alt='difficulty_hard icon' style='width: 150px; height:100px;'>";
     }
 
     category = Question.category;
