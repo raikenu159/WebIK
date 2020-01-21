@@ -1,6 +1,7 @@
 import os
 import uuid
 import requests
+import random
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 from flask_session import Session
@@ -105,6 +106,7 @@ def load_questions():
     c = requests.get("https://opentdb.com/api.php?amount=50&category=22").json()['results'] # geopraphy
     d = requests.get("https://opentdb.com/api.php?amount=50&category=23").json()['results'] # history
     e = requests.get("https://opentdb.com/api.php?amount=50&category=27").json()['results'] # animals
+
     questions = []
     for i in range(50):
         questions.append(a[i])
@@ -112,5 +114,37 @@ def load_questions():
         questions.append(c[i])
         questions.append(d[i])
         questions.append(e[i])
-    return jsonify(questions)
 
+    questions_js = []
+    correct_answers = []
+    for question in questions:
+        answers = question['incorrect_answers']
+        answers.append(question['correct_answer'])
+        random.shuffle(answers)
+
+        questions_js.append({
+            'answers' : answers,
+            'question' : question['question'],
+            'difficulty' : question['difficulty'],
+            'category' : question['category'],
+            'type' : question['type'],
+        })
+
+        correct_answers.append(question['correct_answer'])
+
+    session['correct_answers'] = correct_answers
+
+    return jsonify(questions_js)
+
+
+@app.route("/check_answer")
+def check_answer():
+    answer = request.args.get('answer');
+    correct_answer = session['correct_answers'][0]
+    session['correct_answers'].remove(session['correct_answers'][0])
+    if answer == correct_answer:
+
+        return jsonify(True)
+    else:
+
+        return jsonify(False)

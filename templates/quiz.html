@@ -83,7 +83,13 @@ setInterval(countdown, 1000);
 
 // check the answer
 function check(input) {
-  if (input == correct_answer) {
+  fetch('/check_answer?answer='+input)
+  .then((response) => {
+      return response.json();
+  })
+
+  .then((data) => {
+  if (data == true) {
     score++; // if correct increment score
     timer = timer + difficulty_score; // add the amount of time appropriate for the difficulty of the question
     document.getElementById("time").style.backgroundColor = "LawnGreen"; // turn the background of the time green to make the time increment visible
@@ -97,6 +103,7 @@ function check(input) {
 
   next(questions);// generate a new question
   setTimeout(reset_color, 300); // return timer to default color after a short time
+  });
 }
 
 function reset_color() {
@@ -152,105 +159,34 @@ function load_questions() {
 }
 function next(data) {
     Question = data[question_index];
-      correct_answer = Question.correct_answer;
-      if (Question.difficulty == "easy") {
-        difficulty_score = 1;
-      }
-      else if (Question.difficulty == 'medium') {
-        difficulty_score = 2;
-      }
-      else {
-        difficulty_score = 3;
-      }
+    if (Question.difficulty == "easy") {
+      difficulty_score = 1;
+    }
+    else if (Question.difficulty == 'medium') {
+      difficulty_score = 2;
+    }
+    else {
+      difficulty_score = 3;
+    }
 
-      category = Question.category;
+    category = Question.category;
+    let answers = Question.answers;
 
-      let answers = Question.incorrect_answers; // creates an array with all the anwers correct and incorrect
-      answers.push(Question.correct_answer);
-
-      answers_length = answers.length;
-
-      // sort True/False question as True, False
-      if (answers.length == 2) {
-        answers.sort();
-        answers.reverse();
-      }
-      // randomize multiple choice questions
-      else {
-      answers.sort(() => Math.random() - 0.5);
-      }
-      if (answers_length == 2) { // remove the 3rd and 4th button if True/False question
-        document.getElementById('answer3').style.display = "none";
-        document.getElementById('answer4').style.display = "none";
-      }
-      else {
-        document.getElementById('answer3').style.display = "block";
-        document.getElementById('answer4').style.display = "block";
-      }
-      // displaying question and answers
-      document.getElementById('question').innerHTML = Question.question;
-      document.getElementById('answer1').innerHTML = answers[0];
-      document.getElementById('answer2').innerHTML = answers[1];
-      document.getElementById('answer3').innerHTML = answers[2];
-      document.getElementById('answer4').innerHTML = answers[3];
+    if (Question.answers.length == 2) { // remove the 3rd and 4th button if True/False question
+      document.getElementById('answer3').style.display = "none";
+      document.getElementById('answer4').style.display = "none";
+    }
+    else {
+      document.getElementById('answer3').style.display = "block";
+      document.getElementById('answer4').style.display = "block";
+    }
+    // displaying question and answers
+    document.getElementById('question').innerHTML = Question.question;
+    document.getElementById('answer1').innerHTML = answers[0];
+    document.getElementById('answer2').innerHTML = answers[1];
+    document.getElementById('answer3').innerHTML = answers[2];
+    document.getElementById('answer4').innerHTML = answers[3];
 }
-
-
-// function fetch_question(){
-//   fetch('https://opentdb.com/api.php?amount=1&category=9') // request api
-//     .then((response) => {
-//       return response.json();
-//     })
-
-//     .then((data) => {
-//       Question = data.results[0];
-//       correct_answer = Question.correct_answer;
-//       if (Question.difficulty == "easy") {
-//         difficulty_score = 1;
-//       }
-//       else if (Question.difficulty == 'medium') {
-//         difficulty_score = 2;
-//       }
-//       else {
-//         difficulty_score = 3;
-//       }
-
-//       category = Question.category;
-
-//       let answers = Question.incorrect_answers; // creates an array with all the anwers correct and incorrect
-//       answers.push(Question.correct_answer);
-
-//       answers_length = answers.length;
-
-//       // sort True/False question as True, False
-//       if (answers.length == 2) {
-//         answers.sort();
-//         answers.reverse();
-//       }
-//       // randomize multiple choice questions
-//       else {
-//       answers.sort(() => Math.random() - 0.5);
-//       }
-//       if (answers_length == 2) { // remove the 3rd and 4th button if True/False question
-//         document.getElementById('answer3').style.display = "none";
-//         document.getElementById('answer4').style.display = "none";
-//       }
-//       else {
-//         document.getElementById('answer3').style.display = "block";
-//         document.getElementById('answer4').style.display = "block";
-//       }
-//       // displaying question and answers
-//       document.getElementById('question').innerHTML = Question.question;
-//       document.getElementById('answer1').innerHTML = answers[0];
-//       document.getElementById('answer2').innerHTML = answers[1];
-//       document.getElementById('answer3').innerHTML = answers[2];
-//       document.getElementById('answer4').innerHTML = answers[3];
-
-//     });
-
-// }
-
-
 
 </script>
 
