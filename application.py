@@ -32,7 +32,6 @@ db = SQL("sqlite:///triviasite.db")
 @app.route("/")
 def homepage():
     """Homepage"""
-    session.clear()
     # deze functie laadt alleen de homepage
     return render_template("index.html")
 
@@ -43,6 +42,7 @@ def startquiz():
     return render_template("startquiz.html")
 
 
+
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
     """Take quiz"""
@@ -51,8 +51,7 @@ def quiz():
         name = request.form.get("username")
         db.execute("UPDATE scores SET username = :name WHERE id = :id", name=name, id=session["user_id"])
         topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
-        return render_template("leaderboard.html", scores=topscores, played="Play Again!")
-
+        return render_template("leaderboard.html", scores=topscores)
     else:
         return render_template("quiz.html")
 
@@ -90,14 +89,7 @@ def leaderboard():
 
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
-    try:
-        session["user_id"]
-    except:
-        return render_template("leaderboard.html", scores=topscores, played="Play Now!")
-
-    else:
-        return render_template("leaderboard.html", scores=topscores, played="Try Again!")
-
+    return render_template("leaderboard.html", scores=topscores)
 
 @app.route("/barchart")
 def barchart():
@@ -127,10 +119,7 @@ def load_questions():
     for question in questions:
         answers = question['incorrect_answers']
         answers.append(question['correct_answer'])
-        if len(answers) > 2:
-            random.shuffle(answers)
-        else:
-            answers = ['True', 'False']
+        random.shuffle(answers)
 
         questions_js.append({
             'answers' : answers,
