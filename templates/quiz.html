@@ -164,13 +164,15 @@ function next(data) {
     Question = data[question_index];
     if (Question.difficulty == "easy") {
       difficulty_score = 1;
-      document.getElementById("difficulty").innerHTML = "<img src="static/difficulty_easy.png">";
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_easy.png'>";
     }
     else if (Question.difficulty == 'medium') {
       difficulty_score = 2;
+      document.getElementById("difficulty").innerHTML = "<img src='/static/medium.png'>";
     }
     else {
       difficulty_score = 3;
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_hard.png'>";
     }
 
     category = Question.category;
