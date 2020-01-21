@@ -32,3 +32,10 @@ button{
     overflow: scroll;
     height: 65vh;
 }
+
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
