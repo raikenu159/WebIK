@@ -120,7 +120,10 @@ def load_questions():
     for question in questions:
         answers = question['incorrect_answers']
         answers.append(question['correct_answer'])
-        random.shuffle(answers)
+        if len(answers) > 2:
+            random.shuffle(answers)
+        else:
+            answers = ['True', 'False']
 
         questions_js.append({
             'answers' : answers,
