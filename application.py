@@ -98,6 +98,16 @@ def leaderboard():
 
     return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
+@app.route("/delete_username")
+def delete_username():
+    """Delete the username of the user from the leaderboards"""
+
+    topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
+
+    db.execute("DELETE FROM scores WHERE id=:id", id=session["user_id"])
+
+    return render_template("leaderboard.html", scores=topscores, played='Try again!')
+
 @app.route("/barchart")
 def barchart():
     """Display in a barchart the score per category"""
