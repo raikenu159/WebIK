@@ -55,6 +55,24 @@ def quiz():
 
         return render_template("leaderboard.html", scores=topscores, played='Try again!')
     else:
+        row = db.execute('INSERT INTO scores (score) VALUES (0)')
+        session["user_id"] = row
+        session["category_scores"] = {
+        'General Knowledge' : 0,
+        'Computer Science' : 0,
+        'Geography' : 0,
+        'History' : 0,
+        'Animals' : 0
+        }
+        session["difficulty_scores"] = {
+        'easy' : 0,
+        'medium' : 0,
+        'hard' : 0
+        }
+        session["type_scores"] = {
+        'boolean' : 0,
+        'multiple' : 0
+        }
         return render_template("quiz.html")
 
 
@@ -65,8 +83,7 @@ def check():
     # we returnen dan True/False naar de quiz.html, deze zal de gebruiker om een naam vragen als hij
     # in de top 10 zit zodat we die kunnen laten zien op de leaderboard en anders een pop up geven dat de quiz voorbij is
     userScore = int(request.args.get("score"))
-    row = db.execute('INSERT INTO scores (score) VALUES (:score)', score=userScore)
-    session["user_id"] = row
+    db.execute('UPDATE scores SET score = :score WHERE id = :id', score=userScore, id=session["user_id"])
 
     leaderboard= db.execute('SELECT score FROM scores')
 
@@ -98,10 +115,24 @@ def leaderboard():
 
     return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
+@app.route("/delete_username")
+def delete_username():
+    """Delete the username of the user from the leaderboards"""
+
+    topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
+
+    db.execute("DELETE FROM scores WHERE id=:id", id=session["user_id"])
+
+    return render_template("leaderboard.html", scores=topscores, played='Try again!')
+
 @app.route("/barchart")
 def barchart():
     """Display in a barchart the score per category"""
-
+    values = []
+    print(session['category_scores'])
+    for score in session['category_scores'].values():
+        values.append(score)
+    session['chart_data'] = values
     return render_template("barchart.html")
 
 @app.route("/load_questions", methods=["GET"])
@@ -162,9 +193,15 @@ def check_answer():
     answer = request.args.get('answer');
     correct_answer = session['correct_answers'][0]
     session['correct_answers'].remove(session['correct_answers'][0])
-
+    print(session["category_scores"], session["difficulty_scores"], session["type_scores"])
     if answer == correct_answer:
+        session["category_scores"][request.args.get('category')]+= 1
+        session["difficulty_scores"][request.args.get('difficulty')]+= 1
+        session["type_scores"][request.args.get('type')]+= 1
         return jsonify(True)
     else:
         return jsonify(False)
 
+@app.route("/chart_values")
+def chart_values():
+    return jsonify(session['chart_data'])

@@ -4,6 +4,7 @@
 {% block main %}
 
 <html lang="en">
+<div id="quizScreen">
     <h1>Kwik Kwiz</h1>
 
     <h5>Question difficulty:</h5>
@@ -16,7 +17,6 @@
         <div class="col-sm-5"></div>
           <div class="col-sm-2">
             <span><h3 id='time'></h3>
-
           </div>
           <div class="col-sm-0">
             <h3 id='timer_change'></h3>
@@ -63,6 +63,7 @@
         <hr>
       </form>
     </div>
+</div>
 </html>
 
 <script>
@@ -72,18 +73,15 @@ var score = 0;
 var timer = 60;
 var question_index = 0;
 var questions;
+
 // var correct_answer;
 // var answers_length;
 var difficulty_score;
+
+var difficulty;
+var type;
+
 var category;
-var category_scores ={
-  'Computer Science' : 0,
-  'Geography' : 0,
-  'History' : 0,
-  'Animals' : 0,
-  'General Knowledge' : 0
-};
-console.log(category);
 var checked = false;
 document.getElementById("top10form").style.display = "none";
 // open popup if in top10
@@ -109,21 +107,23 @@ setInterval(countdown, 1000);
 
 // check the answer
 function check(input) {
-  fetch('/check_answer?answer='+input)
+  console.log(difficulty);
+  console.log(type);
+  fetch('/check_answer?answer='+input+'&category='+category+'&difficulty='+difficulty+'&type='+type)
   .then((response) => {
       return response.json();
   })
 
   .then((data) => {
   if (data == true) {
-    category_scores[category]++;
-    console.log(category_scores);
     // if correct increment score
     score++;
     // add the amount of time appropriate for the difficulty of the question
+
     timer = timer + difficulty_score;
     // display time added to timer
     document.getElementById('timer_change').innerHTML = "+" + difficulty_score;
+
     // turn the background of the time green to make the time increment visible
     document.getElementById("timer_color").style.backgroundColor = "LawnGreen";
     // display the incremented score
@@ -203,6 +203,9 @@ function load_questions() {
 function next(data) {
     Question = data[question_index];
 
+    category = Question.category;
+    difficulty = Question.difficulty;
+    type = Question.type;
     if (Question.difficulty == "easy") {
       difficulty_score = 1;
       document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_easy.png' alt='difficulty_easy icon' style='width: 150px; height:100px;'>";
@@ -216,7 +219,6 @@ function next(data) {
       document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_hard.png' alt='difficulty_hard icon' style='width: 150px; height:100px;'>";
     }
 
-    category = Question.category;
     let answers = Question.answers;
 
     // remove the 3rd and 4th button if True/False question
