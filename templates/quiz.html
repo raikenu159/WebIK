@@ -74,7 +74,7 @@ var question_index = 0;
 var questions;
 // var correct_answer;
 // var answers_length;
-// var difficulty_score;
+var difficulty_score;
 var category;
 var category_scores ={
   'Computer Science' : 0,
@@ -122,8 +122,8 @@ function check(input) {
     score++;
     // add the amount of time appropriate for the difficulty of the question
     timer = timer + difficulty_score;
-    // display time is added to timer
-    document.getElementById('timer_change').innerHTML = "+";
+    // display time added to timer
+    document.getElementById('timer_change').innerHTML = "+" + difficulty_score;
     // turn the background of the time green to make the time increment visible
     document.getElementById("timer_color").style.backgroundColor = "LawnGreen";
     // display the incremented score
@@ -132,8 +132,8 @@ function check(input) {
   else {
     // subract the amount of time
     timer = timer + (difficulty_score - 4);
-    //display time is subtracted from timer
-    document.getElementById('timer_change').innerHTML = "-";
+    //display time subtracted from timer
+    document.getElementById('timer_change').innerHTML = (difficulty_score - 4);
     // make visible subraction to time
     document.getElementById("timer_color").style.backgroundColor = "red";
   }
