@@ -32,10 +32,8 @@ db = SQL("sqlite:///triviasite.db")
 @app.route("/")
 def homepage():
     """Homepage"""
-    session.clear()
     # deze functie laadt alleen de homepage
     return render_template("index.html")
-
 
 
 @app.route("/startquiz", methods=["GET","POST"])
@@ -44,16 +42,18 @@ def startquiz():
     return render_template("startquiz.html")
 
 
+
 @app.route("/quiz", methods=["GET", "POST"])
 def quiz():
     """Take quiz"""
 
     if request.method == "POST":
         name = request.form.get("username")
+
         db.execute("UPDATE scores SET username = :name WHERE id = :id", name=name, id=session["user_id"])
         topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
-        return render_template("leaderboard.html", scores=topscores, played="Play Again!")
 
+        return render_template("leaderboard.html", scores=topscores, played='Try again!')
     else:
         return render_template("quiz.html")
 
@@ -92,13 +92,11 @@ def leaderboard():
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
     try:
-        session["user_id"]
+        session['user_id']
     except:
-        return render_template("leaderboard.html", scores=topscores, played="Play Now!")
+        return render_template("leaderboard.html", scores=topscores, played='Play now!')
 
-    else:
-        return render_template("leaderboard.html", scores=topscores, played="Try Again!")
-
+    return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
 @app.route("/barchart")
 def barchart():
@@ -109,40 +107,51 @@ def barchart():
 @app.route("/load_questions", methods=["GET"])
 def load_questions():
     """fetches questions"""
+    # request questions
     a = requests.get("https://opentdb.com/api.php?amount=50&category=9").json()['results'] # general knowledge
     b = requests.get("https://opentdb.com/api.php?amount=50&category=18").json()['results'] # computer science
     c = requests.get("https://opentdb.com/api.php?amount=50&category=22").json()['results'] # geopraphy
     d = requests.get("https://opentdb.com/api.php?amount=50&category=23").json()['results'] # history
     e = requests.get("https://opentdb.com/api.php?amount=50&category=27").json()['results'] # animals
 
+    # creating pseudo-random question order
     questions = []
     for i in range(50):
-        questions.append(a[i])
-        questions.append(b[i])
-        questions.append(c[i])
-        questions.append(d[i])
-        questions.append(e[i])
+        b[i]['category'] = 'Computer Science'
+        temp = []
+        temp.append(a[i])
+        temp.append(b[i])
+        temp.append(c[i])
+        temp.append(d[i])
+        temp.append(e[i])
+        random.shuffle(temp)
+        for q in temp:
+            questions.append(q)
 
     questions_js = []
     correct_answers = []
     for question in questions:
-        answers = question['incorrect_answers']
-        answers.append(question['correct_answer'])
-        if len(answers) > 2:
+
+        # combine correct and incorrect answers
+        if len(question['incorrect_answers']) == 3:
+            answers = question['incorrect_answers']
+            answers.append(question['correct_answer'])
             random.shuffle(answers)
         else:
             answers = ['True', 'False']
 
+        # prepare array to send to javascript
         questions_js.append({
             'answers' : answers,
             'question' : question['question'],
             'difficulty' : question['difficulty'],
             'category' : question['category'],
-            'type' : question['type'],
+            'type' : question['type']
         })
 
         correct_answers.append(question['correct_answer'])
 
+    # save correct answers to session
     session['correct_answers'] = correct_answers
 
     return jsonify(questions_js)
@@ -153,10 +162,9 @@ def check_answer():
     answer = request.args.get('answer');
     correct_answer = session['correct_answers'][0]
     session['correct_answers'].remove(session['correct_answers'][0])
-    if answer == correct_answer:
 
+    if answer == correct_answer:
         return jsonify(True)
     else:
-
         return jsonify(False)
 

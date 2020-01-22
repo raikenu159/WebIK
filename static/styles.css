@@ -25,5 +25,18 @@ main img{
 }
 
 button{
-    margin:20px;
+    margin: 5px;
+}
+
+#leaderboard{
+    overflow-y: auto;
+    overflow-x: auto;
+    height: 65vh;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }

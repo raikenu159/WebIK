@@ -4,30 +4,35 @@
 {% block main %}
 
 <h1>Leaderboards</h1>
+<div id="leaderboard">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Username</th>
+        <th scope="col">Score</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
 
-<table class="table table-striped">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Username</th>
-      <th scope="col">Score</th>
-      <th scope="col">Date</th>
-    </tr>
-  </thead>
-  <tbody>
+      {% for score in scores %}
+      <tr>
+        <td> {{score.username}} </td>
+        <td> {{score.score}}</td></td>
+        <td> {{score.date}}</td>
+      </tr>
+      {% endfor %}
 
-    {% for score in scores %}
-    <tr>
-      <td> {{score.username}} </td>
-      <td> {{score.score}}</td></td>
-      <td> {{score.date}}</td>
-    </tr>
-    {% endfor %}
-
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
 
 <form action="/quiz" method="get">
     <p><button type="submit" class="btn btn-primary"> {{played}} </button></p>
+</form>
+
+<form action="/barchart" method="get">
+    <button type="submit" class="btn btn-danger" margin="20px">See how you scored per category!</button>
 </form>
 
 <form action="/" method="get">
