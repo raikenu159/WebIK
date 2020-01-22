@@ -41,3 +41,9 @@ footer{
     left: 0;
     z-index: -1;
 }
+
+#barChart{
+    margin: auto;
+    max-width: 80%;
+}
+
