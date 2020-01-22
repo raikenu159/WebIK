@@ -33,6 +33,7 @@ db = SQL("sqlite:///triviasite.db")
 def homepage():
     """Homepage"""
     # deze functie laadt alleen de homepage
+    session.clear()
     return render_template("index.html")
 
 
