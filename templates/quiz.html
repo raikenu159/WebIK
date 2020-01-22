@@ -62,7 +62,15 @@ var questions;
 // var correct_answer;
 // var answers_length;
 // var difficulty_score;
-// var category;
+var category;
+var category_scores ={
+  'Computer Science' : 0,
+  'Geography' : 0,
+  'History' : 0,
+  'Animals' : 0,
+  'General Knowledge' : 0
+};
+console.log(category);
 var checked = false;
 document.getElementById("top10form").style.display = "none";
 // open popup if in top10
@@ -95,6 +103,8 @@ function check(input) {
 
   .then((data) => {
   if (data == true) {
+    category_scores[category]++;
+    console.log(category_scores);
     // if correct increment score
     score++;
     // add the amount of time appropriate for the difficulty of the question
