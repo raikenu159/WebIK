@@ -2,10 +2,8 @@
 
 
 {% block main %}
-
-<canvas id="myChart" width="400" height="400"></canvas>
-
-
+<div id = "barChart">
+    <canvas id="myChart"></canvas>
     <form action="/quiz" method="get">
         <button type="submit" class="btn btn-info">Play again!</button>
     </form>
@@ -13,6 +11,7 @@
     <form action="/" method="get">
         <button type="submit" class="btn btn-primary">Home</button>
     </form>
+</div>
 
 
 
