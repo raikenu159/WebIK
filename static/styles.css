@@ -11,6 +11,9 @@ main img{
     max-width: 100%;
 }
 
+#quizScreen{
+    max-height: 100vh;
+}
 
 .top10form {
     display: none;
@@ -31,14 +34,15 @@ button{
 #leaderboard{
     overflow-y: auto;
     overflow-x: auto;
-    height: 65vh;
+    margin: auto;
+    max-width: 80%;
+    max-height: 60%;
 }
 
 footer{
     position: fixed;
-    width: 100%;
     bottom: 0;
-    left: 0;
+    right: 0;
     z-index: -1;
 }
 
@@ -46,4 +50,5 @@ footer{
     margin: auto;
     max-width: 80%;
 }
+
 
