@@ -25,22 +25,27 @@
 
     </tbody>
   </table>
+
 </div>
 
-<form action="/quiz" method="get">
-    <button type="submit" class="btn btn-primary"> {{played}} </button>
-</form>
+<div class = "btn-group">
+  <form action="/" method="get">
+      <button type="submit" class="btn btn-info">Home</button>
+  </form>
 
-<form action="/barchart" method="get">
-    <button type="submit" class="btn btn-danger">See how you scored per category!</button>
-</form>
+  <form action="/quiz" method="get">
+      <button type="submit" class="btn btn-primary"> {{played}} </button>
+  </form>
 
-<form action="/" method="get">
-    <p><button type="submit" class="btn btn-danger">Home</button></p>
-</form>
+  <form action="/barchart" method="get">
+      <button type="submit" class="btn btn-primary">Detailed results</button>
+  </form>
 
-<form action="/delete_username" method="get">
-    <button type="submit" class="btn btn-danger">Delete yourself from the leaderboard!</button>
-</form>
+
+
+  <form action="/delete_username" method="get">
+      <button type="submit" class="btn btn-danger">Delete your score</button>
+  </form>
+</div>
 
 {% endblock %}
