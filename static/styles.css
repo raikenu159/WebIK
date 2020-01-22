@@ -11,9 +11,9 @@ main img{
     max-width: 100%;
 }
 
-#quizScreen{
-    max-height: 100vh;
-}
+/*#quizScreen{*/
+/*    max-height: 100vh;*/
+/*}*/
 
 .top10form {
     display: none;
