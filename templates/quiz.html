@@ -6,14 +6,18 @@
 <html lang="en">
     <h1>Kwik Kwiz</h1>
 
-    <p id="question"></p>
-    <p id='time'></p>
-    <div>Question difficulty:</div>
-    <h4>Question difficulty:</h4>
+    <h5>Question difficulty:</h5>
     <div id="difficulty"></div>
+
+    <p id="question" style="font-size: 200%;"></p>
+    <p id='time'></p>
+
+    <h5 id='category'></h5>
+    <hr width="30%" style="color: grey;">
+    <h5>Score:</h5>
     <h4 id='score'></h4>
+
     <h3 id='time'></h3>
-    <h5 id='category'></h235>
     <h2 id="question"></h2>
 
 
@@ -27,7 +31,7 @@
     <hr style="width: 30%;">
 
     <div>
-        <button id="skip_question" type="submit" class="btn btn-danger btn-block" onclick="skip_question()">Skip Question</button>
+        <button id="skip_question" type="submit" class="btn btn-danger" onclick="skip_question()">Skip Question</button>
       <form action="/" method="get">
         <button id="stop" type="submit" class="btn btn-danger">Stop Quiz</button>
       </form>
