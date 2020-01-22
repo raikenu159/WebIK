@@ -10,7 +10,19 @@
     <div id="difficulty"></div>
 
     <p id="question" style="font-size: 200%;"></p>
-    <p id='time'></p>
+
+    <div class="container" id='timer_color'>
+      <div class="row">
+        <div class="col-sm-5"></div>
+          <div class="col-sm-2">
+            <span><h3 id='time'></h3>
+
+          </div>
+          <div class="col-sm-0">
+            <h3 id='timer_change'></h3>
+          </div>
+      </div>
+    </div>
 
     <h5 id='category'></h5>
     <hr width="30%" style="color: grey;">
@@ -18,6 +30,8 @@
     <h4 id='score'></h4>
 
     <h3 id='time'></h3>
+
+
     <h2 id="question"></h2>
 
 
@@ -31,7 +45,7 @@
     <hr style="width: 30%;">
 
     <div>
-        <button id="skip_question" type="submit" class="btn btn-danger btn-block" onclick="skip_question()">Skip Question</button>
+        <button id="skip_question" type="submit" class="btn btn-danger" onclick="skip_question()">Skip Question</button>
       <form action="/" method="get">
         <button id="stop" type="submit" class="btn btn-danger">Stop Quiz</button>
       </form>
@@ -108,16 +122,20 @@ function check(input) {
     score++;
     // add the amount of time appropriate for the difficulty of the question
     timer = timer + difficulty_score;
+    // display time is added to timer
+    document.getElementById('timer_change').innerHTML = "+";
     // turn the background of the time green to make the time increment visible
-    document.getElementById("time").style.backgroundColor = "LawnGreen";
+    document.getElementById("timer_color").style.backgroundColor = "LawnGreen";
     // display the incremented score
     document.getElementById('score').innerHTML = score;
   }
   else {
     // subract the amount of time
     timer = timer + (difficulty_score - 4);
+    //display time is subtracted from timer
+    document.getElementById('timer_change').innerHTML = "-";
     // make visible subraction to time
-    document.getElementById("time").style.backgroundColor = "red";
+    document.getElementById("timer_color").style.backgroundColor = "red";
   }
   question_index++;
 
@@ -129,7 +147,8 @@ function check(input) {
 }
 
 function reset_color() {
-  document.getElementById("time").style.backgroundColor = "white";
+  document.getElementById("timer_color").style.backgroundColor = "white";
+  document.getElementById("timer_change").innerHTML = " ";
 }
 // decrement timer if page loaded or end quiz if time is up
 function countdown() {
