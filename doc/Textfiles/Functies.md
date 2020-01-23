@@ -29,9 +29,18 @@ Deze functie haalt de top 10 op plus de specifieke scores per categorie van de h
 >@app.route("/delete_username")
 def delete_username(): 
 
-Deze functie verwijderd de user zijn positie in de leaderboard, mocht de
+Deze functie verwijderd de user zijn/haar positie in de leaderboard, mocht hij/zij het nog een keer willen proberen onder dezelfde username.
+
+>@app.route("/barchart")
+def barchart():
+
+Deze functie rendert de html pagina 'barchart' waarin specifieke data staat van de zojuits gemaakte quiz. Denk hierbij aan score per category en per moeilijkheidsgraad.
+
+>@app.route("/load_questions", methods=["GET"])
+def load_questions():
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjY1OTg0MzUsMTA2MTg0ODM4MiwtMT
-c0NjkwNzY2OCwtMTg3NzQ5NzA1MSw4NzgzMTc4ODEsLTE0NzI4
-MzM3OTcsLTE1MzI0MjAwNjksLTE5NTUzMTA1MTVdfQ==
+eyJoaXN0b3J5IjpbMTM2ODMyNzM5NCwxMDYxODQ4MzgyLC0xNz
+Q2OTA3NjY4LC0xODc3NDk3MDUxLDg3ODMxNzg4MSwtMTQ3Mjgz
+Mzc5NywtMTUzMjQyMDA2OSwtMTk1NTMxMDUxNV19
 -->
