@@ -19,14 +19,14 @@ Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitg
 Check()
 
 Deze functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
-Anders wordt er alleen aangegeven in welke qua
+Anders wordt er alleen aangegeven in welk kwartier de score van de user valt. 
 
 >@app.route("/leaderboard")
 Leaderboard():
 
 Deze functie haalt de top 10 op plus de gegevens van de gebruiker en, rendert de leaderboard.html met deze gegevens.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MDY0NTk1MCwxMDYxODQ4MzgyLC0xNz
-Q2OTA3NjY4LC0xODc3NDk3MDUxLDg3ODMxNzg4MSwtMTQ3Mjgz
-Mzc5NywtMTUzMjQyMDA2OSwtMTk1NTMxMDUxNV19
+eyJoaXN0b3J5IjpbMTIwODkwNTMyLDEwNjE4NDgzODIsLTE3ND
+Y5MDc2NjgsLTE4Nzc0OTcwNTEsODc4MzE3ODgxLC0xNDcyODMz
+Nzk3LC0xNTMyNDIwMDY5LC0xOTU1MzEwNTE1XX0=
 -->
