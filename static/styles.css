@@ -69,6 +69,16 @@ hr{
 }
 
 
+.header {
+    width: 100%;
+    margin-top:0px;
+    padding: 60px;
+    background: #7332ed;
+    color: white;
+    text-align: center;
+    font-size: 23px;
+}
+
 .top10form {
     display: none;
     position: absolute;

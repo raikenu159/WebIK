@@ -1,27 +1,57 @@
 # Functies:
 
 > @app.route("/")
-Homepage():
+def homepage():
 
-Deze functie rendert de homepage
+Deze functie rendert de homepage.
+
+>@app.route("/startquiz", methods=["GET","POST"])
+def startquiz():
+
+Deze functie rendert de uitleg pagina van de quiz
 
 >@app.route("/quiz", methods=["GET", "POST"])
-Quiz
+def quiz()
+
 Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitgevoerd worden. Nadat de quiz af is zal deze functie de database updaten met de behaalde score (totaal en per categorie), en mits de gebruiker in de top 10 beland ook met een username. Als laatste roept dit de leaderboard()functie op.
 
 >@app.route("/check", methods=["GET"])
-Check()
+def check()
 
-Deze 
-
-functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
+Deze functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
+Anders wordt er alleen aangegeven in welk kwartier de score van de user valt en wordt een jsonified False gereturnd.
 
 >@app.route("/leaderboard")
-Leaderboard():
+def leaderboard():
 
-Deze functie haalt de top 10 op plus de gegevens van de gebruiker en, rendert de leaderboard.html met deze gegevens.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDY5MDc2NjgsLTE4Nzc0OTcwNTEsOD
-c4MzE3ODgxLC0xNDcyODMzNzk3LC0xNTMyNDIwMDY5LC0xOTU1
-MzEwNTE1XX0=
--->
+Deze functie haalt de top 10 op plus de specifieke scores per categorie van de huidige user. Vervolgens wordt de leaderboard.html pagina gerendert  met deze gegevens.
+
+>@app.route("/delete_username")
+def delete_username():
+
+Deze functie verwijderd de user zijn/haar positie in de leaderboard, mocht hij/zij het nog een keer willen proberen onder dezelfde username.
+
+>@app.route("/barchart")
+def barchart():
+
+Deze functie rendert de html pagina 'barchart' waarin specifieke data staat van de zojuits gemaakte quiz. Denk hierbij aan score per category en per moeilijkheidsgraad.
+
+>@app.route("/load_questions", methods=["GET"])
+def load_questions():
+
+Deze functie vraagt vanuit de API een array van vragen aan per categorie, en zet deze vragen in gerandomiseerde volgordes in de 'questions' lijst. vervolgens worden de juiste en onjuiste antwoorden uit elkaar gehouden, en worden alle vragen met antwoorden in de sessie meegegeven naar de frontend d.m.v. jsonify.
+
+>@app.route("/check_answer")
+def check_answer():
+
+Deze functie checkt pér antwoord die tijdens de quiz gegeven wordt of deze juist of onjuist is. Bij een juist antwoord wordt de score per categorie, moeilijkheidsgraad en type vraag (meerkeuze/true&false) geupdate en wordt jsonified True gereturnt. Bij een fout antwoord wordt jsonified False gereturnt.
+
+>@app.route("/chart_values")
+def chart_values():
+
+Deze functie returnt de bijgehouden quiz data (een juist antwoord per categorie, moeilijkheidsgraad en type vraag (meerkeuze/true&false)) jsonified.
+
+>@app.route("/deletebutton_display")
+def deletebutton_display():
+
+Deze functie controleert en bepaalt of de 'delete username' knop beschikbaar(zichtbaar) is of niet. Dit gebeurd door te controleren of er een sessie met user_id bestaat. Een sessie geeft namelijk aan dat de huidige user de quiz gemaakt heeft en dus in de leaderboard staat.

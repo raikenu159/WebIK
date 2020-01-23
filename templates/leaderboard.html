@@ -8,6 +8,7 @@
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
+        <th scope="col">Rank</th>
         <th scope="col">Username</th>
         <th scope="col">Score</th>
         <th scope="col">Date</th>
@@ -17,9 +18,10 @@
 
       {% for score in scores %}
       <tr>
+        <td> {{score.position}} </td>
         <td> {{score.username}} </td>
-        <td> {{score.score}}</td></td>
-        <td> {{score.date}}</td>
+        <td> {{score.score}} </td></td>
+        <td> {{score.date}} </td>
       </tr>
       {% endfor %}
 
@@ -38,11 +40,11 @@
   </form>
 
   <form action="/barchart" method="get">
-      <button type="submit" class="btn btn-primary">Detailed results</button>
+      <button id="results" type="submit" class="btn btn-primary">Detailed results</button>
   </form>
 
   <form action="/delete_username" method="get">
-      <button id=delete-score type="submit" class="btn btn-danger">Delete your score</button>
+      <button id="delete-score" type="submit" class="btn btn-danger">Delete your score</button>
   </form>
 </div>
 
@@ -50,6 +52,7 @@
 <script>
   // hide 'delete username' button when loading page
   document.getElementById('delete-score').style.display = "none";
+  document.getElementById('results').style.display = "none";
 
   // Fetch outcome of backend check for session
   fetch('/deletebutton_display')
@@ -62,6 +65,7 @@
     console.log(truefalse)
     if (truefalse == true){
       document.getElementById('delete-score').style.display = "block";
+      document.getElementById('results').style.display = "block";
     }
     })
 
