@@ -67,8 +67,8 @@
 </html>
 
 <script>
-// initiate global variables
 
+// initiate global variables
 var score = 0;
 var timer = 60;
 var question_index = 0;
@@ -77,10 +77,8 @@ var questions;
 // var correct_answer;
 // var answers_length;
 var difficulty_score;
-
 var difficulty;
 var type;
-
 var category;
 var checked = false;
 
@@ -155,11 +153,16 @@ function check(input) {
   });
 }
 
+
+
 // reset timer backgroundcolor and remove displayed incremented/subtracted time
 function reset_color() {
   document.getElementById("timer_color").style.backgroundColor = "white";
   document.getElementById("timer_change").innerHTML = " ";
 }
+
+
+
 // decrement timer if page loaded or end quiz if time is up
 function countdown() {
   if (!document.getElementById('answer4').innerHTML) {
@@ -175,6 +178,7 @@ function countdown() {
     }
   }
 }
+
 
 
 function check_score() {
@@ -203,6 +207,8 @@ function check_score() {
   }
 }
 
+
+
 // fetch questions from backend
 function load_questions() {
   fetch('/load_questions')
@@ -214,6 +220,8 @@ function load_questions() {
     next(questions);
   });
 }
+
+
 
 function next(data) {
     // define question variables
@@ -258,6 +266,8 @@ function next(data) {
     document.getElementById('category').innerHTML = 'Category: ' + Question.category;
 }
 
+
+
 // skip to next question
 function skip_question() {
   question_index++;
@@ -265,5 +275,4 @@ function skip_question() {
 }
 
 </script>
-
 {% endblock %}
