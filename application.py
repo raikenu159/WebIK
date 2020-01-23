@@ -107,24 +107,29 @@ def check():
 def leaderboard():
     """Display the current leaderboard and some statistics about the users performance"""
 
+    # select the top 10 scores from the scores database
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
+    # check if the user has already played the quiz: if not display button 'play now'
     try:
         session['user_id']
     except:
         return render_template("leaderboard.html", scores=topscores, played='Play now!')
 
+    # if the user has played the quiz but did not make the topscores display 'try again'
     return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
 @app.route("/delete_username")
 def delete_username():
     """Delete the username of the user from the leaderboards"""
 
+    # select the top 10 scores from the scores database
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
+    # delete the score from the database
     db.execute("DELETE FROM scores WHERE id=:id", id=session["user_id"])
 
-    return render_template("leaderboard.html", scores=topscores, played='Try again!')
+    return render_template("leaderboard.html", scores=topscores, played='Play again!')
 
 @app.route("/barchart")
 def barchart():
