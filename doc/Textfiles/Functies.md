@@ -39,9 +39,14 @@ Deze functie rendert de html pagina 'barchart' waarin specifieke data staat van 
 >@app.route("/load_questions", methods=["GET"])
 def load_questions():
 
-Deze functie vraagt vanuit de API een array van vragen aan per categorie, en zet deze vragen in gerandomiseerde volgordes in de 'questions' lijst.
+Deze functie vraagt vanuit de API een array van vragen aan per categorie, en zet deze vragen in gerandomiseerde volgordes in de 'questions' lijst. vervolgens worden de juiste en onjuiste antwoorden uit elkaar gehouden, en worden alle vragen met antwoorden in de sessie meegegeven naar de frontend d.m.v. jsonify.
+
+>@app.route("/check_answer")
+def check_answer():
+
+Deze functie 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4OTQ0Mzk2NCwxMDYxODQ4MzgyLC0xNz
+eyJoaXN0b3J5IjpbMTU1MDcyOTE3OSwxMDYxODQ4MzgyLC0xNz
 Q2OTA3NjY4LC0xODc3NDk3MDUxLDg3ODMxNzg4MSwtMTQ3Mjgz
 Mzc5NywtMTUzMjQyMDA2OSwtMTk1NTMxMDUxNV19
 -->
