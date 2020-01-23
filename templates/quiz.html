@@ -4,9 +4,13 @@
 {% block main %}
 
 <html lang="en">
-<div id="quizScreen">
-    <h1>Kwik Kwiz</h1>
+  <header>
+      <h1>Kwik Kwiz</h1>
+  </header>
 
+<div id="loader"></div>
+
+<div id="quizScreen">
     <h5>Question difficulty:</h5>
     <div id="difficulty"></div>
 
@@ -84,6 +88,8 @@ var checked = false;
 
 // hide top10 popup when starting quiz
 document.getElementById("top10form").style.display = "none";
+document.getElementById("quizScreen").style.display = "none";
+
 
 // open popup if in top10
 function openPopup() {
@@ -162,12 +168,13 @@ function reset_color() {
 }
 
 
-
 // decrement timer if page loaded or end quiz if time is up
 function countdown() {
   if (!document.getElementById('answer4').innerHTML) {
+
     return;
   }
+
   else if (timer >= 0) {
     document.getElementById('time').innerHTML = timer;
     timer--;
@@ -177,6 +184,8 @@ function countdown() {
       check_score();
     }
   }
+  document.getElementById("loader").style.display = "none"
+  document.getElementById("quizScreen").style.display = "block";
 }
 
 
