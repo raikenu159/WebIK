@@ -5,7 +5,7 @@ def homepage():
 
 Deze functie rendert de homepage.
 
-@app.route("/startquiz", methods=["GET","POST"])
+>@app.route("/startquiz", methods=["GET","POST"])
 def startquiz():
 
 Deze functie rendert de uitleg pagina van de quiz
@@ -24,9 +24,14 @@ Anders wordt er alleen aangegeven in welk kwartier de score van de user valt en 
 >@app.route("/leaderboard")
 def leaderboard():
 
-Deze functie haalt de top 10 op plus de specifieke scores per categorie van de huidige user. Vervolgens renderd de leaderboard.html met deze gegevens.
+Deze functie haalt de top 10 op plus de specifieke scores per categorie van de huidige user. Vervolgens wordt de leaderboard.html pagina gerendert  met deze gegevens.
+
+>@app.route("/delete_username")
+def delete_username(): 
+
+Deze 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTAxNzEyNjAsMTA2MTg0ODM4MiwtMT
+eyJoaXN0b3J5IjpbLTIwMjA0Mjc3OTAsMTA2MTg0ODM4MiwtMT
 c0NjkwNzY2OCwtMTg3NzQ5NzA1MSw4NzgzMTc4ODEsLTE0NzI4
 MzM3OTcsLTE1MzI0MjAwNjksLTE5NTUzMTA1MTVdfQ==
 -->
