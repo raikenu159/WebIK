@@ -38,8 +38,10 @@ def homepage():
     # deze functie laadt alleen de homepage
     session.clear()
 
+    # create table scores in database
     db.execute("CREATE TABLE if not exists 'scores' ('position' integer, 'id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
 
+    # return de index.html template
     return render_template("index.html")
 
 
@@ -47,6 +49,8 @@ def homepage():
 @app.route("/startquiz", methods=["GET","POST"])
 def startquiz():
     """Explain quiz and start"""
+
+    # return de startquiz template
     return render_template("startquiz.html")
 
 
@@ -55,6 +59,7 @@ def startquiz():
 def quiz():
     """Take quiz"""
 
+    # user reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
         # get username from html form
@@ -72,6 +77,7 @@ def quiz():
 
     else:
 
+        # if no username given as input score equals 0
         row = db.execute('INSERT INTO scores (score) VALUES (0)')
         session["user_id"] = row
         session["category_scores"] = {
@@ -90,6 +96,8 @@ def quiz():
         'boolean' : 0,
         'multiple' : 0
         }
+
+        # return de quiz.html template
         return render_template("quiz.html")
 
 
