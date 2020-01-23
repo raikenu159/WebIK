@@ -49,9 +49,14 @@ Deze functie checkt pér antwoord die tijdens de quiz gegeven wordt of deze juis
 >@app.route("/chart_values")
 def chart_values():
 
-Deze functie return de bijgehouden chart data
+Deze functie returnt de bijgehouden quiz data (een juist antwoord per categorie, moeilijkheidsgraad en type vraag (meerkeuze/true&false)) jsonified.
+
+>@app.route("/deletebutton_display")
+def deletebutton_display():
+
+Deze functie controleert en bepaalt of de 'delete username' kn
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2Mzc2MjIwOSwxMDYxODQ4MzgyLC0xNz
-Q2OTA3NjY4LC0xODc3NDk3MDUxLDg3ODMxNzg4MSwtMTQ3Mjgz
-Mzc5NywtMTUzMjQyMDA2OSwtMTk1NTMxMDUxNV19
+eyJoaXN0b3J5IjpbLTE0NjAyODcxMDYsMTA2MTg0ODM4MiwtMT
+c0NjkwNzY2OCwtMTg3NzQ5NzA1MSw4NzgzMTc4ODEsLTE0NzI4
+MzM3OTcsLTE1MzI0MjAwNjksLTE5NTUzMTA1MTVdfQ==
 -->
