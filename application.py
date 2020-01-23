@@ -160,13 +160,24 @@ def delete_username():
 def barchart():
     """Display in a barchart the score per category"""
 
-    # create empty values list
-    values = []
-
     # add all scores per categroy from current user's session
-    for score in session['category_scores'].values():
-        values.append(score)
+    category = []
+    category.append([score for score in session['category_scores'].values()])
+    category.append([name for name in session['category_scores'].keys()])
+    category.append('Category scores')
 
+    difficulty = []
+    difficulty.append([score for score in session['difficulty_scores'].values()])
+    difficulty.append([name for name in session['difficulty_scores'].keys()])
+    difficulty.append('Difficulty scores')
+
+    types = []
+    types.append([score for score in session['type_scores'].values()])
+    types.append([name for name in session['type_scores'].keys()])
+    types.append('Type scores')
+
+
+    values = [category, difficulty, types]
     # render barchart html page with values
     session['chart_data'] = values
     return render_template("barchart.html")
