@@ -19,7 +19,7 @@ Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitg
 def check()
 
 Deze functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
-Anders wordt er alleen aangegeven in welk kwartier de score van de user valt en wordt een jsonified False gereturnd. 
+Anders wordt er alleen aangegeven in welk kwartier de score van de user valt en wordt een jsonified False gereturnd.
 
 >@app.route("/leaderboard")
 def leaderboard():
@@ -27,7 +27,7 @@ def leaderboard():
 Deze functie haalt de top 10 op plus de specifieke scores per categorie van de huidige user. Vervolgens wordt de leaderboard.html pagina gerendert  met deze gegevens.
 
 >@app.route("/delete_username")
-def delete_username(): 
+def delete_username():
 
 Deze functie verwijderd de user zijn/haar positie in de leaderboard, mocht hij/zij het nog een keer willen proberen onder dezelfde username.
 
@@ -44,7 +44,7 @@ Deze functie vraagt vanuit de API een array van vragen aan per categorie, en zet
 >@app.route("/check_answer")
 def check_answer():
 
-Deze functie checkt pér antwoord die tijdens de quiz gegeven wordt of deze juist of onjuist is. Bij een juist antwoord wordt de score per categorie, moeilijkheidsgraad en type vraag (meerkeuze/true&false) geupdate en wordt jsonified True gereturnt. Bij een fout antwoord wordt jsonified False gereturnt. 
+Deze functie checkt pér antwoord die tijdens de quiz gegeven wordt of deze juist of onjuist is. Bij een juist antwoord wordt de score per categorie, moeilijkheidsgraad en type vraag (meerkeuze/true&false) geupdate en wordt jsonified True gereturnt. Bij een fout antwoord wordt jsonified False gereturnt.
 
 >@app.route("/chart_values")
 def chart_values():
@@ -54,9 +54,4 @@ Deze functie returnt de bijgehouden quiz data (een juist antwoord per categorie,
 >@app.route("/deletebutton_display")
 def deletebutton_display():
 
-Deze functie controleert en bepaalt of de 'delete username' knop beschikbaar(zichtbaar) is of niet. Dit gebeurd door te controleren of er een sessie met user_id bestaat. Een sessie geeft namelijk aan dat de huidige user de quiz gemaakt heeft en dus in de leaderboard staat. 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk5MjMzODQ5LDEwNjE4NDgzODIsLTE3ND
-Y5MDc2NjgsLTE4Nzc0OTcwNTEsODc4MzE3ODgxLC0xNDcyODMz
-Nzk3LC0xNTMyNDIwMDY5LC0xOTU1MzEwNTE1XX0=
--->
+Deze functie controleert en bepaalt of de 'delete username' knop beschikbaar(zichtbaar) is of niet. Dit gebeurd door te controleren of er een sessie met user_id bestaat. Een sessie geeft namelijk aan dat de huidige user de quiz gemaakt heeft en dus in de leaderboard staat.
