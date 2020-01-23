@@ -133,7 +133,7 @@ def delete_username():
 def barchart():
     """Display in a barchart the score per category"""
     values = []
-    print(session['category_scores'])
+
     for score in session['category_scores'].values():
         values.append(score)
     session['chart_data'] = values
@@ -150,18 +150,23 @@ def load_questions():
     e = requests.get("https://opentdb.com/api.php?amount=50&category=27").json()['results'] # animals
 
     # creating pseudo-random question order
-    questions = []
+    packages = []
     for i in range(50):
         b[i]['category'] = 'Computer Science'
-        temp = []
-        temp.append(a[i])
-        temp.append(b[i])
-        temp.append(c[i])
-        temp.append(d[i])
-        temp.append(e[i])
-        random.shuffle(temp)
-        for q in temp:
-            questions.append(q)
+        package = []
+        package.append(a[i])
+        package.append(b[i])
+        package.append(c[i])
+        package.append(d[i])
+        package.append(e[i])
+        random.shuffle(package)
+        packages.append(package)
+    random.shuffle(packages)
+
+    questions = []
+    for package in packages:
+        for question in package:
+            questions.append(question)
 
     questions_js = []
     correct_answers = []
