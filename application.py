@@ -30,12 +30,15 @@ def after_request(response):
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///triviasite.db")
 
+
+
 @app.route("/")
 def homepage():
     """Homepage"""
     # deze functie laadt alleen de homepage
     session.clear()
     return render_template("index.html")
+
 
 
 @app.route("/startquiz", methods=["GET","POST"])
@@ -50,12 +53,18 @@ def quiz():
     """Take quiz"""
 
     if request.method == "POST":
+
+        # get username from html form
         name = request.form.get("username")
 
+        # insert username into DB
         db.execute("UPDATE scores SET username = :name WHERE id = :id", name=name, id=session["user_id"])
         topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
+        # render current leaderboard after quiz with new user added in
         return render_template("leaderboard.html", scores=topscores, played='Try again!')
+
+    # if request method == GET create session with user_id & define all scores as 0
     else:
         row = db.execute('INSERT INTO scores (score) VALUES (0)')
         session["user_id"] = row
@@ -78,22 +87,27 @@ def quiz():
         return render_template("quiz.html")
 
 
+
 @app.route("/check", methods=["GET"])
 def check():
     """Return true if achieved score is in top 10"""
     # voordat de quiz.html de score submit checken we of de gebruiker in de top 10 van gebruikers zit
     # we returnen dan True/False naar de quiz.html, deze zal de gebruiker om een naam vragen als hij
     # in de top 10 zit zodat we die kunnen laten zien op de leaderboard en anders een pop up geven dat de quiz voorbij is
+
+    # get user score from frontend and update into DB
     userScore = int(request.args.get("score"))
     db.execute('UPDATE scores SET score = :score WHERE id = :id', score=userScore, id=session["user_id"])
 
     leaderboard= db.execute('SELECT score FROM scores')
 
+    # check position in current leadeboard
     ranking = 0
     for score in leaderboard:
         if userScore <= score['score']:
             ranking+= 1
 
+    # calculate and return in which quartile user scored
     percentile = ((1-(ranking / len(leaderboard))) * 100)
     if ranking < 10:
         return jsonify(['Congratulations! you are number ' + str(ranking) + ' on the leaderboard.', True])
@@ -103,6 +117,8 @@ def check():
         return jsonify('You scored better than {0:.2f}% of previous users.'.format(percentile))
     elif percentile < 25:
         return jsonify('Better luck next time, you scored in the bottom quartile.')
+
+
 
 @app.route("/leaderboard")
 def leaderboard():
@@ -120,6 +136,8 @@ def leaderboard():
     # if the user has played the quiz but did not make the topscores display 'try again'
     return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
+
+
 @app.route("/delete_username")
 def delete_username():
     """Delete the username of the user from the leaderboards"""
@@ -127,27 +145,43 @@ def delete_username():
     # delete the score from the database
     db.execute("DELETE FROM scores WHERE id=:id", id=session["user_id"])
 
+    # redirect to homepage
     return redirect("/")
+
+
 
 @app.route("/barchart")
 def barchart():
     """Display in a barchart the score per category"""
+
+    # create empty values list
     values = []
 
+    # add all scores per categroy from current user's session
     for score in session['category_scores'].values():
         values.append(score)
+
+    # render barchart html page with values
     session['chart_data'] = values
     return render_template("barchart.html")
+
+
 
 @app.route("/load_questions", methods=["GET"])
 def load_questions():
     """fetches questions"""
-    # request questions
-    a = requests.get("https://opentdb.com/api.php?amount=50&category=9").json()['results'] # general knowledge
-    b = requests.get("https://opentdb.com/api.php?amount=50&category=18").json()['results'] # computer science
-    c = requests.get("https://opentdb.com/api.php?amount=50&category=22").json()['results'] # geopraphy
-    d = requests.get("https://opentdb.com/api.php?amount=50&category=23").json()['results'] # history
-    e = requests.get("https://opentdb.com/api.php?amount=50&category=27").json()['results'] # animals
+
+    # request questions from API per category:
+    # general knowledge
+    a = requests.get("https://opentdb.com/api.php?amount=50&category=9").json()['results']
+    # computer science
+    b = requests.get("https://opentdb.com/api.php?amount=50&category=18").json()['results']
+    # geopraphy
+    c = requests.get("https://opentdb.com/api.php?amount=50&category=22").json()['results']
+    # history
+    d = requests.get("https://opentdb.com/api.php?amount=50&category=23").json()['results']
+    # animals
+    e = requests.get("https://opentdb.com/api.php?amount=50&category=27").json()['results']
 
     # creating pseudo-random question order
     packages = []
@@ -189,37 +223,58 @@ def load_questions():
             'type' : question['type']
         })
 
+        # keep track of all correct answers
         correct_answers.append(question['correct_answer'])
 
     # save correct answers to session
     session['correct_answers'] = correct_answers
 
+    # return questions to frontend
     return jsonify(questions_js)
+
 
 
 @app.route("/check_answer")
 def check_answer():
+    """Checks every answer of correctness"""
+
+    # get answer from frontend
     answer = request.args.get('answer');
+
+    # get correct answer
     correct_answer = session['correct_answers'][0]
     session['correct_answers'].remove(session['correct_answers'][0])
     print(session["category_scores"], session["difficulty_scores"], session["type_scores"])
+
+    # check if answer is correct and keep track of indiviual scores and return true
     if answer == correct_answer:
         session["category_scores"][request.args.get('category')]+= 1
         session["difficulty_scores"][request.args.get('difficulty')]+= 1
         session["type_scores"][request.args.get('type')]+= 1
         return jsonify(True)
+    # if answer is not correct return False
     else:
         return jsonify(False)
 
+
+
 @app.route("/chart_values")
 def chart_values():
+    """returns chart data after user finishes quiz"""
     return jsonify(session['chart_data'])
+
+
 
 @app.route("/deletebutton_display")
 def deletebutton_display():
+    """hides or shows delete username button"""
+
+    # check if user has user id in current session
     try:
         session['user_id']
+    # if not, return False (button will not show)
     except:
         return jsonify(False)
 
+    # if session is found True returns (button will show)
     return jsonify(True)
