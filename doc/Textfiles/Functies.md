@@ -1,9 +1,14 @@
 # Functies:
 
 > @app.route("/")
-Homepage():
+def homepage():
 
-Deze functie rendert de homepage
+Deze functie rendert de homepage.
+
+@app.route("/startquiz", methods=["GET","POST"])
+def startquiz():
+
+Deze functie rendert de uitleg pagina van de quiz
 
 >@app.route("/quiz", methods=["GET", "POST"])
 Quiz
@@ -22,7 +27,7 @@ Leaderboard():
 
 Deze functie haalt de top 10 op plus de gegevens van de gebruiker en, rendert de leaderboard.html met deze gegevens.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MTg0ODM4MiwtMTc0NjkwNzY2OCwtMT
-g3NzQ5NzA1MSw4NzgzMTc4ODEsLTE0NzI4MzM3OTcsLTE1MzI0
-MjAwNjksLTE5NTUzMTA1MTVdfQ==
+eyJoaXN0b3J5IjpbMTgzNTczMTQ3MCwxMDYxODQ4MzgyLC0xNz
+Q2OTA3NjY4LC0xODc3NDk3MDUxLDg3ODMxNzg4MSwtMTQ3Mjgz
+Mzc5NywtMTUzMjQyMDA2OSwtMTk1NTMxMDUxNV19
 -->
