@@ -2,73 +2,72 @@
 
 
 {% block main %}
-
-<html lang="en">
-  <header>
-      <h1>Kwik Kwiz</h1>
-  </header>
+<header>
+    <h2>Kwik Kwiz</h2>
+</header>
 
 <div id="loader"></div>
 
 <div id="quizScreen">
-    <h5>Question difficulty:</h5>
-    <div id="difficulty"></div>
+  <div id="questionInfo">
+    <p id='score'></p>
 
-    <p id="question" style="font-size: 200%;"></p>
-
-    <div class="container" id='timer_color'>
-      <div class="row">
-        <div class="col-sm-5"></div>
-          <div class="col-sm-2">
-            <span><h3 id='time'></h3>
-          </div>
-          <div class="col-sm-0">
-            <h3 id='timer_change'></h3>
-          </div>
-      </div>
+  <div class="container" id='timer_color'>
+    <div class="row">
+      <div class="col-sm-5"></div>
+        <div class="col-sm-2">
+          <p id='time'></p>
+        </div>
+        <div class="col-sm-0">
+          <p id='timer_change'></p>
+        </div>
     </div>
-
-    <h5 id='category'></h5>
-    <hr width="30%" style="color: grey;">
-    <h5>Score:</h5>
-    <h4 id='score'></h4>
-
-    <h3 id='time'></h3>
+  </div>
 
 
-    <h2 id="question"></h2>
+  <hr>
+  <p id="difficultyText">Question difficulty:</p>
+  <div id="difficulty"></div>
+
+  <p id='category'></p>
+  <p id='time'></p>
+  </div>
+
+  <div id="questionBox">
+    <p id="question"></p>
+  </div>
 
 
-    <div id='all_answers'>
-      <button id='answer1' type="button" class="btn btn-primary btn-lg btn-block" onclick='check(this.innerHTML)'></button>
-      <button id='answer2' type="button" class="btn btn-danger btn-lg btn-block" onclick='check(this.innerHTML)'></button>
-      <button id='answer3' type="button" class="btn btn-info btn-lg btn-block" onclick='check(this.innerHTML)'></button>
-      <button id='answer4' type="button" class="btn btn-warning btn-lg btn-block" onclick='check(this.innerHTML)'></button>
-    </div>
+  <div id="allAnswers">
+      <button id='answer1' type="button" class="btn btn-primary btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
+      <button id='answer2' type="button" class="btn btn-danger btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
+      <button id='answer3' type="button" class="btn btn-info btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
+      <button id='answer4' type="button" class="btn btn-warning btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
+  </div>
 
-    <hr style="width: 30%;">
+  <hr>
 
-    <div>
-        <button id="skip_question" type="submit" class="btn btn-danger" onclick="skip_question()">Skip Question</button>
-      <form action="/" method="get">
-        <button id="stop" type="submit" class="btn btn-danger">Stop Quiz</button>
-      </form>
-    </div>
+  <div id="skipStop">
+    <button id="skip_question" type="submit" class="btn btn-danger " onclick="skip_question()">Skip Question</button>
+    <form action="/" method="get">
+      <button id="stop" type="submit" class="btn btn-danger">Stop Quiz</button>
+    </form>
+  </div>
 
-    <div class="form-popup" id="top10form">
-      <form action="/quiz" method="post">
-        <h2>Congratulations! You made the top 10!</h2>
+  <div class="form-popup" id="top10form">
+    <form action="/quiz" method="post">
+      <h2>Congratulations! You made the top 10!</h2>
 
-        <label for="username"><b>Username</b></label>
-        <input type="text" placeholder="Enter username" name="username" required>
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter username" name="username" required>
 
 
-        <button type="submit" class="btn btn-success">See Results</button>
-        <hr>
-      </form>
-    </div>
+      <button type="submit" class="btn btn-success">See Results</button>
+      <hr>
+    </form>
+  </div>
 </div>
-</html>
+
 
 <script>
 
@@ -102,7 +101,7 @@ function openPopup() {
 
 // display default values of the timer and score (60, 0)
 document.getElementById('time').innerHTML = timer;
-document.getElementById('score').innerHTML = score;
+document.getElementById('score').innerHTML = "Score:" + " " + score;
 
 // generate a question
 load_questions();
@@ -136,7 +135,7 @@ function check(input) {
     document.getElementById("timer_color").style.backgroundColor = "LawnGreen";
 
     // display the incremented score
-    document.getElementById('score').innerHTML = score;
+    document.getElementById('score').innerHTML = "Score:" + " " + score;
   }
   // else if answer not correct
   else {
@@ -244,15 +243,15 @@ function next(data) {
       difficulty_score = 1;
 
       // also display icon showing difficulty per question
-      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_easy.png' alt='difficulty_easy icon' style='width: 150px; height:100px;'>";
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_easy.png' alt='difficulty_easy icon'>";
     }
     else if (Question.difficulty == 'medium') {
       difficulty_score = 2;
-      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_medium.png' alt='difficulty_medium icon' style='width: 150px; height:100px;'>";
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_medium.png' alt='difficulty_medium icon'>";
     }
     else {
       difficulty_score = 3;
-      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_hard.png' alt='difficulty_hard icon' style='width: 150px; height:100px;'>";
+      document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_hard.png' alt='difficulty_hard icon'>";
     }
 
     let answers = Question.answers;
