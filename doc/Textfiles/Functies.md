@@ -54,9 +54,9 @@ Deze functie returnt de bijgehouden quiz data (een juist antwoord per categorie,
 >@app.route("/deletebutton_display")
 def deletebutton_display():
 
-Deze functie controleert en bepaalt of de 'delete username' kn
+Deze functie controleert en bepaalt of de 'delete username' knop beschikbaar is of niet. Dit gebeurd door te controleren of er een sessie met user_id bestaat. Een sessie geeft namelijk aan dat de huidige user de quiz gemaakt heeft en dus in de leaderboard staat. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjAyODcxMDYsMTA2MTg0ODM4MiwtMT
-c0NjkwNzY2OCwtMTg3NzQ5NzA1MSw4NzgzMTc4ODEsLTE0NzI4
-MzM3OTcsLTE1MzI0MjAwNjksLTE5NTUzMTA1MTVdfQ==
+eyJoaXN0b3J5IjpbLTU2MTQ5OTI5NiwxMDYxODQ4MzgyLC0xNz
+Q2OTA3NjY4LC0xODc3NDk3MDUxLDg3ODMxNzg4MSwtMTQ3Mjgz
+Mzc5NywtMTUzMjQyMDA2OSwtMTk1NTMxMDUxNV19
 -->
