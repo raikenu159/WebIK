@@ -107,7 +107,7 @@ De samenwerking verliep eigenlijk al goed. We hebben wel geconcludeerd dat we op
 
 Communicatieve vaardigheden
 
-Qua communicatieve vaardigheden hebben we ook met elkaar gepraat en hierbij kwamen we tot de conclusie dat bij sommige leden van de groep de whatsapp groep wat vaker bekeken moet worden.
+Qua communicatieve vaardigheden hebben we ook met elkaar gepraat en hierbij kwamen we tot de conclusie dat bij sommige leden van de groep de whatsapp groep wat vaker bekeken moet worden. Ook is hethanidg
 
 Werkhouding
 
@@ -117,5 +117,6 @@ Projectbijdrage
 
 De projectbijdrage wordt steeds meer gelijk en iedereen wil zich na de afspraken ook nog meer inzetten om zijn/haar deel te doen.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2Njg5Mjk4MCwtMjEyODYyMzc2NV19
+eyJoaXN0b3J5IjpbLTE4Mjc0MDU0OTMsLTY2Njg5Mjk4MCwtMj
+EyODYyMzc2NV19
 -->
