@@ -94,6 +94,28 @@ We vinden het belangrijk dat we allemaal op de hoogte zijn van belangrijke beslu
 Hoe ziet onze projectplanning eruit?
 
 We gaan (zoals verplicht) dagelijks fysiek bijeenkomen om aan het project te werken, het idee is om elke dag een aantal behapbare taken te delegeren over de teamleden en deze bij de volgende meeting te controleren en bespreken.
+
+<![endif]-->
+
+**Afspraken na individuele feedback**
+
+Na de feedback gesprekken die hebben plaatsgevonden hebben we op een aantal aspecten bepaalde afspraken gemaakt.
+
+Samenwerken
+
+De samenwerking verliep eigenlijk al goed. We hebben wel geconcludeerd dat we op bepaalde aspecten beter moeten samenwerken (programmeren).
+
+Communicatieve vaardigheden
+
+Qua communicatieve vaardigheden hebben we ook met elkaar gepraat en hierbij kwamen we tot de conclusie dat bij sommige leden van de groep de whatsapp groep wat vaker bekeken moet worden.
+
+Werkhouding
+
+De werkhouding is al verbeterd ten opzichte van het begin. En ook na de afspraken is deze alleen maar beter geworden. Het eindresultaat komt in zicht en iedereen wordt steeds enthousiaster.
+
+Projectbijdrage
+
+De projectbijdrage wordt steeds meer gelijk en iedereen wil zich na de afspraken ook nog meer inzetten om zijn/haar deel te doen.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjg2MjM3NjVdfQ==
+eyJoaXN0b3J5IjpbLTY2Njg5Mjk4MCwtMjEyODYyMzc2NV19
 -->
