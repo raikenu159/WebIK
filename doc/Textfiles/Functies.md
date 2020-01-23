@@ -44,9 +44,9 @@ Deze functie vraagt vanuit de API een array van vragen aan per categorie, en zet
 >@app.route("/check_answer")
 def check_answer():
 
-Deze functie checkt pér antwoord die tijdens de quiz gegeven wordt of deze juist of onjuist is. 
+Deze functie checkt pér antwoord die tijdens de quiz gegeven wordt of deze juist of onjuist is. Bij een juist antwoord wordt de score per categ
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTM1MTQ0MjUsMTA2MTg0ODM4MiwtMT
-c0NjkwNzY2OCwtMTg3NzQ5NzA1MSw4NzgzMTc4ODEsLTE0NzI4
-MzM3OTcsLTE1MzI0MjAwNjksLTE5NTUzMTA1MTVdfQ==
+eyJoaXN0b3J5IjpbMTcwMjQ4MjIwOSwxMDYxODQ4MzgyLC0xNz
+Q2OTA3NjY4LC0xODc3NDk3MDUxLDg3ODMxNzg4MSwtMTQ3Mjgz
+Mzc5NywtMTUzMjQyMDA2OSwtMTk1NTMxMDUxNV19
 -->
