@@ -44,9 +44,14 @@ Deze functie vraagt vanuit de API een array van vragen aan per categorie, en zet
 >@app.route("/check_answer")
 def check_answer():
 
-Deze functie checkt pér antwoord die tijdens de quiz gegeven wordt of deze juist of onjuist is. Bij een juist antwoord wordt de score per categ
+Deze functie checkt pér antwoord die tijdens de quiz gegeven wordt of deze juist of onjuist is. Bij een juist antwoord wordt de score per categorie, moeilijkheidsgraad en type vraag (meerkeuze/true&false) geupdate en wordt jsonified True gereturnt. Bij een fout antwoord wordt jsonified False gereturnt. 
+
+>@app.route("/chart_values")
+def chart_values():
+
+Deze functie return de bijgehouden chart data
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMjQ4MjIwOSwxMDYxODQ4MzgyLC0xNz
+eyJoaXN0b3J5IjpbMTc2Mzc2MjIwOSwxMDYxODQ4MzgyLC0xNz
 Q2OTA3NjY4LC0xODc3NDk3MDUxLDg3ODMxNzg4MSwtMTQ3Mjgz
 Mzc5NywtMTUzMjQyMDA2OSwtMTk1NTMxMDUxNV19
 -->
