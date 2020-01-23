@@ -36,5 +36,8 @@ We used mkdtemp().
 - Voor de datum in de leaderboards
 - In application.py (uit Finance)
 
+Chart.js
 
-
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTMyNzc0OTQ5NF19
+-->
