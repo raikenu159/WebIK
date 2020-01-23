@@ -28,13 +28,16 @@ def after_request(response):
     return response
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///triviasite.db")
+db = SQL("sqlite:///trivia.db")
 
 @app.route("/")
 def homepage():
     """Homepage"""
     # deze functie laadt alleen de homepage
     session.clear()
+
+    db.execute("CREATE TABLE if not exists 'scores' ('position' integer, 'id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
+
     return render_template("index.html")
 
 
@@ -56,7 +59,9 @@ def quiz():
         topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
         return render_template("leaderboard.html", scores=topscores, played='Try again!')
+
     else:
+
         row = db.execute('INSERT INTO scores (score) VALUES (0)')
         session["user_id"] = row
         session["category_scores"] = {

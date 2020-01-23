@@ -8,6 +8,7 @@
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
+        <th scope="col">Rank</th>
         <th scope="col">Username</th>
         <th scope="col">Score</th>
         <th scope="col">Date</th>
@@ -17,9 +18,10 @@
 
       {% for score in scores %}
       <tr>
+        <td> {{score.position}} </td>
         <td> {{score.username}} </td>
-        <td> {{score.score}}</td></td>
-        <td> {{score.date}}</td>
+        <td> {{score.score}} </td></td>
+        <td> {{score.date}} </td>
       </tr>
       {% endfor %}
 
