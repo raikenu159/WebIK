@@ -1,7 +1,7 @@
 # Functies:
 
 > @app.route("/")
-def homepage():
+def hHomepage():
 
 Deze functie rendert de homepage.
 
@@ -12,17 +12,19 @@ Deze functie rendert de uitleg pagina van de quiz
 
 >@app.route("/quiz", methods=["GET", "POST"])
 def quiz()
-
+Quiz
 Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitgevoerd worden. Nadat de quiz af is zal deze functie de database updaten met de behaalde score (totaal en per categorie), en mits de gebruiker in de top 10 beland ook met een username. Als laatste roept dit de leaderboard()functie op.
 
 >@app.route("/check", methods=["GET"])
-def check()
+def cCheck()
 
-Deze functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
+Deze 
+
+functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
 Anders wordt er alleen aangegeven in welk kwartier de score van de user valt en wordt een jsonified False gereturnd.
 
 >@app.route("/leaderboard")
-def leaderboard():
+def lLeaderboard():
 
 Deze functie haalt de top 10 op plus de specifieke scores per categorie van de huidige user. Vervolgens wordt de leaderboard.html pagina gerendert  met deze gegevens.
 
@@ -54,4 +56,7 @@ Deze functie returnt de bijgehouden quiz data (een juist antwoord per categorie,
 >@app.route("/deletebutton_display")
 def deletebutton_display():
 
-Deze functie controleert en bepaalt of de 'delete username' knop beschikbaar(zichtbaar) is of niet. Dit gebeurd door te controleren of er een sessie met user_id bestaat. Een sessie geeft namelijk aan dat de huidige user de quiz gemaakt heeft en dus in de leaderboard staat.
+Deze functie controleert en bepaalt of de 'delete username' knop beschikbaar(zichtbaar) is of niet. Dit gebeurd door te controleren of er een sessie met user_id bestaat. Een sessie geeft namelijk aan dat de huidige user de quiz gemaakt heeft en dus in de leaderboard staatgegevens van de gebruiker en, rendert de leaderboard.html met deze gegevens.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTM2Njg1MTYwN119
+-->
