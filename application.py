@@ -8,6 +8,7 @@ from flask_session import Session
 from tempfile import mkdtemp
 from datetime import datetime
 
+
 # Configure application
 app = Flask(__name__)
 
@@ -123,13 +124,10 @@ def leaderboard():
 def delete_username():
     """Delete the username of the user from the leaderboards"""
 
-    # select the top 10 scores from the scores database
-    topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
-
     # delete the score from the database
     db.execute("DELETE FROM scores WHERE id=:id", id=session["user_id"])
 
-    return render_template("leaderboard.html", scores=topscores, played='Play again!')
+    return redirect("/")
 
 @app.route("/barchart")
 def barchart():
@@ -211,3 +209,12 @@ def check_answer():
 @app.route("/chart_values")
 def chart_values():
     return jsonify(session['chart_data'])
+
+@app.route("/deletebutton_display")
+def deletebutton_display():
+    try:
+        session['user_id']
+    except:
+        return jsonify(False)
+
+    return jsonify(True)

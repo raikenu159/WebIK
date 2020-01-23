@@ -46,22 +46,29 @@
 
 
   <form action="/delete_username" method="get">
-      <button id=delete-score type="submit" class="btn btn-danger" onclick='delete_score(this.innerHTML)'>Delete your score</button>
+      <button id=delete-score type="submit" class="btn btn-danger">Delete your score</button>
   </form>
 </div>
 
 
 <script>
-  function delete_score(){
-    let id=session["user_id"];
 
-    if (id == true){
+
+  document.getElementById('delete-score').style.display = "none";
+
+  fetch('/deletebutton_display')
+    .then((response) => {
+      return response.json();
+    })
+
+    .then((truefalse) => {
+    console.log(truefalse)
+    if (truefalse == true){
       document.getElementById('delete-score').style.display = "block";
     }
-    else if (id == false){
-      document.getElementById('delete-score').style.display = "none";
-    }
-  }
+    })
+
+
 </script>
 
 
