@@ -41,10 +41,6 @@
       <button type="submit" class="btn btn-primary">Detailed results</button>
   </form>
 
-
-
-
-
   <form action="/delete_username" method="get">
       <button id=delete-score type="submit" class="btn btn-danger">Delete your score</button>
   </form>
@@ -52,15 +48,16 @@
 
 
 <script>
-
-
+  // hide 'delete username' button when loading page
   document.getElementById('delete-score').style.display = "none";
 
+  // Fetch outcome of backend check for session
   fetch('/deletebutton_display')
     .then((response) => {
       return response.json();
     })
 
+    // if outcome is True (session exists) display button
     .then((truefalse) => {
     console.log(truefalse)
     if (truefalse == true){
@@ -70,6 +67,4 @@
 
 
 </script>
-
-
 {% endblock %}
