@@ -14,12 +14,22 @@ Flask is een van de beste [micro-frameworks](https://en.wikipedia.org/wiki/Micro
 	>from flask import Flask, flash, jsonify, redirect, 
 	render_template, request, session
 	from flask_session import Session
+	
 ### Socket.io
 
 Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt realtime bidirectionele communicatie tussen webclients en servers mogelijk.
 
 - Kan misschien pop-ups genereren, push meldingen versturen naar de gebruikers.
 - A.s. vrijdag 17 januari meer over vragen aan begeleiders.
+
+### tempfile
+
+This module creates temporary files and directories.
+It works on all supported platforms.
+TemporaryFile, NamedTemporaryFile, TemporaryDirectory, and SpooledTemporaryFile are
+high-level interfaces which provide automatic cleanup and can be used as context managers.
+mkstemp() and mkdtemp() are lower-level functions which require manual cleanup.
+We used mkdtemp().
 
 ### Datetime.now
 - Genereert de datum van het moment van spelen van de trivia game
@@ -29,6 +39,6 @@ Socket.IO is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjQ0NTIwNiw3NTgxMTk1MTAsMjAwND
-A2ODYyNV19
+eyJoaXN0b3J5IjpbMTI1OTU4ODExMSwtMTE2NDQ1MjA2LDc1OD
+ExOTUxMCwyMDA0MDY4NjI1XX0=
 -->
