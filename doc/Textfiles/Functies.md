@@ -18,16 +18,15 @@ Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitg
 >@app.route("/check", methods=["GET"])
 Check()
 
-Deze 
-
-functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
+Deze functie checkt of de score van de gebruiker genoeg is om in de top 10 te komen, zo ja returnt het True in met jsonify, in dat geval zal de gebruiker via javascript gevraagd worden een username op te geven.
+Anders wordt er alleen aangegeven in welke qua
 
 >@app.route("/leaderboard")
 Leaderboard():
 
 Deze functie haalt de top 10 op plus de gegevens van de gebruiker en, rendert de leaderboard.html met deze gegevens.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNTczMTQ3MCwxMDYxODQ4MzgyLC0xNz
+eyJoaXN0b3J5IjpbLTY1MDY0NTk1MCwxMDYxODQ4MzgyLC0xNz
 Q2OTA3NjY4LC0xODc3NDk3MDUxLDg3ODMxNzg4MSwtMTQ3Mjgz
 Mzc5NywtMTUzMjQyMDA2OSwtMTk1NTMxMDUxNV19
 -->
