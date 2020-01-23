@@ -11,7 +11,7 @@ def startquiz():
 Deze functie rendert de uitleg pagina van de quiz
 
 >@app.route("/quiz", methods=["GET", "POST"])
-Quiz
+def quiz()
 
 Deze functie rendert de quiz, hierna zal de rest van de quiz via javascript uitgevoerd worden. Nadat de quiz af is zal deze functie de database updaten met de behaalde score (totaal en per categorie), en mits de gebruiker in de top 10 beland ook met een username. Als laatste roept dit de leaderboard()functie op.
 
@@ -29,9 +29,9 @@ Deze functie haalt de top 10 op plus de specifieke scores per categorie van de h
 >@app.route("/delete_username")
 def delete_username(): 
 
-Deze 
+Deze functie verwijderd de user zijn positie in de leaderboard, mocht de
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjA0Mjc3OTAsMTA2MTg0ODM4MiwtMT
+eyJoaXN0b3J5IjpbLTEyMjY1OTg0MzUsMTA2MTg0ODM4MiwtMT
 c0NjkwNzY2OCwtMTg3NzQ5NzA1MSw4NzgzMTc4ODEsLTE0NzI4
 MzM3OTcsLTE1MzI0MjAwNjksLTE5NTUzMTA1MTVdfQ==
 -->
