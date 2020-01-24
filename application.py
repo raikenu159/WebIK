@@ -2,6 +2,7 @@ import os
 import uuid
 import requests
 import random
+import json
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 from flask_session import Session
@@ -96,7 +97,7 @@ def quiz():
         'boolean' : 0,
         'multiple' : 0
         }
-
+        session['question_results'] = []
         # return de quiz.html template
         return render_template("quiz.html")
 
@@ -263,18 +264,23 @@ def check_answer():
     """Checks every answer of correctness"""
 
     # get answer from frontend
-    answer = request.args.get('answer');
+    answer = request.args.get('answer')
+    question_data = json.loads(request.args.get('question_data'))
+    correct_answer = session['correct_answers'][0]
+
+    question_data['user_answer'] = answer
+    question_data['correct_answer'] = correct_answer
+    session['question_results'].append(question_data)
 
     # get correct answer
     correct_answer = session['correct_answers'][0]
     session['correct_answers'].remove(session['correct_answers'][0])
-    print(session["category_scores"], session["difficulty_scores"], session["type_scores"])
 
     # check if answer is correct and keep track of indiviual scores and return true
     if answer == correct_answer:
-        session["category_scores"][request.args.get('category')]+= 1
-        session["difficulty_scores"][request.args.get('difficulty')]+= 1
-        session["type_scores"][request.args.get('type')]+= 1
+        session["category_scores"][question_data['category']]+= 1
+        session["difficulty_scores"][question_data['difficulty']]+= 1
+        session["type_scores"][question_data['type']]+= 1
         return jsonify(True)
     # if answer is not correct return False
     else:
@@ -302,3 +308,8 @@ def deletebutton_display():
 
     # if session is found True returns (button will show)
     return jsonify(True)
+
+
+@app.route("/questions")
+def questions():
+    return render_template('question_results.html', data=session['question_results'])
