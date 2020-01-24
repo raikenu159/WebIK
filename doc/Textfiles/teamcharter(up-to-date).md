@@ -1,4 +1,6 @@
 
+<![endif]-->
+
 **Team mission**
 
 Wat willen wij gezamenlijk bereiken?
@@ -29,7 +31,7 @@ Wie vervult welke rollen binnen ons team?
 
 <![if !supportLists]>- <![endif]>Communicatie: via Whatsapp, coördinator: Sem
 
-Wat doen we al ser een conflict binnen ons team ontstaat?
+Wat doen we als er een conflict binnen ons team ontstaat?
 
 We proberen het gezamenlijk te bepraten en naar elkaar te luisteren. Als dit niet lukt proberen we het via een tussenpersoon (Jelle, Laureanne) op te lossen.
 
@@ -95,8 +97,6 @@ Hoe ziet onze projectplanning eruit?
 
 We gaan (zoals verplicht) dagelijks fysiek bijeenkomen om aan het project te werken, het idee is om elke dag een aantal behapbare taken te delegeren over de teamleden en deze bij de volgende meeting te controleren en bespreken.
 
-<![endif]-->
-
 **Afspraken na individuele feedback**
 
 Na de feedback gesprekken die hebben plaatsgevonden hebben we op een aantal aspecten bepaalde afspraken gemaakt.
@@ -116,6 +116,31 @@ De werkhouding is al verbeterd ten opzichte van het begin. En ook na de afsprake
 Projectbijdrage
 
 De projectbijdrage wordt steeds meer gelijk en iedereen wil zich na de afspraken ook nog meer inzetten om zijn/haar deel te doen.
+
+
+
+<![endif]-->
+
+Thuisopdracht 1
+
+Om te bepalen wat mijn voornaamste rollen zijn binnen het model van Belbin heb ik de test gemaakt die te vinden is op: [www.werkenmetteamrollen.nl](http://www.werkenmetteamrollen.nl).
+
+Uit deze test is gebleken dat ik een over een aantal eigenschappen beschik.
+
+<![if !supportLists]>- <![endif]>Ik ben een Vormer: De vormer is doelgericht, brengt het team in beweging.  
+Eigenschappen: Gedreven en ambitieus
+
+<![if !supportLists]>- <![endif]>Ik ben een Brononderzoeker: De brononderzoeker is een netwerker en regelt contacten en ideeën.  
+Eigenschappen: Nieuwsgierig en enthousiast
+
+<![if !supportLists]>- <![endif]>Ik ben een Bedrijfsman: De Bedrijfsman is de organisator, werkt ordelijk en is praktisch ingesteld.  
+Eigenschappen: Praktisch en doelmatig
+
+Ook bleek uit de test dat mijn talenten voornamelijk liggen in het team in beweging brengen, resultaten behalen, contacten leggen, en het uitwerken van ideeën.
+
+Als ik niet kijk naar de test, maar van mijzelf uitga vind ik dat ik vooral direct, daadkrachtig en resultaatgericht ben. Dit heeft volgens mij veel voordelen, omdat voor het project zo waarschijnlijk een goed resultaat kan worden behaald. Toch kan dit ook bepaalde negatieve effecten hebben doordat ik soms niet zo zorgvuldig, nauwkeurig en kritisch te werk ga.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2Njg5Mjk4MCwtMjEyODYyMzc2NV19
+eyJoaXN0b3J5IjpbNTQwMzI1MjgzLDE4NjQ4MzQxNjUsLTczND
+AwMjg3MywtNzE4NTQwOTg2LC02NjY4OTI5ODAsLTIxMjg2MjM3
+NjVdfQ==
 -->
