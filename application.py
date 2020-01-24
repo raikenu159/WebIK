@@ -40,7 +40,7 @@ def homepage():
     session.clear()
 
     # create table scores in database
-    db.execute("CREATE TABLE if not exists 'scores' ('position' integer PRIMARY KEY, 'id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
+    db.execute("CREATE TABLE if not exists 'scores' ('position' integer, 'id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
 
     #db.execute("")
 

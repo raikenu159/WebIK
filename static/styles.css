@@ -40,13 +40,48 @@ hr{
     height: 400px;
     margin-left: -200px;
     margin-top: -200px;
-
 }
-
 
 button{
     margin: 5px;
     padding: 5px;
+}
+
+#quizTitle{
+    font-size: 3vmin;
+    margin-bottom: 0;
+}
+
+#questionInfo{
+    font-size: 2.5vmin;
+}
+
+#timer_color{
+    height: 2em;
+}
+#questionBox{
+    font-size: 3vmin;
+    min-height: 4em;
+    ;
+}
+
+#allAnswers{
+    height: 15em;
+}
+.answerButtons{
+    font-size: 3vmin;
+}
+
+#skip_question, #stop{
+    font-size: 3vmin;
+}
+
+#difficultyText{
+    margin-bottom: 0px;
+}
+#difficulty{
+    margin: auto;
+    width: 10%;
 }
 
 #leaderboard{
@@ -57,9 +92,6 @@ button{
     max-height: 60%;
 }
 
-.answerButtons, #skip_question, #stop{
-    font-size: 2.8vmin;
-}
 
 footer{
     position: fixed;

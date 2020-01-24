@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+    {% for question in data %}
+    <h1>{{ question.question }}</h1>
+        {% for answer in question.answers %}
+        <p>{{ answer }}</p>
+        {% endfor %}
+
+    <p>your answer: {{ question.user_answer }}</p>
+    <p>correct answer: {{  question.correct_answer }}</p>
+    {% endfor %}
+
+    <form action="/quiz" method="get">
+        <button type="submit" class="btn btn-info">Play again!</button>
+    </form>
+
+    <form action="/" method="get">
+        <button type="submit" class="btn btn-primary">Home</button>
+    </form>
+
+<script>
+
+
+</script>
+
+
+
+
+{% endblock %}
