@@ -3,9 +3,7 @@ var score = 0;
 var timer = 60;
 var question_index = 0;
 var questions;
-
-// var correct_answer;
-// var answers_length;
+var question_data;
 var difficulty_score;
 var difficulty;
 var type;
@@ -20,9 +18,11 @@ document.getElementById("quizScreen").style.display = "none";
 // open popup if in top10
 function openPopup() {
   document.getElementById("top10form").style.display = "block";
-  document.getElementById("question").style.display = "none";
-  document.getElementById("all_answers").style.display = "none";
-  document.getElementById("stop").style.display = "none";
+  // document.getElementById("question").style.display = "none";
+  // document.getElementById("all_answers").style.display = "none";
+  // document.getElementById("stop").style.display = "none";
+  document.getElementById("quizScreen").style.display = "none";
+  document.getElementById('score2').innerHTML = "Score:" + " " + score;
 }
 
 
@@ -40,9 +40,8 @@ setInterval(countdown, 1000);
 
 // check the answer
 function check(input) {
-  console.log(difficulty);
-  console.log(type);
-  fetch('/check_answer?answer='+input+'&category='+category+'&difficulty='+difficulty+'&type='+type)
+  console.log(question_data)
+  fetch('/check_answer?answer='+input+'&question_data='+encodeURIComponent(JSON.stringify(question_data)))
   .then((response) => {
       return response.json();
   })
@@ -81,7 +80,7 @@ function check(input) {
   next(questions);
 
   // return timer to default color after a short time
-  setTimeout(reset_color, 300);
+  setTimeout(reset_color, 700);
   });
 }
 
@@ -98,11 +97,10 @@ function reset_color() {
 // decrement timer if page loaded or end quiz if time is up
 function countdown() {
   if (!document.getElementById('answer4').innerHTML) {
-
     return;
   }
-
   else if (timer >= 0) {
+    document.getElementById("quizScreen").style.display = "block";
     document.getElementById('time').innerHTML = timer;
     timer--;
   }
@@ -111,8 +109,7 @@ function countdown() {
       check_score();
     }
   }
-  document.getElementById("loader").style.display = "none"
-  document.getElementById("quizScreen").style.display = "block";
+  document.getElementById("loader").style.display = "none";
 }
 
 
@@ -162,6 +159,7 @@ function load_questions() {
 function next(data) {
     // define question variables
     Question = data[question_index];
+    question_data = Question;
     category = Question.category;
     difficulty = Question.difficulty;
     type = Question.type;
@@ -209,3 +207,5 @@ function skip_question() {
   question_index++;
   next(questions);
 }
+
+
