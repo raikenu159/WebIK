@@ -56,15 +56,38 @@ button{
     font-size: 2.5vmin;
 }
 
+#clockImage{
+    font-size: 2.5vmin;
+    width: 6vmin;
+    z-index: -1;
+}
+
+#score{
+    margin-bottom: 0;
+}
+
+#time{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 #timer_color{
     height: 2em;
 }
 #questionBox{
-    font-size: 3vmin;
+    font-size: 4vmin;
     min-height: 4em;
-    ;
 }
 
+#question{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    margin: auto;
+}
 #allAnswers{
     height: 15em;
 }
