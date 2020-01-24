@@ -1,93 +1,11 @@
-{% extends "layout.html" %}
-
-
-{% block main %}
-<div id="loader"></div>
-
-<div id="quizScreen">
-  <div class="row">
-    <div class="col-sm">
-      <p id="quizTitle">Kwik Kwiz</p>
-    </div>
-  </div>
-
-  <div id="questionInfo" class="row">
-    <div class="col-sm">
-    <p id='score'></p>
-
-    <div id='timer_color' class="row">
-      <div class="col-sm-5"></div>
-        <div class="col-sm-2">
-          <p id='time'></p>
-        </div>
-        <div class="col-sm-0">
-          <p id='timer_change'></p>
-        </div>
-    </div>
-
-
-  <hr>
-  <p id="difficultyText">Question difficulty:</p>
-  <div id="difficulty"></div>
-
-  <p id='category'></p>
-    </div>
-  </div>
-
-
-  <div id="questionBox" class="row">
-    <div class="col-sm">
-      <p id="question"></p>
-    </div>
-  </div>
-
-
-  <div id="allAnswers" class="row">
-    <div class="col-sm">
-        <button id='answer1' type="button" class="btn btn-primary btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-        <button id='answer2' type="button" class="btn btn-danger btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-        <button id='answer3' type="button" class="btn btn-info btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-        <button id='answer4' type="button" class="btn btn-warning btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-    </div>
-  </div>
-
-  <hr>
-  <div id="skipStop" class="row">
-    <div class="col-sm">
-      <button id="skip_question" type="submit" class="btn btn-danger " onclick="skip_question()">Skip Question</button>
-      <form action="/" method="get">
-        <button id="stop" type="submit" class="btn btn-danger">Stop Quiz</button>
-      </form>
-    </div>
-
-  </div>
-  </div>
-
-  <div class="form-popup" id="top10form">
-    <p id='score2'></p>
-    <hr>
-    <form action="/quiz" method="post">
-      <h2>Congratulations! You made the top 10!</h2>
-
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter username" name="username" required>
-
-
-      <button type="submit" class="btn btn-success">See Results</button>
-      <hr>
-    </form>
-  </div>
-
-
-
-<script>
-
 // initiate global variables
 var score = 0;
 var timer = 60;
 var question_index = 0;
 var questions;
-var question_data;
+
+// var correct_answer;
+// var answers_length;
 var difficulty_score;
 var difficulty;
 var type;
@@ -102,11 +20,9 @@ document.getElementById("quizScreen").style.display = "none";
 // open popup if in top10
 function openPopup() {
   document.getElementById("top10form").style.display = "block";
-  // document.getElementById("question").style.display = "none";
-  // document.getElementById("all_answers").style.display = "none";
-  // document.getElementById("stop").style.display = "none";
-  document.getElementById("quizScreen").style.display = "none";
-  document.getElementById('score2').innerHTML = "Score:" + " " + score;
+  document.getElementById("question").style.display = "none";
+  document.getElementById("all_answers").style.display = "none";
+  document.getElementById("stop").style.display = "none";
 }
 
 
@@ -124,8 +40,9 @@ setInterval(countdown, 1000);
 
 // check the answer
 function check(input) {
-  console.log(question_data)
-  fetch('/check_answer?answer='+input+'&question_data='+encodeURIComponent(JSON.stringify(question_data)))
+  console.log(difficulty);
+  console.log(type);
+  fetch('/check_answer?answer='+input+'&category='+category+'&difficulty='+difficulty+'&type='+type)
   .then((response) => {
       return response.json();
   })
@@ -164,7 +81,7 @@ function check(input) {
   next(questions);
 
   // return timer to default color after a short time
-  setTimeout(reset_color, 700);
+  setTimeout(reset_color, 300);
   });
 }
 
@@ -181,10 +98,11 @@ function reset_color() {
 // decrement timer if page loaded or end quiz if time is up
 function countdown() {
   if (!document.getElementById('answer4').innerHTML) {
+
     return;
   }
+
   else if (timer >= 0) {
-    document.getElementById("quizScreen").style.display = "block";
     document.getElementById('time').innerHTML = timer;
     timer--;
   }
@@ -193,7 +111,8 @@ function countdown() {
       check_score();
     }
   }
-  document.getElementById("loader").style.display = "none";
+  document.getElementById("loader").style.display = "none"
+  document.getElementById("quizScreen").style.display = "block";
 }
 
 
@@ -243,7 +162,6 @@ function load_questions() {
 function next(data) {
     // define question variables
     Question = data[question_index];
-    question_data = Question;
     category = Question.category;
     difficulty = Question.difficulty;
     type = Question.type;
@@ -291,9 +209,3 @@ function skip_question() {
   question_index++;
   next(questions);
 }
-
-</script>
-
-<!--<script src="static/js/quiz.js"></script>-->
-
-{% endblock %}
