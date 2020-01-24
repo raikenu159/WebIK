@@ -2,6 +2,7 @@ import os
 import uuid
 import requests
 import random
+import json
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 from flask_session import Session
@@ -39,7 +40,10 @@ def homepage():
     session.clear()
 
     # create table scores in database
-    db.execute("CREATE TABLE if not exists 'scores' ('position' integer NOT NULL, 'id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
+    db.execute("CREATE TABLE if not exists 'scores' ('position' integer PRIMARY KEY, 'id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
+
+    #db.execute("")
+
 
     # return de index.html template
     return render_template("index.html")
@@ -69,6 +73,21 @@ def quiz():
         db.execute("UPDATE scores SET username = :name WHERE id = :id", name=name, id=session["user_id"])
         topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
+
+
+        # score = db.execute("SELECT score FROM scores WHERE id=:id", id=session["user_id"])[0]["score"]
+        # previous_scores = db.execute("SELECT score FROM scores")
+        # lijst = []
+        # for i in previous_scores:
+        #     lijst.append(i["score"])
+
+        # position = 1
+        # for points in lijst:
+        #     if score < points:
+        #         position += 1
+
+        # db.execute("UPDATE scores SET position=:position WHERE id=:id", position = position, id=session["user_id"])
+
         # render current leaderboard after quiz with new user added in
         return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
@@ -96,7 +115,7 @@ def quiz():
         'boolean' : 0,
         'multiple' : 0
         }
-
+        session['question_results'] = []
         # return de quiz.html template
         return render_template("quiz.html")
 
@@ -263,18 +282,23 @@ def check_answer():
     """Checks every answer of correctness"""
 
     # get answer from frontend
-    answer = request.args.get('answer');
+    answer = request.args.get('answer')
+    question_data = json.loads(request.args.get('question_data'))
+    correct_answer = session['correct_answers'][0]
+
+    question_data['user_answer'] = answer
+    question_data['correct_answer'] = correct_answer
+    session['question_results'].append(question_data)
 
     # get correct answer
     correct_answer = session['correct_answers'][0]
     session['correct_answers'].remove(session['correct_answers'][0])
-    print(session["category_scores"], session["difficulty_scores"], session["type_scores"])
 
     # check if answer is correct and keep track of indiviual scores and return true
     if answer == correct_answer:
-        session["category_scores"][request.args.get('category')]+= 1
-        session["difficulty_scores"][request.args.get('difficulty')]+= 1
-        session["type_scores"][request.args.get('type')]+= 1
+        session["category_scores"][question_data['category']]+= 1
+        session["difficulty_scores"][question_data['difficulty']]+= 1
+        session["type_scores"][question_data['type']]+= 1
         return jsonify(True)
     # if answer is not correct return False
     else:
@@ -302,3 +326,8 @@ def deletebutton_display():
 
     # if session is found True returns (button will show)
     return jsonify(True)
+
+
+@app.route("/questions")
+def questions():
+    return render_template('question_results.html', data=session['question_results'])
