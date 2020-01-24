@@ -39,7 +39,7 @@ def homepage():
     session.clear()
 
     # create table scores in database
-    db.execute("CREATE TABLE if not exists 'scores' ('position' integer, 'id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
+    db.execute("CREATE TABLE if not exists 'scores' ('position' integer NOT NULL, 'id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
 
     # return de index.html template
     return render_template("index.html")
@@ -111,7 +111,7 @@ def check():
 
     # get user score from frontend and update into DB
     userScore = int(request.args.get("score"))
-    db.execute('UPDATE scores SET score = :score WHERE id = :id', score=userScore, id=session["user_id"])
+    db.execute('UPDATE scores SET score=:score WHERE id = :id', score=userScore, id=session["user_id"])
 
     leaderboard= db.execute('SELECT score FROM scores')
 
@@ -149,7 +149,6 @@ def leaderboard():
 
     # if the user has played the quiz but did not make the topscores display 'try again'
     return render_template("leaderboard.html", scores=topscores, played='Try again!')
-
 
 
 @app.route("/delete_username")
