@@ -2,15 +2,32 @@
 
 
 {% block main %}
-    {% for question in data %}
-    <h1>{{ question.question }}</h1>
-        {% for answer in question.answers %}
-        <p>{{ answer }}</p>
-        {% endfor %}
+<h2> Question results </h2>
+<div id="question_results_table" class="row">
+    <div class="col-sm">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Question</th>
+                <th scope="col">Your answer</th>
+                <th scope="col">Correct answer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question in data %}
+            {% filter escape %}
+            <tr>
+                <td>{{ question.question }}</td>
+                <td>{{ question.user_answer }}</td>
+                <td>{{ question.correct_answer}}</td>
+            </tr>
+            {% endfilter %}
+            {% endfor %}
 
-    <p>your answer: {{ question.user_answer }}</p>
-    <p>correct answer: {{  question.correct_answer }}</p>
-    {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</div>
 
     <form action="/quiz" method="get">
         <button type="submit" class="btn btn-info">Play again!</button>
@@ -22,10 +39,6 @@
 
 <script>
 
-
 </script>
-
-
-
 
 {% endblock %}

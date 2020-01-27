@@ -116,6 +116,14 @@ button{
     max-height: 60%;
 }
 
+#question_results_table{
+    overflow-y: auto;
+    overflow-x: auto;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80%;
+}
+
 
 footer{
     position: fixed;
