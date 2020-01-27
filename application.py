@@ -40,7 +40,7 @@ def homepage():
     session.clear()
 
     # create table scores in database
-    db.execute("CREATE TABLE if not exists 'scores' ('position' integer, 'id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
+    db.execute("CREATE TABLE if not exists 'scores' ('id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
 
     # return de index.html template
     return render_template("index.html")
@@ -140,17 +140,16 @@ def leaderboard():
     """Display the current leaderboard and some statistics about the users performance"""
 
     # select the top 10 scores from the scores database
-    position = [i for i in range(1,11)]
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
     # check if the user has already played the quiz: if not display button 'play now'
     try:
         session['user_id']
     except:
-        return render_template("leaderboard.html", scores=topscores, played='Play now!', position=position)
+        return render_template("leaderboard.html", scores=topscores, played='Play now!')
 
     # if the user has played the quiz but did not make the topscores display 'try again'
-    return render_template("leaderboard.html", scores=topscores, played='Try again!', position=position)
+    return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
 
 @app.route("/delete_username")
