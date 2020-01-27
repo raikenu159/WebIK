@@ -17,14 +17,21 @@
       </thead>
       <tbody>
 
+        {% set count = namespace(value=1) %}
         {% for score in scores %}
         <tr>
-          <td> {{score.position}} </td>
+          <td>
+            <b>
+            {{ count.value }}
+            </b>
+          </td>
           <td> {{score.username}} </td>
           <td> {{score.score}} </td></td>
           <td> {{score.date}} </td>
         </tr>
+        {% set count.value = count.value + 1 %}
         {% endfor %}
+
 
       </tbody>
     </table>

@@ -42,9 +42,6 @@ def homepage():
     # create table scores in database
     db.execute("CREATE TABLE if not exists 'scores' ('position' integer, 'id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
 
-    #db.execute("")
-
-
     # return de index.html template
     return render_template("index.html")
 
@@ -72,21 +69,6 @@ def quiz():
         # insert username into DB
         db.execute("UPDATE scores SET username = :name WHERE id = :id", name=name, id=session["user_id"])
         topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
-
-
-
-        # score = db.execute("SELECT score FROM scores WHERE id=:id", id=session["user_id"])[0]["score"]
-        # previous_scores = db.execute("SELECT score FROM scores")
-        # lijst = []
-        # for i in previous_scores:
-        #     lijst.append(i["score"])
-
-        # position = 1
-        # for points in lijst:
-        #     if score < points:
-        #         position += 1
-
-        # db.execute("UPDATE scores SET position=:position WHERE id=:id", position = position, id=session["user_id"])
 
         # render current leaderboard after quiz with new user added in
         return render_template("leaderboard.html", scores=topscores, played='Try again!')
@@ -158,16 +140,17 @@ def leaderboard():
     """Display the current leaderboard and some statistics about the users performance"""
 
     # select the top 10 scores from the scores database
+    position = [i for i in range(1,11)]
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
     # check if the user has already played the quiz: if not display button 'play now'
     try:
         session['user_id']
     except:
-        return render_template("leaderboard.html", scores=topscores, played='Play now!')
+        return render_template("leaderboard.html", scores=topscores, played='Play now!', position=position)
 
     # if the user has played the quiz but did not make the topscores display 'try again'
-    return render_template("leaderboard.html", scores=topscores, played='Try again!')
+    return render_template("leaderboard.html", scores=topscores, played='Try again!', position=position)
 
 
 @app.route("/delete_username")
