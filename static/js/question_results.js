@@ -19,4 +19,10 @@ function add_question(question) {
   col1.innerHTML = question.question;
   col2.innerHTML = question.correct_answer;
   col3.innerHTML = question.user_answer;
+  if (question.correct_answer == question.user_answer){
+      row.style.backgroundColor = "#ccffcc";
+  }
+  else{
+      row.style.backgroundColor = "#ffcccc"
+  }
 }
