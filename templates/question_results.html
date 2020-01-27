@@ -3,28 +3,15 @@
 
 {% block main %}
 <h2> Question results </h2>
-<div id="question_results_table" class="row">
-    <div class="col-sm">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Question</th>
-                <th scope="col">Your answer</th>
-                <th scope="col">Correct answer</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for question in data %}
-            {% filter escape %}
-            <tr>
-                <td>{{ question.question }}</td>
-                <td>{{ question.user_answer }}</td>
-                <td>{{ question.correct_answer}}</td>
-            </tr>
-            {% endfilter %}
-            {% endfor %}
 
-        </tbody>
+<div class="row">
+    <div class="col-sm">
+    <table id="question_results_table" class="table">
+        <tr>
+            <th scope="col">Question</th>
+            <th scope="col">Your answer</th>
+            <th scope="col">Correct answer</th>
+        </tr>
     </table>
     </div>
 </div>
@@ -37,8 +24,6 @@
         <button type="submit" class="btn btn-primary">Home</button>
     </form>
 
-<script>
-
-</script>
+<script src="static/js/question_results.js"></script>
 
 {% endblock %}

@@ -313,4 +313,12 @@ def deletebutton_display():
 
 @app.route("/questions")
 def questions():
+
     return render_template('question_results.html', data=session['question_results'])
+
+@app.route("/question_results")
+def question_results():
+    """Returns all taken question info in json format"""
+    print("SESSION QUESTION RESULTS TEST", session['question_results'][0])
+    return jsonify(session["question_results"])
+
