@@ -1,4 +1,4 @@
-# Projectvoorstel IK02 Trivia spel
+# Kwik Kwiz
 ### Projectleden 
 * Daan van Baarsen, 
 * Una Garcia, 
@@ -6,36 +6,38 @@
 * Soufiane Zouli
 
 ## Samenvatting
-Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
+Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel is er een leaderboards-pagina , waar de tien hoogste scores getoond worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers. Na een quiz afgenomen te hebben kan de gebruiker grafieken zien die de behaalde score per onderdeel en soort vraag tonen. Ook kan de gebruiker een tabel zien met daarin alle beantwoorde vragen met het gegeven antwoord en het correcte antwoord.
 
-## Schetsen
-**Homepagina**
-![Homepagina](https://i.imgur.com/QP6Ov9Y.png)
-**Uitlegpagina quiz**
-![Uitlegpagina quiz](https://i.imgur.com/SyRuodO.png)
+## Afbeeldingen
+**Homepagina met uitleg quiz**
+![Homepagina](https://i.imgur.com/I1EepTC.png)
 **Quizvraag pagina type 1 meerkeuze**
-![Quizvraag pagina meerkeuze](https://i.imgur.com/YLaX3YG.png)
-**Quizvraag pagina type 2 true/false**
-![Quizvraag pagina true/false](https://i.imgur.com/YPbNbEU.png)
+![Quizvraag pagina meerkeuze](https://i.imgur.com/gobQsLO.png)
+**Quizvraag pagina type 2 boolean**
+![Quizvraag pagina boolean](https://i.imgur.com/ATSs2sh.png)
 **Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben**
-![Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben](https://i.imgur.com/xBnqQpH.png)
+![Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben](https://i.imgur.com/2KWoOco.png)
 **Quizvraag pagina tijd verlopen top 10 score behaald**
-![Quizvraag pagina tijd verlopen top 10 score behaald](https://i.imgur.com/OW1MBkK.png)
+![Quizvraag pagina tijd verlopen top 10 score behaald](https://i.imgur.com/oSkyIT5.png)
 **Leaderboards pagina**
-![Leaderboards pagina](https://i.imgur.com/e6srWBE.png)
-
+![Leaderboards pagina](https://i.imgur.com/cyqAbDQ.png)
+**Barcharts pagina**
+![Barcharts pagina](https://i.imgur.com/IIAyq8s.png)![Barcharts pagina](https://i.imgur.com/5zJP0vX.png)
+**Question results pagina**
+![Question results pagina](https://i.imgur.com/H643Jcm.png)
 ## Features
 1. De vragen in de quizzes komen uit Online Trivia Database (https://opentdb.com)
-3. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database (zie feature 2).
-4. De quizzes zijn multiple choice.
-5. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-6. Elke quiz begint met een tijdslimiet van een minuut.
-8. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-8. Gebruikers behalen punten met elke goed beantwoorde vraag.
-9. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-10. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald.
-11. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
-12. In de result-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
+2. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database.
+3. De quizzes zijn multiple choice.
+4. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+5. Elke quiz begint met een tijdslimiet van een minuut.
+6. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
+7. Gebruikers behalen punten met elke goed beantwoorde vraag.
+8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald.
+10. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
+11. In de chart-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
+12. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
 
 
 ## Minimum viable product
@@ -150,20 +152,10 @@ from flask import Flask, flash, jsonify, redirect, render_template, request, ses
 from flask_session import Session
 ```
 
-### Socket.io
-Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt realtime bidirectionele communicatie tussen webclients en servers mogelijk.
-
-- Kan misschien pop-ups genereren, push meldingen versturen naar de gebruikers.
-- A.s. vrijdag 17 januari meer over vragen aan begeleiders.
-- Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
-- Hierbij zijn er voor alle startwaardes eigen leaderboards.
-- Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-- We gebruiken een online trivia database waaruit we onze vragen halen.
-- Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NDcwODM3MCwtMTI4MTIxNzAzLC0xMj
-U2NzYwMTgsLTYxMDIwMjY1OCwtMTI1NTI2OTkwNywxMjg2MDQ3
-ODA2LC0xNzI4NDA2Njg3LC0xMDE0NTQ5MDcsLTE5NjQ0Njc2MD
-IsLTYxMzE5MjAxOCw0MDQ5NjgxNjBdfQ==
+eyJoaXN0b3J5IjpbLTY2NzMwOTU0MCwxNzUwMjg1MzMsLTM1ND
+cwODM3MCwtMTI4MTIxNzAzLC0xMjU2NzYwMTgsLTYxMDIwMjY1
+OCwtMTI1NTI2OTkwNywxMjg2MDQ3ODA2LC0xNzI4NDA2Njg3LC
+0xMDE0NTQ5MDcsLTE5NjQ0Njc2MDIsLTYxMzE5MjAxOCw0MDQ5
+NjgxNjBdfQ==
 -->
