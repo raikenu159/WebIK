@@ -167,26 +167,13 @@ def delete_username():
 def barchart():
     """Display in a barchart the score per category"""
 
-    # add all scores per categroy from current user's session
-    category = []
-    category.append([score for score in session['category_scores'].values()])
-    category.append([name for name in session['category_scores'].keys()])
-    category.append('Category scores')
+    # add all scores per category from current user's session
+    category = [[score for score in session['category_scores'].values()], [name for name in session['category_scores'].keys()], 'Category scores']
+    difficulty = [[score for score in session['difficulty_scores'].values()], [name for name in session['difficulty_scores'].keys()], 'Difficulty scores']
+    types = [[score for score in session['type_scores'].values()], [name for name in session['type_scores'].keys()], 'Type scores']
 
-    difficulty = []
-    difficulty.append([score for score in session['difficulty_scores'].values()])
-    difficulty.append([name for name in session['difficulty_scores'].keys()])
-    difficulty.append('Difficulty scores')
+    session['chart_data'] = [category, difficulty, types]
 
-    types = []
-    types.append([score for score in session['type_scores'].values()])
-    types.append([name for name in session['type_scores'].keys()])
-    types.append('Type scores')
-
-
-    values = [category, difficulty, types]
-    # render barchart html page with values
-    session['chart_data'] = values
     return render_template("barchart.html")
 
 
@@ -195,30 +182,21 @@ def barchart():
 def load_questions():
     """fetches questions"""
 
-    # request questions from API per category:
-    # general knowledge
-    a = requests.get("https://opentdb.com/api.php?amount=50&category=9").json()['results']
-    # computer science
-    b = requests.get("https://opentdb.com/api.php?amount=50&category=18").json()['results']
-    # geopraphy
-    c = requests.get("https://opentdb.com/api.php?amount=50&category=22").json()['results']
-    # history
-    d = requests.get("https://opentdb.com/api.php?amount=50&category=23").json()['results']
-    # animals
-    e = requests.get("https://opentdb.com/api.php?amount=50&category=27").json()['results']
+    # request questions from API per category
+    general = requests.get("https://opentdb.com/api.php?amount=50&category=9").json()['results']
+    computers = requests.get("https://opentdb.com/api.php?amount=50&category=18").json()['results']
+    geography = requests.get("https://opentdb.com/api.php?amount=50&category=22").json()['results']
+    history = requests.get("https://opentdb.com/api.php?amount=50&category=23").json()['results']
+    animals = requests.get("https://opentdb.com/api.php?amount=50&category=27").json()['results']
 
     # creating pseudo-random question order
     packages = []
     for i in range(50):
-        b[i]['category'] = 'Computer Science'
-        package = []
-        package.append(a[i])
-        package.append(b[i])
-        package.append(c[i])
-        package.append(d[i])
-        package.append(e[i])
+        computers[i]['category'] = 'Computer Science'
+        package = [general[i], computers[i], geography[i], history[i], animals[i]]
         random.shuffle(package)
         packages.append(package)
+
     random.shuffle(packages)
 
     questions = []
@@ -227,7 +205,7 @@ def load_questions():
             questions.append(question)
 
     questions_js = []
-    correct_answers = []
+    session['correct_answers'] = []
     for question in questions:
 
         # combine correct and incorrect answers
@@ -248,10 +226,7 @@ def load_questions():
         })
 
         # keep track of all correct answers
-        correct_answers.append(question['correct_answer'])
-
-    # save correct answers to session
-    session['correct_answers'] = correct_answers
+        session['correct_answers'].append(question['correct_answer'])
 
     # return questions to frontend
     return jsonify(questions_js)
@@ -264,15 +239,14 @@ def check_answer():
 
     # get answer from frontend
     answer = request.args.get('answer')
-    question_data = json.loads(request.args.get('question_data'))
     correct_answer = session['correct_answers'][0]
 
+    question_data = json.loads(request.args.get('question_data'))
     question_data['user_answer'] = answer
     question_data['correct_answer'] = correct_answer
+
     session['question_results'].append(question_data)
 
-    # get correct answer
-    correct_answer = session['correct_answers'][0]
     session['correct_answers'].remove(session['correct_answers'][0])
 
     # check if answer is correct and keep track of indiviual scores and return true
@@ -281,6 +255,7 @@ def check_answer():
         session["difficulty_scores"][question_data['difficulty']]+= 1
         session["type_scores"][question_data['type']]+= 1
         return jsonify(True)
+
     # if answer is not correct return False
     else:
         return jsonify(False)
@@ -317,6 +292,6 @@ def questions():
 @app.route("/question_results")
 def question_results():
     """Returns all taken question info in json format"""
-    print("SESSION QUESTION RESULTS TEST", session['question_results'][0])
+
     return jsonify(session["question_results"])
 
