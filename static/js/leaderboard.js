@@ -1,4 +1,4 @@
-  // hide 'delete username' button when loading page
+  // Hide 'delete username' button when loading page
   document.getElementById('delete-score').style.display = "none";
   document.getElementById('results').style.display = "none";
 
@@ -8,7 +8,7 @@
       return response.json();
     })
 
-    // if outcome is True (session exists) display button
+    // Display delete score button if session exists
     .then((truefalse) => {
     console.log(truefalse)
     if (truefalse == true){

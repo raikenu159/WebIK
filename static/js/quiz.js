@@ -1,4 +1,4 @@
-// initiate global variables
+// Initiate global variables
 var score = 0;
 var timer = 60;
 var question_index = 0;
@@ -10,12 +10,12 @@ var type;
 var category;
 var checked = false;
 
-// hide top10 popup when starting quiz
+// Hide top10 popup when starting quiz
 document.getElementById("top10form").style.display = "none";
 document.getElementById("quizScreen").style.display = "none";
 
 
-// open popup if in top10
+// Open popup if in top10
 function openPopup() {
   document.getElementById("top10form").style.display = "block";
   // document.getElementById("question").style.display = "none";
@@ -26,19 +26,19 @@ function openPopup() {
 }
 
 
-// display default values of the timer and score (60, 0)
+// Display default values of the timer and score (60, 0)
 document.getElementById('time').innerHTML = timer;
 document.getElementById('score').innerHTML = "Score:" + " " + score;
 
-// generate a question
+// Generate a question
 load_questions();
 
 
-// decrement time every second
+// Decrement time every second
 setInterval(countdown, 1000);
 
 
-// check the answer
+// Check the users' given answer
 function check(input) {
   console.log(question_data)
   fetch('/check_answer?answer='+input+'&question_data='+encodeURIComponent(JSON.stringify(question_data)))
@@ -48,45 +48,44 @@ function check(input) {
 
   .then((data) => {
   if (data == true) {
-    // if answer correct increment score
+    // If answer correct increment score
     score++;
 
-    // add the amount of time appropriate for the difficulty of the question
+    // Add the amount of time appropriate for the difficulty of the question
     timer = timer + difficulty_score;
 
-    // display time added to timer
+    // Display time added to timer
     document.getElementById('timer_change').innerHTML = "+" + difficulty_score;
 
-    // turn the background of the time green to make the time increment visible
+    // Turn the background of the time green to make the time increment visible
     document.getElementById("timer_color").style.backgroundColor = "LawnGreen";
 
-    // display the incremented score
+    // Display the incremented score
     document.getElementById('score').innerHTML = "Score:" + " " + score;
   }
-  // else if answer not correct
   else {
-    // subract the amount of time
+    // Subtract time if answer is incorrect
     timer = timer + (difficulty_score - 4);
 
-    //display time subtracted from timer
+    //Display time subtracted from timer
     document.getElementById('timer_change').innerHTML = (difficulty_score - 4);
 
-    // display time is subtraction from timer
+    // Display time is subtraction from timer
     document.getElementById("timer_color").style.backgroundColor = "red";
   }
   question_index++;
 
-  // generate a new question
+  // Generate a new question
   next(questions);
 
-  // return timer to default color after a short time
+  // Return timer to default color after a short time
   setTimeout(reset_color, 700);
   });
 }
 
 
 
-// reset timer backgroundcolor and remove displayed incremented/subtracted time
+// Reset timer backgroundcolor and remove displayed incremented/subtracted time
 function reset_color() {
   document.getElementById("timer_color").style.backgroundColor = "white";
   document.getElementById("timer_change").innerHTML = " ";
@@ -94,7 +93,7 @@ function reset_color() {
 
 
 
-// decrement timer if page loaded or end quiz if time is up
+// Decrement timer if page loaded or end quiz if time is up
 function countdown() {
   if (!document.getElementById('answer4').innerHTML) {
     return;
@@ -115,22 +114,22 @@ function countdown() {
 
 
 function check_score() {
-  //stop timer at 0
+  // Stop timer at 0
   if (timer < 0) {
     document.getElementById('time').innerHTML = 0;
-    // fetch response from backend for position in leaderboard
+    // Fetch response from backend for position in leaderboard
     fetch('/check?score=' + score)
     .then((response) => {
       return response.json();
     })
 
     .then((data) => {
-      // var check_executed == True; | user is in top 10: display popup
+      // Display popup if user is in top 10
       if (data.length == 2) {
         openPopup();
         checked = true;
       }
-      // user not in top10: alert with information on position ("better than X% of players")
+      // User not in top10: alert with information on position ("better than X% of players")
       else {
         alert(data);
         checked = true;
@@ -142,7 +141,7 @@ function check_score() {
 
 
 
-// fetch questions from backend
+// Fetch questions from backend
 function load_questions() {
   fetch('/load_questions')
   .then((response) => {
@@ -157,18 +156,18 @@ function load_questions() {
 
 
 function next(data) {
-    // define question variables
+    // Define question variables
     Question = data[question_index];
     question_data = Question;
     category = Question.category;
     difficulty = Question.difficulty;
     type = Question.type;
 
-    // add and subtract different amount of time per question difficulty
+    // Add and subtract different amount of time per question difficulty
     if (Question.difficulty == "easy") {
       difficulty_score = 1;
 
-      // also display icon showing difficulty per question
+      // Display icon showing difficulty per question
       document.getElementById("difficulty").innerHTML = "<img src='/static/difficulty_easy.png' alt='difficulty_easy icon'>";
     }
     else if (Question.difficulty == 'medium') {
@@ -182,7 +181,7 @@ function next(data) {
 
     let answers = Question.answers;
 
-    // remove the 3rd and 4th button if True/False question
+    // Remove the 3rd and 4th button if True/False question
     if (Question.answers.length == 2) {
       document.getElementById('answer3').style.display = "none";
       document.getElementById('answer4').style.display = "none";
@@ -191,7 +190,7 @@ function next(data) {
       document.getElementById('answer3').style.display = "block";
       document.getElementById('answer4').style.display = "block";
     }
-    // displaying question and answers
+    // Display question and answers
     document.getElementById('question').innerHTML = Question.question;
     document.getElementById('answer1').innerHTML = answers[0];
     document.getElementById('answer2').innerHTML = answers[1];
@@ -202,7 +201,7 @@ function next(data) {
 
 
 
-// skip to next question
+// Skip to next question
 function skip_question() {
   question_index++;
   next(questions);

@@ -1,3 +1,4 @@
+// Get given questions and answers of user from application.py
 fetch('/question_results')
         .then((response) => {
         return response.json();
@@ -9,7 +10,7 @@ fetch('/question_results')
         });
 
 
-
+// Add one row to question results table
 function add_question(question) {
   var table = document.getElementById("question_results_table");
   var row = table.insertRow(-1);
@@ -19,6 +20,8 @@ function add_question(question) {
   col1.innerHTML = question.question;
   col2.innerHTML = question.correct_answer;
   col3.innerHTML = question.user_answer;
+
+  // Color background of row green if question was correct. Otherwise color background red.
   if (question.correct_answer == question.user_answer){
       row.style.backgroundColor = "#ccffcc";
   }
