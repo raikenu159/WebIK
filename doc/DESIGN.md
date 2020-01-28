@@ -8,7 +8,7 @@
 ## Samenvatting
 Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel is er een leaderboards-pagina , waar de tien hoogste scores getoond worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers. Na een quiz afgenomen te hebben kan de gebruiker grafieken zien die de behaalde score per onderdeel en soort vraag tonen. Ook kan de gebruiker een tabel zien met daarin alle beantwoorde vragen met het gegeven antwoord en het correcte antwoord.
 
-## Schetsen
+## Afbeeldingen
 **Homepagina met uitleg quiz**
 ![Homepagina](https://i.imgur.com/I1EepTC.png)
 **Quizvraag pagina type 1 meerkeuze**
@@ -23,6 +23,8 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 ![Leaderboards pagina](https://i.imgur.com/cyqAbDQ.png)
 **Barcharts pagina**
 ![Barcharts pagina](https://i.imgur.com/IIAyq8s.png)![Barcharts pagina](https://i.imgur.com/5zJP0vX.png)
+**Question results pagina**
+![Question results pagina](https://i.imgur.com/H643Jcm.png)
 ## Features
 1. De vragen in de quizzes komen uit Online Trivia Database (https://opentdb.com)
 2. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database.
@@ -35,7 +37,7 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald.
 10. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
 11. In de chart-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
-12. Inde question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
+12. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
 
 
 ## Minimum viable product
@@ -151,9 +153,9 @@ from flask_session import Session
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMwNTY0MTQyLDE3NTAyODUzMywtMzU0Nz
-A4MzcwLC0xMjgxMjE3MDMsLTEyNTY3NjAxOCwtNjEwMjAyNjU4
-LC0xMjU1MjY5OTA3LDEyODYwNDc4MDYsLTE3Mjg0MDY2ODcsLT
-EwMTQ1NDkwNywtMTk2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2
-ODE2MF19
+eyJoaXN0b3J5IjpbLTI5ODk4MzE1NSwxNzUwMjg1MzMsLTM1ND
+cwODM3MCwtMTI4MTIxNzAzLC0xMjU2NzYwMTgsLTYxMDIwMjY1
+OCwtMTI1NTI2OTkwNywxMjg2MDQ3ODA2LC0xNzI4NDA2Njg3LC
+0xMDE0NTQ5MDcsLTE5NjQ0Njc2MDIsLTYxMzE5MjAxOCw0MDQ5
+NjgxNjBdfQ==
 -->
