@@ -39,13 +39,18 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 11. In de chart-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
 12. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
 
+## Repository gids
+Voeg een aantal punten toe die ons helpen snel de weg te vinden in je repository. Heb je bijvoorbeeld helpers gemaakt, leg dan uit wat we daar voor soort dingen kunnen vinden. En leg even uit welke mapjes er zijn.
 ## Werkverdeling
 **Daan van Baarsen**
-**Sem Kjaer
-### Una Garcia
-### Soufiane Zouli
+
+**Sem Kjaer**
+
+**Una Garcia**
+
+**Soufiane Zouli**
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDE5ODI2MTRdfQ==
+eyJoaXN0b3J5IjpbLTM4MDg1Mjc4OV19
 -->
