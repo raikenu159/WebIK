@@ -60,19 +60,13 @@ def startquiz():
 def quiz():
     """Take quiz"""
 
-    # user reached route via POST (as by submitting a form via POST)
+    # user reached route via POST meaning they placed in the top 10 and submitted a username
     if request.method == "POST":
 
         session['username'] = request.form.get("username")
-
-        # render current leaderboard after quiz with new user added in
         return redirect('/leaderboard')
 
-
-    # if request method == GET create session with user_id & define all scores as 0
-
     else:
-
         session["category_scores"] = {
         'General Knowledge' : 0,
         'Computer Science' : 0,
@@ -305,7 +299,7 @@ def deletebutton_display():
 
     # check if user has user id in current session
     try:
-        session['user_id']
+        session['score']
     # if not, return False (button will not show)
     except:
         return jsonify(False)
