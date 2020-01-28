@@ -1,4 +1,4 @@
-# Projectvoorstel IK02 Trivia spel
+# Kwik Kwiz
 ### Projectleden 
 * Daan van Baarsen, 
 * Una Garcia, 
@@ -153,7 +153,7 @@ from flask_session import Session
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5ODk4MzE1NSwxNzUwMjg1MzMsLTM1ND
+eyJoaXN0b3J5IjpbLTY2NzMwOTU0MCwxNzUwMjg1MzMsLTM1ND
 cwODM3MCwtMTI4MTIxNzAzLC0xMjU2NzYwMTgsLTYxMDIwMjY1
 OCwtMTI1NTI2OTkwNywxMjg2MDQ3ODA2LC0xNzI4NDA2Njg3LC
 0xMDE0NTQ5MDcsLTE5NjQ0Njc2MDIsLTYxMzE5MjAxOCw0MDQ5
