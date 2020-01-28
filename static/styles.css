@@ -31,7 +31,7 @@ hr{
     font-size: 23px;
 }
 
-.top10form {
+#top10form {
     display: none;
     position: absolute;
     top: 50%;
@@ -41,7 +41,9 @@ hr{
     margin-left: -200px;
     margin-top: -200px;
 }
-
+#quizScreen {
+    display:none;
+}
 button{
     margin: 5px;
 }

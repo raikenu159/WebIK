@@ -10,12 +10,8 @@ var type;
 var category;
 var checked = false;
 
-// Hide top10 popup when starting quiz
-document.getElementById("top10form").style.display = "none";
-document.getElementById("quizScreen").style.display = "none";
 
-
-// Open popup if in top10
+// open popup if in top10
 function openPopup() {
   document.getElementById("top10form").style.display = "block";
   // document.getElementById("question").style.display = "none";
