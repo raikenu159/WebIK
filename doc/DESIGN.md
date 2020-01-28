@@ -21,7 +21,8 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 ![Quizvraag pagina tijd verlopen top 10 score behaald](https://i.imgur.com/oSkyIT5.png)
 **Leaderboards pagina**
 ![Leaderboards pagina](https://i.imgur.com/cyqAbDQ.png)
-
+**Barcharts pagina**
+![Barcharts pagina](https://i.imgur.com/IIAyq8s.png)![Barcharts pagina](https://i.imgur.com/5zJP0vX.png)
 ## Features
 1. De vragen in de quizzes komen uit Online Trivia Database (https://opentdb.com)
 2. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database.
@@ -150,9 +151,9 @@ from flask_session import Session
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MDE3NzY5MSwxNzUwMjg1MzMsLTM1ND
-cwODM3MCwtMTI4MTIxNzAzLC0xMjU2NzYwMTgsLTYxMDIwMjY1
-OCwtMTI1NTI2OTkwNywxMjg2MDQ3ODA2LC0xNzI4NDA2Njg3LC
-0xMDE0NTQ5MDcsLTE5NjQ0Njc2MDIsLTYxMzE5MjAxOCw0MDQ5
-NjgxNjBdfQ==
+eyJoaXN0b3J5IjpbNjMwNTY0MTQyLDE3NTAyODUzMywtMzU0Nz
+A4MzcwLC0xMjgxMjE3MDMsLTEyNTY3NjAxOCwtNjEwMjAyNjU4
+LC0xMjU1MjY5OTA3LDEyODYwNDc4MDYsLTE3Mjg0MDY2ODcsLT
+EwMTQ1NDkwNywtMTk2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2
+ODE2MF19
 -->
