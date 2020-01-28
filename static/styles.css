@@ -73,6 +73,14 @@ button{
     font-size: 150%;
 }
 
+#final_score{
+    margin-top: 0px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 500%;
+
+}
+
 #time{
   position: absolute;
   top: 50%;

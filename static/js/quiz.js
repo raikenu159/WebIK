@@ -18,7 +18,7 @@ function openPopup() {
   // document.getElementById("all_answers").style.display = "none";
   // document.getElementById("stop").style.display = "none";
   document.getElementById("quizScreen").style.display = "none";
-  document.getElementById('score2').innerHTML = "Score:" + " " + score;
+  document.getElementById('final_score').innerHTML = "Score:" + " " + score;
 }
 
 
