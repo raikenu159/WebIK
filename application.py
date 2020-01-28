@@ -1,5 +1,4 @@
 import os
-import uuid
 import requests
 import random
 import json
@@ -160,7 +159,7 @@ def delete_username():
     db.execute("DELETE FROM scores WHERE id=:id", id=session["user_id"])
 
     # redirect to homepage
-    return redirect("/")
+    return render_template("leaderboard.html", played='Play again!')
 
 
 
