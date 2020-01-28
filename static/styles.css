@@ -25,15 +25,19 @@ hr{
 }
 
 
-header {
+#quizHeader {
     width: 100%;
-    margin-top:0px;
-    margin-bottom:0px;
-    padding: 20px;
-    background: crimson;
+    margin-bottom: -5vh;
+    padding: 0.2%;
+    background-color: #e93232;
     color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: 4vmin;
+}
+
+.jumbotron{
+    color: white;
+    background-color: #e93232;
 }
 
 #top10form {
@@ -46,6 +50,7 @@ header {
     margin-left: -200px;
     margin-top: -200px;
 }
+
 #quizScreen {
     display:none;
 }
@@ -54,8 +59,8 @@ button{
 }
 
 #quizTitle{
-    font-size: 3vmin;
-    margin-bottom: 0;
+    font-size: 6vmin;
+    margin: auto;
 }
 
 #questionInfo{
@@ -74,7 +79,7 @@ button{
     margin-top: 0px;
     margin-bottom: 0;
     font-weight: bold;
-    font-size: 150%;
+    font-size: 3.5vmin;
 }
 
 #time{

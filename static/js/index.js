@@ -1,3 +1,5 @@
+document.getElementById("quizHeader").style.display = "none";
+
 function toggle_guide(){
     guide = document.getElementById("quizGuide");
     if(guide.style.display === "none"){
