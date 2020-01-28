@@ -10,7 +10,6 @@
 
     // Display delete score button if session exists
     .then((truefalse) => {
-    console.log(truefalse)
     if (truefalse == true){
       document.getElementById('delete-score').style.display = "block";
       document.getElementById('results').style.display = "block";

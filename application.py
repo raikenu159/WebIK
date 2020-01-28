@@ -1,5 +1,4 @@
 import os
-import uuid
 import requests
 import random
 import json
@@ -60,27 +59,13 @@ def startquiz():
 def quiz():
     """Take quiz"""
 
-    # user reached route via POST (as by submitting a form via POST)
+    # user reached route via POST meaning they placed in the top 10 and submitted a username
     if request.method == "POST":
 
-        # get username from html form
-        name = request.form.get("username")
-
-        # insert username into DB
-        db.execute("UPDATE scores SET username = :name WHERE id = :id", name=name, id=session["user_id"])
-        topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
-
-        # render current leaderboard after quiz with new user added in
-        return render_template("leaderboard.html", scores=topscores, played='Try again!')
-
-
-    # if request method == GET create session with user_id & define all scores as 0
+        session['username'] = request.form.get("username")
+        return redirect('/leaderboard')
 
     else:
-
-        # if no username given as input score equals 0
-        row = db.execute('INSERT INTO scores (score) VALUES (0)')
-        session["user_id"] = row
         session["category_scores"] = {
         'General Knowledge' : 0,
         'Computer Science' : 0,
@@ -111,27 +96,30 @@ def check():
     # in de top 10 zit zodat we die kunnen laten zien op de leaderboard en anders een pop up geven dat de quiz voorbij is
 
     # get user score from frontend and update into DB
-    userScore = int(request.args.get("score"))
-    db.execute('UPDATE scores SET score=:score WHERE id = :id', score=userScore, id=session["user_id"])
+    session['score'] = int(request.args.get("score"))
 
-    leaderboard= db.execute('SELECT score FROM scores')
+
+    leaderboard = db.execute('SELECT score FROM scores')
 
     # check position in current leadeboard
-    ranking = 0
+    ranking = 1
     for score in leaderboard:
-        if userScore <= score['score']:
+        if session['score'] <= score['score']:
             ranking+= 1
 
-    # calculate and return in which quartile user scored
-    percentile = ((1-(ranking / len(leaderboard))) * 100)
+        percentile = ((1-(ranking / len(leaderboard))) * 100)
+
     if ranking < 10:
         return jsonify(['Congratulations! you are number ' + str(ranking) + ' on the leaderboard.', True])
-    elif percentile > 50:
-        return jsonify('Well done you scored better than {0:.2f}% of previous users!'.format(percentile))
-    elif percentile >= 25:
-        return jsonify('You scored better than {0:.2f}% of previous users.'.format(percentile))
-    elif percentile < 25:
-        return jsonify('Better luck next time, you scored in the bottom quartile.')
+    else:
+        percentile = ((1-(ranking / len(leaderboard))) * 100)
+
+        if percentile > 50:
+            return jsonify('Well done you scored better than {0:.2f}% of previous users!'.format(percentile))
+        elif percentile >= 25:
+            return jsonify('You scored better than {0:.2f}% of previous users.'.format(percentile))
+        elif percentile < 25:
+            return jsonify('Better luck next time, you scored in the bottom quartile.')
 
 
 
@@ -144,11 +132,22 @@ def leaderboard():
 
     # check if the user has already played the quiz: if not display button 'play now'
     try:
-        session['user_id']
+        session['score']
     except:
         return render_template("leaderboard.html", scores=topscores, played='Play now!')
 
+    try:
+        session['username']
+    except:
+        row = db.execute('INSERT INTO scores (score) VALUES (:score)', score=session['score'])
+        session['user_id'] = row
+        topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
+        return render_template("leaderboard.html", scores=topscores, played='Try again!')
+
     # if the user has played the quiz but did not make the topscores display 'try again'
+    row = db.execute('INSERT INTO scores (score, username) VALUES (:score, :username)', score=session['score'], username=session['username'])
+    session['user_id'] = row
+    topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
     return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
 
@@ -160,7 +159,7 @@ def delete_username():
     db.execute("DELETE FROM scores WHERE id=:id", id=session["user_id"])
 
     # redirect to homepage
-    return redirect("/")
+    return render_template("leaderboard.html", played='Play again!')
 
 
 
@@ -301,7 +300,7 @@ def deletebutton_display():
 
     # check if user has user id in current session
     try:
-        session['user_id']
+        session['score']
     # if not, return False (button will not show)
     except:
         return jsonify(False)
