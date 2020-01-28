@@ -151,20 +151,9 @@ from flask import Flask, flash, jsonify, redirect, render_template, request, ses
 from flask_session import Session
 ```
 
-### Socket.io
-Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt realtime bidirectionele communicatie tussen webclients en servers mogelijk.
-
-- Kan misschien pop-ups genereren, push meldingen versturen naar de gebruikers.
-- A.s. vrijdag 17 januari meer over vragen aan begeleiders.
-- Gebruikers kunnen kiezen uit een aantal verschillende startwaardes voor tijdslimieten.
-- Hierbij zijn er voor alle startwaardes eigen leaderboards.
-- Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-- We gebruiken een online trivia database waaruit we onze vragen halen.
-- Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNjM4OTY3NywtMzU0NzA4MzcwLC0xMj
-gxMjE3MDMsLTEyNTY3NjAxOCwtNjEwMjAyNjU4LC0xMjU1MjY5
-OTA3LDEyODYwNDc4MDYsLTE3Mjg0MDY2ODcsLTEwMTQ1NDkwNy
-wtMTk2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2ODE2MF19
+eyJoaXN0b3J5IjpbMTc1MDI4NTMzLC0zNTQ3MDgzNzAsLTEyOD
+EyMTcwMywtMTI1Njc2MDE4LC02MTAyMDI2NTgsLTEyNTUyNjk5
+MDcsMTI4NjA0NzgwNiwtMTcyODQwNjY4NywtMTAxNDU0OTA3LC
+0xOTY0NDY3NjAyLC02MTMxOTIwMTgsNDA0OTY4MTYwXX0=
 -->
