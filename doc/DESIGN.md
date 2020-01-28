@@ -6,7 +6,7 @@
 * Soufiane Zouli
 
 ## Samenvatting
-Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel zal er een leaderboards-pagina zijn, waar de hoogste scores van gebruikers bijgehouden en getoond zullen worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers.
+Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel is er een leaderboards-pagina , waar de tien hoogste scores getoond worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers. Na een quiz afgenomen te hebben kan de gebruiker grafieken zien die de behaalde score per onderdeel en soort vraag tonen. Ook kan de gebruiker een tabel zien met daarin alle beantwoorde vragen met het gegeven antwoord en het correcte antwoord.
 
 ## Schetsen
 **Homepagina**
@@ -26,16 +26,17 @@ Op onze webapplicatie zal het mogelijk zijn om gecategoriseerde multiple choice 
 
 ## Features
 1. De vragen in de quizzes komen uit Online Trivia Database (https://opentdb.com)
-3. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database (zie feature 2).
-4. De quizzes zijn multiple choice.
-5. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
-6. Elke quiz begint met een tijdslimiet van een minuut.
-8. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
-8. Gebruikers behalen punten met elke goed beantwoorde vraag.
-9. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
-10. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald.
-11. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
-12. In de result-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
+2. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database.
+3. De quizzes zijn multiple choice.
+4. Gebruikers kunnen ervoor kiezen om een vraag over te slaan zonder tijd te verliezen.
+5. Elke quiz begint met een tijdslimiet van een minuut.
+6. Gebruikers verdienen extra tijd met elke goed beantwoorde vraag.
+7. Gebruikers behalen punten met elke goed beantwoorde vraag.
+8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
+9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald.
+10. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
+11. In de result-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
+12. Vanuit de result-page
 
 
 ## Minimum viable product
@@ -162,8 +163,8 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NDcwODM3MCwtMTI4MTIxNzAzLC0xMj
-U2NzYwMTgsLTYxMDIwMjY1OCwtMTI1NTI2OTkwNywxMjg2MDQ3
-ODA2LC0xNzI4NDA2Njg3LC0xMDE0NTQ5MDcsLTE5NjQ0Njc2MD
-IsLTYxMzE5MjAxOCw0MDQ5NjgxNjBdfQ==
+eyJoaXN0b3J5IjpbLTQ0Mzg3Mjc1NSwtMzU0NzA4MzcwLC0xMj
+gxMjE3MDMsLTEyNTY3NjAxOCwtNjEwMjAyNjU4LC0xMjU1MjY5
+OTA3LDEyODYwNDc4MDYsLTE3Mjg0MDY2ODcsLTEwMTQ1NDkwNy
+wtMTk2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2ODE2MF19
 -->
