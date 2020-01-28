@@ -14,13 +14,13 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 **Quizvraag pagina type 1 meerkeuze**
 ![Quizvraag pagina meerkeuze](https://i.imgur.com/gobQsLO.png)
 **Quizvraag pagina type 2 boolean**
-![Quizvraag pagina true/false](https://i.imgur.com/ATSs2sh.png)
+![Quizvraag pagina boolean](https://i.imgur.com/ATSs2sh.png)
 **Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben**
-![Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben](https://i.imgur.com/xBnqQpH.png)
+![Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben](https://i.imgur.com/2KWoOco.png)
 **Quizvraag pagina tijd verlopen top 10 score behaald**
-![Quizvraag pagina tijd verlopen top 10 score behaald](https://i.imgur.com/OW1MBkK.png)
+![Quizvraag pagina tijd verlopen top 10 score behaald](https://i.imgur.com/oSkyIT5.png)
 **Leaderboards pagina**
-![Leaderboards pagina](https://i.imgur.com/e6srWBE.png)
+![Leaderboards pagina](https://i.imgur.com/cyqAbDQ.png)
 
 ## Features
 1. De vragen in de quizzes komen uit Online Trivia Database (https://opentdb.com)
@@ -150,9 +150,9 @@ from flask_session import Session
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg4MDAzOTU4LDE3NTAyODUzMywtMzU0Nz
-A4MzcwLC0xMjgxMjE3MDMsLTEyNTY3NjAxOCwtNjEwMjAyNjU4
-LC0xMjU1MjY5OTA3LDEyODYwNDc4MDYsLTE3Mjg0MDY2ODcsLT
-EwMTQ1NDkwNywtMTk2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2
-ODE2MF19
+eyJoaXN0b3J5IjpbLTg0MDE3NzY5MSwxNzUwMjg1MzMsLTM1ND
+cwODM3MCwtMTI4MTIxNzAzLC0xMjU2NzYwMTgsLTYxMDIwMjY1
+OCwtMTI1NTI2OTkwNywxMjg2MDQ3ODA2LC0xNzI4NDA2Njg3LC
+0xMDE0NTQ5MDcsLTE5NjQ0Njc2MDIsLTYxMzE5MjAxOCw0MDQ5
+NjgxNjBdfQ==
 -->
