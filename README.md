@@ -40,9 +40,12 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 12. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
 
 ## Werkverdeling
-### Daan van Baarsen
+**Daan van Baarsen**
+**Sem Kjaer
+### Una Garcia
+### Soufiane Zouli
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDU4OTk4OV19
+eyJoaXN0b3J5IjpbLTExNDE5ODI2MTRdfQ==
 -->
