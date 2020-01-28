@@ -131,6 +131,11 @@ def leaderboard():
     # select the top 10 scores from the scores database
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
 
+    try:
+        session['user_id']
+    except:
+        return render_template("leaderboard.html", scores=topscores, played='Try again!')
+
     # check if the user has already played the quiz: if not display button 'play now'
     try:
         session['score']
