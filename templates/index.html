@@ -2,23 +2,39 @@
 
 
 {% block main %}
-    <div class="header">
+    <div class="jumbotron">
         <h1 id="quizTitle">Kwik Kwiz</h1>
         <p>Hoe lang houd jij het vol?</p>
     </div>
+<div class="row">
+    <div class="col-sm">
+        <form action="/quiz" method="get">
+            <button type="submit" class="btn btn-success">Go to Quiz!</button>
+        </form>
 
-    <form action="/quiz" method="get">
-        <button type="submit" class="btn btn-primary">Go to Quiz!</button>
-    </form>
+        <form action="/leaderboard" method="get">
+            <button type="submit" class="btn btn-primary">Leaderboard</button>
+        </form>
 
-    <form action="/leaderboard" method="get">
-        <button type="submit" class="btn btn-info">Leaderboard</button>
-    </form>
-
-    <form action="/startquiz" method="get">
-        <button type="submit" class="btn btn-danger" margin="20px">Quiz guide</button>
-    </form>
-
+        <button onclick="toggle_guide()" class="btn btn-danger">Quiz guide</button>
 
 
+
+        <div id="quizGuide">
+            <p>
+                Each quiz contains questions from five categories: General Knowledge, Computer science, Geography, History and Animals
+                and each question can be of easy, medium or hard difficulty. You start with a one minute timer. Giving a correct answer grants extra time, based on the difficulty of the question.
+                On the other hand, giving a wrong answer costs you time, the amount of which also depends on the difficulty of the question.
+                The time distribution based on question difficulty is as follows:
+            </p>
+            <ul>
+                <li><b>Easy questions.</b> Correct answers grant one extra second. Wrong answers deduct three seconds.</li>
+                <li><b>Medium questions.</b> Correct answers grant two extra seconds. Wrong answers deduct two seconds.</li>
+                <li><b>Hard questions.</b> Correct answers grant three extra seconds. Wrong answers deduct one second.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="static/js/index.js"></script>
 {% endblock %}
