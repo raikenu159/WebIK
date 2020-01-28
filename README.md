@@ -35,9 +35,10 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 7. Gebruikers behalen punten met elke goed beantwoorde vraag.
 8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
 9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald.
-10. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
-11. In de chart-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
-12. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
+10. Wanneer e 
+11. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
+12. In de chart-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
+13. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
 
 ## Repository gids
 *Voeg een aantal punten toe die ons helpen snel de weg te vinden in je repository. Heb je bijvoorbeeld helpers gemaakt, leg dan uit wat we daar voor soort dingen kunnen vinden. En leg even uit welke mapjes er zijn.*
@@ -52,5 +53,5 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyNjU2MDczN119
+eyJoaXN0b3J5IjpbLTczNDc1NzU3OCwtNDI2NTYwNzM3XX0=
 -->
