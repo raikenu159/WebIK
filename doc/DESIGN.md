@@ -35,8 +35,8 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
 9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald.
 10. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
-11. In de result-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
-12. Vanuit de result-page
+11. In de chart-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
+12. Inde question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
 
 
 ## Minimum viable product
@@ -163,7 +163,7 @@ Socket.io is een JavaScript-bibliotheek voor realtime webapplicaties. Het maakt 
 - Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0Mzg3Mjc1NSwtMzU0NzA4MzcwLC0xMj
+eyJoaXN0b3J5IjpbMTczNjM4OTY3NywtMzU0NzA4MzcwLC0xMj
 gxMjE3MDMsLTEyNTY3NjAxOCwtNjEwMjAyNjU4LC0xMjU1MjY5
 OTA3LDEyODYwNDc4MDYsLTE3Mjg0MDY2ODcsLTEwMTQ1NDkwNy
 wtMTk2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2ODE2MF19
