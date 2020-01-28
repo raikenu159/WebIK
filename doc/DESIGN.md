@@ -9,14 +9,12 @@
 Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel is er een leaderboards-pagina , waar de tien hoogste scores getoond worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers. Na een quiz afgenomen te hebben kan de gebruiker grafieken zien die de behaalde score per onderdeel en soort vraag tonen. Ook kan de gebruiker een tabel zien met daarin alle beantwoorde vragen met het gegeven antwoord en het correcte antwoord.
 
 ## Schetsen
-**Homepagina**
-![Homepagina](https://i.imgur.com/QP6Ov9Y.png)
-**Uitlegpagina quiz**
-![Uitlegpagina quiz](https://i.imgur.com/SyRuodO.png)
+**Homepagina met uitleg quiz**
+![Homepagina](https://i.imgur.com/I1EepTC.png)
 **Quizvraag pagina type 1 meerkeuze**
-![Quizvraag pagina meerkeuze](https://i.imgur.com/YLaX3YG.png)
-**Quizvraag pagina type 2 true/false**
-![Quizvraag pagina true/false](https://i.imgur.com/YPbNbEU.png)
+![Quizvraag pagina meerkeuze](https://i.imgur.com/gobQsLO.png)
+**Quizvraag pagina type 2 boolean**
+![Quizvraag pagina true/false](https://i.imgur.com/ATSs2sh.png)
 **Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben**
 ![Quizvraag pagina tijd verlopen zonder top 10 score behaald te hebben](https://i.imgur.com/xBnqQpH.png)
 **Quizvraag pagina tijd verlopen top 10 score behaald**
@@ -152,8 +150,9 @@ from flask_session import Session
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MDI4NTMzLC0zNTQ3MDgzNzAsLTEyOD
-EyMTcwMywtMTI1Njc2MDE4LC02MTAyMDI2NTgsLTEyNTUyNjk5
-MDcsMTI4NjA0NzgwNiwtMTcyODQwNjY4NywtMTAxNDU0OTA3LC
-0xOTY0NDY3NjAyLC02MTMxOTIwMTgsNDA0OTY4MTYwXX0=
+eyJoaXN0b3J5IjpbNzg4MDAzOTU4LDE3NTAyODUzMywtMzU0Nz
+A4MzcwLC0xMjgxMjE3MDMsLTEyNTY3NjAxOCwtNjEwMjAyNjU4
+LC0xMjU1MjY5OTA3LDEyODYwNDc4MDYsLTE3Mjg0MDY2ODcsLT
+EwMTQ1NDkwNywtMTk2NDQ2NzYwMiwtNjEzMTkyMDE4LDQwNDk2
+ODE2MF19
 -->
