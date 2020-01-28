@@ -13,6 +13,10 @@ main img{
     max-width: 100%;
 }
 
+#quizGuide{
+    display: none;
+}
+
 hr{
     width: 40%;
     color: grey;
@@ -105,7 +109,6 @@ button{
 }
 #allAnswers{
     height: 15em;
-    /*border: 1px solid black;*/
 }
 .answerButtons{
     font-size: 3vmin;
