@@ -140,12 +140,14 @@ def leaderboard():
     try:
         session['username']
     except:
-        db.execute('INSERT INTO scores (score, date) VALUES (:score, :date)', score=session['score'], date=datetime.now())
+        row = db.execute('INSERT INTO scores (score) VALUES (:score)', score=session['score'])
+        session['user_id'] = row
         topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
         return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
     # if the user has played the quiz but did not make the topscores display 'try again'
-    db.execute('INSERT INTO scores (score, date, username) VALUES (:score, :date, :username)', score=session['score'], date=datetime.now(), username=session['username'])
+    row = db.execute('INSERT INTO scores (score, username) VALUES (:score, :username)', score=session['score'], username=session['username'])
+    session['user_id'] = row
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
     return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
