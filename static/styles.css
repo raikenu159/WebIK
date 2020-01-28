@@ -24,6 +24,7 @@ hr{
 header {
     width: 100%;
     margin-top:0px;
+    margin-bottom:0px;
     padding: 20px;
     background: crimson;
     color: white;
@@ -55,6 +56,7 @@ button{
 
 #questionInfo{
     font-size: 2.5vmin;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
@@ -65,7 +67,10 @@ button{
 }
 
 #score{
+    margin-top: 0px;
     margin-bottom: 0;
+    font-weight: bold;
+    font-size: 150%;
 }
 
 #time{

@@ -148,7 +148,7 @@ def leaderboard():
     row = db.execute('INSERT INTO scores (score, username) VALUES (:score, :username)', score=session['score'], username=session['username'])
     session['user_id'] = row
     topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
-    return render_template("leaderboard.html", scores=topscores, played='Try again!')
+    return render_template("leaderboard.html", scores=topscores, played='Play again!')
 
 
 @app.route("/delete_username")
