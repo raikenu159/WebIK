@@ -10,7 +10,7 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 
 ## Video
 
-> Blockquote
+[VIDEO](https://www.youtube.com/watch?v=GnmT6GnKVR8)
 
 
 ## Afbeeldingen
@@ -83,7 +83,7 @@ In de **templates-map** vind je:
 
 ## Werkverdeling
 
-Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd en ook aan elk aspect van de applicatie gewerkt. Toch was er tussen de groepsleden enige vorm van specialisatie. 
+Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd en ook aan elk aspect van de applicatie gewerkt. Wel was er tussen de groepsleden enige vorm van specialisatie. 
  
 **Daan van Baarsen**
  - Backend/database communicatie
@@ -104,10 +104,9 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 - Javascript (frontend)
 - HTML & CSS (layout)
 - Textfiles bijgehouden (README)
-elke mapjes er zijn.*
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1OTc3ODAyNiwxNTU2MTk4MzI5LDQ3OD
+eyJoaXN0b3J5IjpbMTI4Nzc0NTU0OCwxNTU2MTk4MzI5LDQ3OD
 cxNDU0OF19
 -->
