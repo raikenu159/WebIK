@@ -60,9 +60,10 @@ Vervolgens de 3 mappen in de repository:
  - static
  - templates
 
-In de doc-map vind je weer 3 mappen:
+In de doc-map vind je twee mappen:
 /afbeeldingen: hierin staan alle afbeeldingen die gebruikt worden in de README file.
-/
+&
+/Textfiles: hierin staan de markdown bestanden waarin je de gebruikte frameworks kunt vinden inclusief 
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -75,6 +76,6 @@ In de doc-map vind je weer 3 mappen:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDkwOTMxMDksMTUwMzkxMDg1NCwtMT
-QyMjA0MDUzMiwtNDI2NTYwNzM3XX0=
+eyJoaXN0b3J5IjpbLTY4MzYzNTc5NSwtMTM0OTA5MzEwOSwxNT
+AzOTEwODU0LC0xNDIyMDQwNTMyLC00MjY1NjA3MzddfQ==
 -->
