@@ -243,6 +243,11 @@ def button_display():
     except:
         return jsonify(False)
 
+    # If the user deleted his score tell js to display only the results button
+    userdata = db.execute("SELECT * FROM scores WHERE id = :id", id=session["user_id"])
+    if len(userdata) == 0:
+        return jsonify("deleted")
+
     # If session is found return True (button will show)
     return jsonify(True)
 

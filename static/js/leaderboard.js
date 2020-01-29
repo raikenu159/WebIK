@@ -4,9 +4,12 @@ fetch("/button_display")
     return response.json();
   })
 
-  // Display delete score button if session exists
+  // Display results and delete button when appropriate
   .then((session) => {
-  if (session == true){
+  if (session == "deleted") {
+    document.getElementById("results").style.display = "block";
+  }
+  else if (session == true){
     document.getElementById("delete_score").style.display = "block";
     document.getElementById("results").style.display = "block";
   }
