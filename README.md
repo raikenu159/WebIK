@@ -48,7 +48,7 @@ Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repositor
  - README.md
  - trivia.db
  
- Het eerste bestand 'Application.py' bevat de volledige backend code in python. Voor alle functies  die gebruikt zijn in application.py inclusief de bijbehorende uitleg volg je het pad WebIKTrivia02/doc/Textfiles/Functies.md.
+ **Het** eerste bestand 'Application.py' bevat de volledige backend code in python. Voor alle functies  die gebruikt zijn in application.py inclusief de bijbehorende uitleg volg je het pad WebIKTrivia02/doc/Textfiles/Functies.md.
  
 Het tweede bestand 'README.md' is het huidige bestand.
 
@@ -82,7 +82,7 @@ Ook het losse bestand DESIGN.md staat in de '/doc' waarin een design in de vroeg
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg1NjgyNzEzLDIzNTc4NjYzNywtMTM0OT
-A5MzEwOSwxNTAzOTEwODU0LC0xNDIyMDQwNTMyLC00MjY1NjA3
-MzddfQ==
+eyJoaXN0b3J5IjpbMTU2MjgyODM3Nyw3ODU2ODI3MTMsMjM1Nz
+g2NjM3LC0xMzQ5MDkzMTA5LDE1MDM5MTA4NTQsLTE0MjIwNDA1
+MzIsLTQyNjU2MDczN119
 -->
