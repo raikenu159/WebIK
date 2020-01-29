@@ -10,6 +10,8 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 
 ## Video
 ![https://www.youtube.com/watch?v=GnmT6GnKVR8](Video)
+```
+```
 
 ## Afbeeldingen
 **Homepagina met uitleg quiz**
@@ -106,6 +108,6 @@ elke mapjes er zijn.*
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MjU5MzUwLDE1NTYxOTgzMjksNDc4Nz
-E0NTQ4XX0=
+eyJoaXN0b3J5IjpbLTE3NjM3MTMxOTQsMTU1NjE5ODMyOSw0Nz
+g3MTQ1NDhdfQ==
 -->
