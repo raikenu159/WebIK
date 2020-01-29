@@ -91,8 +91,8 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
  - Backend
 
 **Sem Kjaer**
-- Backend
-- javascript (frontend)
+- Fackend
+- Werken met de API
 - database
 
 **Una Garcia**
@@ -112,6 +112,7 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4OTI0NjgzNiwtMTM1Njk4OTM0NCwtNz
-cwMzk2ODg3LC0xMzIwMjAwOCwtMTQ5MzIxMDY2Nl19
+eyJoaXN0b3J5IjpbMTI2ODQ5ODA5MSwxNzg5MjQ2ODM2LC0xMz
+U2OTg5MzQ0LC03NzAzOTY4ODcsLTEzMjAyMDA4LC0xNDkzMjEw
+NjY2XX0=
 -->
