@@ -5,9 +5,6 @@ var question_index = 0;
 var questions;
 var question_data;
 var difficulty_score;
-var difficulty;
-var type;
-var category;
 var checked = false;
 
 
@@ -23,6 +20,7 @@ function openPopup() {
 document.getElementById('time').innerHTML = timer;
 document.getElementById('score').innerHTML = "Score:" + " " + score;
 
+
 // Generate a question
 load_questions();
 
@@ -33,8 +31,8 @@ setInterval(countdown, 1000);
 
 // Check the users' given answer
 function check(input) {
-  console.log(question_data)
-  fetch('/check_answer?answer='+input+'&question_data='+encodeURIComponent(JSON.stringify(question_data)))
+  console.log(question_index);
+  fetch('/check_answer?answer='+input+'&question_data='+encodeURIComponent(JSON.stringify(question_data))+'&index='+question_index.toString())
   .then((response) => {
       return response.json();
   })
@@ -51,7 +49,7 @@ function check(input) {
     document.getElementById('timer_change').innerHTML = "+" + difficulty_score;
 
     // Turn the background of the time green to make the time increment visible
-    document.getElementById("timer_color").style.backgroundColor = "LawnGreen";
+    document.getElementById("timer_change").style.backgroundColor = "LawnGreen";
 
     // Display the incremented score
     document.getElementById('score').innerHTML = "Score:" + " " + score;
@@ -64,7 +62,7 @@ function check(input) {
     document.getElementById('timer_change').innerHTML = (difficulty_score - 4);
 
     // Display time is subtraction from timer
-    document.getElementById("timer_color").style.backgroundColor = "red";
+    document.getElementById("timer_change").style.backgroundColor = "red";
   }
   question_index++;
 
@@ -80,7 +78,7 @@ function check(input) {
 
 // Reset timer backgroundcolor and remove displayed incremented/subtracted time
 function reset_color() {
-  document.getElementById("timer_color").style.backgroundColor = "white";
+  document.getElementById("timer_change").style.backgroundColor = "white";
   document.getElementById("timer_change").innerHTML = " ";
 }
 
