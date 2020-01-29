@@ -86,94 +86,6 @@ def quiz():
         return render_template("quiz.html")
 
 
-@app.route("/check", methods=["GET"])
-def check():
-    """Return true if achieved score is in top 10"""
-
-    # Get user score from frontend and update into DB
-    session["score"] = int(request.args.get("score"))
-    session["inserted"] = False
-
-    leaderboard = db.execute("SELECT score FROM scores")
-
-    # Check position in current leaderboard and give the output for the position of the user
-    ranking = 1
-    for score in leaderboard:
-        if session["score"] <= score["score"]:
-            ranking+= 1
-
-    if ranking <= 10:
-        return jsonify(["Congratulations! you are number " + str(ranking) + " on the leaderboard.", True])
-    else:
-        percentile = ((1-(ranking / len(leaderboard))) * 100)
-
-        if percentile > 50:
-            return jsonify("Well done you scored better than {0:.2f}% of previous users!".format(percentile))
-        elif percentile >= 25:
-            return jsonify("You scored better than {0:.2f}% of previous users.".format(percentile))
-        elif percentile < 25:
-            return jsonify("Better luck next time, you scored in the bottom quartile.")
-
-
-@app.route("/leaderboard")
-def leaderboard():
-    """Display the current leaderboard and some statistics about the users performance"""
-
-    # Select the top 10 scores from the scores database
-    topscores = db.execute("SELECT * FROM scores ORDER BY score DESC, id ASC LIMIT 10")
-
-    # Check if the user has already played the quiz: if not display button 'play now'
-    try:
-        session["score"]
-    except:
-        return render_template("leaderboard.html", scores=topscores, played="Play now!")
-
-    # Display button 'try again' if the user didn't reach the top 10 leaderboard
-    if session["inserted"] == True:
-        return render_template("leaderboard.html", scores=topscores, played="Try again!")
-
-    # Check if the user has filled in a username: if not add the score to the database
-    try:
-        session["username"]
-    except:
-        row = db.execute("INSERT INTO scores (score) VALUES (:score)", score=session["score"])
-        session["inserted"] = True
-        session["user_id"] = row
-        topscores = db.execute("SELECT * FROM scores ORDER BY score DESC, id ASC LIMIT 10")
-        return render_template("leaderboard.html", scores=topscores, played="Try again!")
-
-    # If the user has played the quiz but did not make the topscores display "try again"
-    row = db.execute("INSERT INTO scores (score, username) VALUES (:score, :username)", score=session["score"], username=session["username"])
-    session["inserted"] = True
-    session["user_id"] = row
-    topscores = db.execute("SELECT * FROM scores ORDER BY score DESC, id ASC LIMIT 10")
-    return render_template("leaderboard.html", scores=topscores, played="Try again!")
-
-
-@app.route("/delete_username")
-def delete_username():
-    """Delete the username of the user from the leaderboards"""
-
-    # Delete the score from the database
-    db.execute("DELETE FROM scores WHERE id=:id", id=session["user_id"])
-
-    return redirect("/leaderboard")
-
-
-@app.route("/barchart")
-def barchart():
-    """Display in a barchart the score per category"""
-
-    # Add all scores per category from current user's session
-    category = [[score for score in session["category_scores"].values()], [name for name in session["category_scores"].keys()], "Category scores"]
-    difficulty = [[score for score in session["difficulty_scores"].values()], [name for name in session["difficulty_scores"].keys()], "Difficulty scores"]
-    types = [[score for score in session["type_scores"].values()], [name for name in session["type_scores"].keys()], "Type scores"]
-
-    session["chart_data"] = [category, difficulty, types]
-
-    return render_template("barchart.html")
-
-
 @app.route("/load_questions", methods=["GET"])
 def load_questions():
     """Fetches questions"""
@@ -228,6 +140,35 @@ def load_questions():
     return jsonify(questions_js)
 
 
+@app.route("/check", methods=["GET"])
+def check():
+    """Return true if achieved score is in top 10"""
+
+    # Get user score from frontend and update into DB
+    session["score"] = int(request.args.get("score"))
+    session["inserted"] = False
+
+    leaderboard = db.execute("SELECT score FROM scores")
+
+    # Check position in current leaderboard and give the output for the position of the user
+    ranking = 1
+    for score in leaderboard:
+        if session["score"] <= score["score"]:
+            ranking+= 1
+
+    if ranking <= 10:
+        return jsonify(["Congratulations! you are number " + str(ranking) + " on the leaderboard.", True])
+    else:
+        percentile = ((1-(ranking / len(leaderboard))) * 100)
+
+        if percentile > 50:
+            return jsonify("Well done you scored better than {0:.2f}% of previous users!".format(percentile))
+        elif percentile >= 25:
+            return jsonify("You scored better than {0:.2f}% of previous users.".format(percentile))
+        elif percentile < 25:
+            return jsonify("Better luck next time, you scored in the bottom quartile.")
+
+
 @app.route("/check_answer")
 def check_answer():
     """Checks every answer of correctness"""
@@ -255,11 +196,39 @@ def check_answer():
         return jsonify(False)
 
 
-@app.route("/chart_values")
-def chart_values():
-    """Returns barchart data"""
+@app.route("/leaderboard")
+def leaderboard():
+    """Display the current leaderboard and some statistics about the users performance"""
 
-    return jsonify(session["chart_data"])
+    # Select the top 10 scores from the scores database
+    topscores = db.execute("SELECT * FROM scores ORDER BY score DESC, id ASC LIMIT 10")
+
+    # Check if the user has already played the quiz: if not display button 'play now'
+    try:
+        session["score"]
+    except:
+        return render_template("leaderboard.html", scores=topscores, played="Play now!")
+
+    # Display button 'try again' if the user didn't reach the top 10 leaderboard
+    if session["inserted"] == True:
+        return render_template("leaderboard.html", scores=topscores, played="Try again!")
+
+    # Check if the user has filled in a username: if not add the score to the database
+    try:
+        session["username"]
+    except:
+        row = db.execute("INSERT INTO scores (score) VALUES (:score)", score=session["score"])
+        session["inserted"] = True
+        session["user_id"] = row
+        topscores = db.execute("SELECT * FROM scores ORDER BY score DESC, id ASC LIMIT 10")
+        return render_template("leaderboard.html", scores=topscores, played="Try again!")
+
+    # If the user has played the quiz but did not make the topscores display "try again"
+    row = db.execute("INSERT INTO scores (score, username) VALUES (:score, :username)", score=session["score"], username=session["username"])
+    session["inserted"] = True
+    session["user_id"] = row
+    topscores = db.execute("SELECT * FROM scores ORDER BY score DESC, id ASC LIMIT 10")
+    return render_template("leaderboard.html", scores=topscores, played="Try again!")
 
 
 @app.route("/button_display")
@@ -276,6 +245,37 @@ def button_display():
 
     # If session is found return True (button will show)
     return jsonify(True)
+
+
+@app.route("/delete_username")
+def delete_username():
+    """Delete the username of the user from the leaderboards"""
+
+    # Delete the score from the database
+    db.execute("DELETE FROM scores WHERE id=:id", id=session["user_id"])
+
+    return redirect("/leaderboard")
+
+
+@app.route("/barchart")
+def barchart():
+    """Display in a barchart the score per category"""
+
+    # Add all scores per category from current user's session
+    category = [[score for score in session["category_scores"].values()], [name for name in session["category_scores"].keys()], "Category scores"]
+    difficulty = [[score for score in session["difficulty_scores"].values()], [name for name in session["difficulty_scores"].keys()], "Difficulty scores"]
+    types = [[score for score in session["type_scores"].values()], [name for name in session["type_scores"].keys()], "Type scores"]
+
+    session["chart_data"] = [category, difficulty, types]
+
+    return render_template("barchart.html")
+
+
+@app.route("/chart_values")
+def chart_values():
+    """Returns barchart data"""
+
+    return jsonify(session["chart_data"])
 
 
 @app.route("/questions")
