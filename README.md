@@ -98,7 +98,7 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 - database
 
 **Una Garcia**
-- layout quiz
+- layout
 - textfiles (README)
 - resultpage
 
@@ -110,6 +110,6 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MDM5Njg4NywtMTMyMDIwMDgsLTE0OT
-MyMTA2NjZdfQ==
+eyJoaXN0b3J5IjpbNDcxNzIzODIyLC03NzAzOTY4ODcsLTEzMj
+AyMDA4LC0xNDkzMjEwNjY2XX0=
 -->
