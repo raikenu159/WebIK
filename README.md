@@ -36,9 +36,9 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
 9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald.
 11. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
-12. Wanneer een gebruiker vanuit de quiz naar de leaderboards-pagina gaat, kan de net behaalde score verwijderd worden. 
+en gebruiker vanuit de quiz naar de leaderboards-pagina gaat, kan de net behaalde score verwijderd worden. 
 13. In de chart-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
-14. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
+1. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
 
 ## Repository gids
 
@@ -75,7 +75,7 @@ In de **static-map** vind je:
 
 -styles.css: het bestand voor de styling van de webpagina's.
 
--Verder staan hier alle afbeeldingen die gebruikt worden op de webpagina's.
+-Verder staan hier alle afbeeldingen die gebr*Voeg een aantal punten toe die ons helpen snel de weg te vinden in je repository. Heb je bijvoorbeeld helpers gemaakt, leg dan uit wat we daar voor soort dingen kunnen vinden. En leg even uikt worden op de webpagina's.
 
 In de **templates-map** vind je:
 
@@ -104,9 +104,17 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 - Javascript (frontend)
 - HTML & CSS (layout)
 - Textfiles bijgehouden (README)
+elke mapjes er zijn.*
+## Werkverdeling
+**Daan van Baarsen**
 
+**Sem Kjaer**
+
+**Una Garcia**
+
+**Soufiane Zouli**uit w
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc4NzE0NTQ4XX0=
+eyJoaXN0b3J5IjpbMTY0NTc5MDQ0Niw0Nzg3MTQ1NDhdfQ==
 -->
