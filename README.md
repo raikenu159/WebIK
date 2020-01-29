@@ -86,9 +86,9 @@ Alle HTML-files waaruit de trivia web-applicatie bestaat.
 Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd en ook aan elk aspect van de applicatie gewerkt. Toch was er tussen de groepsleden enige vorm van specialisatie. 
  
 **Daan van Baarsen**
- - Leaderboard
  - Backend/database communicatie
  - HTML & CSS
+ - Leaderboard
 
 **Sem Kjaer**
 - Functies in de backend
@@ -100,7 +100,6 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 - HTML & CSS
 - Projectvoorstel (README) 
 
-
 **Soufiane Zouli**
 - Quiz functionaliteit (javascript)
 - HTML & CSS
@@ -109,7 +108,7 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MjgzNTM1MSwxNzg5MjQ2ODM2LC0xMz
-U2OTg5MzQ0LC03NzAzOTY4ODcsLTEzMjAyMDA4LC0xNDkzMjEw
-NjY2XX0=
+eyJoaXN0b3J5IjpbLTE5NTYzMzU2NDksMTc4OTI0NjgzNiwtMT
+M1Njk4OTM0NCwtNzcwMzk2ODg3LC0xMzIwMjAwOCwtMTQ5MzIx
+MDY2Nl19
 -->
