@@ -1,51 +1,51 @@
 {% extends "layout.html" %} {% block main %}
 <div id="loader"></div>
 
-<div id="quizScreen">
+<div id="quiz_screen">
 
-    <div id="questionInfo" class="row">
+    <div id="question_info" class="row">
         <div class="col-sm">
             <p id='score'></p>
 
-            <div id='timer_color' class="row">
+            <div id="timer_color" class="row">
                 <div class="col-sm-5"></div>
                 <div class="col-sm-2">
-                    <img id="clockImage" src="static/clock.jpeg" alt="clock image">
-                    <div id='time'></div>
+                    <img id="clock_image" src="static/clock.jpeg" alt="clock image">
+                    <div id="time"></div>
                 </div>
 
                 <div class="col-sm-0">
-                    <p id='timer_change'></p>
+                    <p id="timer_change"></p>
                 </div>
             </div>
 
             <hr>
-            <p id="difficultyText">Question difficulty:</p>
+            <p id="difficulty_text">Question difficulty:</p>
             <div id="difficulty"></div>
 
-            <p id='category'></p>
+            <p id="category"></p>
         </div>
     </div>
 
-    <div id="questionBox" class="row">
+    <div id="question_box" class="row">
         <div class="col-sm">
             <div id="question"></div>
         </div>
     </div>
 
-    <div id="allAnswers" class="row">
+    <div id="all_answers" class="row">
         <div class="col-sm">
-            <button id='answer1' type="button" class="btn btn-primary btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-            <button id='answer2' type="button" class="btn btn-danger btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-            <button id='answer3' type="button" class="btn btn-info btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-            <button id='answer4' type="button" class="btn btn-warning btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
+            <button id="answer1" type="button" class="btn btn-primary btn-lg btn-block answer_buttons" onclick="check_answer(this.innerHTML)"></button>
+            <button id="answer2" type="button" class="btn btn-danger btn-lg btn-block answer_buttons" onclick="check_answer(this.innerHTML)"></button>
+            <button id="answer3" type="button" class="btn btn-info btn-lg btn-block answer_buttons" onclick="check_answer(this.innerHTML)"></button>
+            <button id="answer4" type="button" class="btn btn-warning btn-lg btn-block answer_buttons" onclick="check_answer(this.innerHTML)"></button>
         </div>
     </div>
 
     <br>
 
     <hr>
-    <div id="skipStop" class="row">
+    <div class="row">
         <div class="col-sm">
             <button id="skip_question" type="submit" class="btn btn-danger" onclick="skip_question()">Skip Question</button>
             <button onclick="location.href = '/'" id="stop" type="submit" class="btn btn-danger">Stop Quiz</button>
@@ -55,7 +55,7 @@
 </div>
 
 <div class="form-popup" id="top10form">
-    <p id='final_score'></p>
+    <p id="final_score"></p>
     <hr>
     <form action="/quiz" method="post">
         <h2>Congratulations! You made the top 10!</h2>

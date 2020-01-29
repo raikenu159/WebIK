@@ -1,5 +1,5 @@
 // Initiate variables
-var index = 1;
+var index = 0;
 var scores;
 
 // Fetch chart values from application.py and make chart for each score
@@ -15,8 +15,8 @@ fetch('/chart_values')
 
 // Make chart with scores obtained from fetch
 function make_chart(score) {
-    var ctx = document.getElementById('myChart'+index);
-    var myChart = new Chart(ctx, {
+    var ctx = document.getElementById('my_chart'+index);
+    var my_chart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: score[1],
