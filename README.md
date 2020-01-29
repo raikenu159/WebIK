@@ -100,7 +100,8 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 - HTML & CSS
 - textfiles (README)
 
-* Quizpagina passend maken op verschillende sche
+* Quizpagina passend maken op verschillende apparaten
+* 
 
 
 **Soufiane Zouli**
@@ -111,6 +112,6 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxODA1NTE4NywtMTM1Njk4OTM0NCwtNz
+eyJoaXN0b3J5IjpbMTc4OTI0NjgzNiwtMTM1Njk4OTM0NCwtNz
 cwMzk2ODg3LC0xMzIwMjAwOCwtMTQ5MzIxMDY2Nl19
 -->
