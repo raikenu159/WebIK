@@ -77,7 +77,9 @@ In de **static-map** vind je:
 
 -Verder staan hier alle afbeeldingen die gebruikt worden op de webpagina's.
 
-d
+In de **templates-map** vind je:
+
+
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -90,7 +92,8 @@ d
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDM2MTMwOTUsMTI0OTY2MzQ4OSw3OD
-U2ODI3MTMsMjM1Nzg2NjM3LC0xMzQ5MDkzMTA5LDE1MDM5MTA4
-NTQsLTE0MjIwNDA1MzIsLTQyNjU2MDczN119
+eyJoaXN0b3J5IjpbLTYzMzQ3MDQwMSwtMTIwMzYxMzA5NSwxMj
+Q5NjYzNDg5LDc4NTY4MjcxMywyMzU3ODY2MzcsLTEzNDkwOTMx
+MDksMTUwMzkxMDg1NCwtMTQyMjA0MDUzMiwtNDI2NTYwNzM3XX
+0=
 -->
