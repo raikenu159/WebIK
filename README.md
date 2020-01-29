@@ -83,10 +83,10 @@ Alle HTML-files waaruit de trivia web-applicatie bestaat.
 
 ## Werkverdeling
 
-Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd. Toch zijn er per persoon onderdelen geweest waarin hij/zij 
+Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd. Toch was er tussen de groepsleden enige vorm van specialisatie. 
  
 **Daan van Baarsen**
-
+Leader
 **Sem Kjaer**
 
 **Una Garcia**
@@ -95,6 +95,6 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMzIwNjY1NSwtMTMyMDIwMDgsLTE0OT
+eyJoaXN0b3J5IjpbMTM2MzI3MjIxNiwtMTMyMDIwMDgsLTE0OT
 MyMTA2NjZdfQ==
 -->
