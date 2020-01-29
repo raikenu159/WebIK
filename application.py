@@ -35,23 +35,13 @@ db = SQL("sqlite:///trivia.db")
 @app.route("/")
 def homepage():
     """Homepage"""
-    # deze functie laadt alleen de homepage
     session.clear()
 
     # create table scores in database
     db.execute("CREATE TABLE if not exists 'scores' ('id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
 
-    # return de index.html template
     return render_template("index.html")
 
-
-
-@app.route("/startquiz", methods=["GET","POST"])
-def startquiz():
-    """Explain quiz and start"""
-
-    # return de startquiz template
-    return render_template("startquiz.html")
 
 
 
@@ -59,13 +49,13 @@ def startquiz():
 def quiz():
     """Take quiz"""
 
-    # user reached route via POST meaning they placed in the top 10 and submitted a username
     if request.method == "POST":
 
         session['username'] = request.form.get("username")
         return redirect('/leaderboard')
 
     else:
+        session.clear()
         session["category_scores"] = {
         'General Knowledge' : 0,
         'Computer Science' : 0,
@@ -97,7 +87,7 @@ def check():
 
     # get user score from frontend and update into DB
     session['score'] = int(request.args.get("score"))
-
+    session['inserted'] = False
 
     leaderboard = db.execute('SELECT score FROM scores')
 
@@ -107,9 +97,8 @@ def check():
         if session['score'] <= score['score']:
             ranking+= 1
 
-        percentile = ((1-(ranking / len(leaderboard))) * 100)
 
-    if ranking < 10:
+    if ranking <= 10:
         return jsonify(['Congratulations! you are number ' + str(ranking) + ' on the leaderboard.', True])
     else:
         percentile = ((1-(ranking / len(leaderboard))) * 100)
@@ -128,7 +117,7 @@ def leaderboard():
     """Display the current leaderboard and some statistics about the users performance"""
 
     # select the top 10 scores from the scores database
-    topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
+    topscores = db.execute("SELECT * FROM scores ORDER BY score DESC, id ASC LIMIT 10")
 
     # check if the user has already played the quiz: if not display button 'play now'
     try:
@@ -136,19 +125,24 @@ def leaderboard():
     except:
         return render_template("leaderboard.html", scores=topscores, played='Play now!')
 
+    if session['inserted'] == True:
+        return render_template("leaderboard.html", scores=topscores, played='Try again!')
+
     try:
         session['username']
     except:
         row = db.execute('INSERT INTO scores (score) VALUES (:score)', score=session['score'])
+        session['inserted'] = True
         session['user_id'] = row
-        topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
+        topscores = db.execute("SELECT * FROM scores ORDER BY score DESC, id ASC LIMIT 10")
         return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
     # if the user has played the quiz but did not make the topscores display 'try again'
     row = db.execute('INSERT INTO scores (score, username) VALUES (:score, :username)', score=session['score'], username=session['username'])
+    session['inserted'] = True
     session['user_id'] = row
-    topscores = db.execute("SELECT * FROM scores ORDER BY score")[::-1][:10]
-    return render_template("leaderboard.html", scores=topscores, played='Play again!')
+    topscores = db.execute("SELECT * FROM scores ORDER BY score DESC, id ASC LIMIT 10")
+    return render_template("leaderboard.html", scores=topscores, played='Try again!')
 
 
 @app.route("/delete_username")
@@ -157,9 +151,7 @@ def delete_username():
 
     # delete the score from the database
     db.execute("DELETE FROM scores WHERE id=:id", id=session["user_id"])
-
-    # redirect to homepage
-    return render_template("leaderboard.html", played='Play again!')
+    return redirect("/leaderboard")
 
 
 
@@ -287,11 +279,11 @@ def deletebutton_display():
 @app.route("/questions")
 def questions():
 
-    return render_template('question_results.html', data=session['question_results'])
+    return render_template('question_results.html')
 
 @app.route("/question_results")
 def question_results():
-    """Returns all taken question info in json format"""
+    """Returns question information"""
 
     return jsonify(session["question_results"])
 
