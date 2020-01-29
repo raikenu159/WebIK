@@ -41,7 +41,7 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 14. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
 
 ## Repository gids
-*Voeg een aantal punten toe die ons helpen snel de weg te vinden in je repository. Heb je bijvoorbeeld helpers gemaakt, leg dan uit wat we daar voor soort dingen kunnen vinden. En leg even uit welke mapjes er zijn.*
+
 Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repository staan er 6 items in de lijst. Drie van deze items zijn mappen, waar we zo op in gaan, de andere drie items zijn bestanden:
 
  - application.py
@@ -66,6 +66,11 @@ In de doc-map vind je twee mappen:
 
 /Textfiles: hierin staan de markdown-bestanden waarin je de gebruikte frameworks kunt vinden inclusief een description (Frameworks&Plugins.md), alle gebruikte functies in application.py inclusief uitleg (Functies.md) en de teamcharter (teamcharter(up-to-date).md) 
 
+Ook het losse bestand DESIGN.md staat in de '/doc' waarin een design in de vroege fase van het project staat.
+
+
+
+
 ## Werkverdeling
 **Daan van Baarsen**
 
@@ -77,7 +82,7 @@ In de doc-map vind je twee mappen:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4Nzc3NDMwLDIzNTc4NjYzNywtMTM0OT
+eyJoaXN0b3J5IjpbNzg1NjgyNzEzLDIzNTc4NjYzNywtMTM0OT
 A5MzEwOSwxNTAzOTEwODU0LC0xNDIyMDQwNTMyLC00MjY1NjA3
 MzddfQ==
 -->
