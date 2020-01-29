@@ -60,14 +60,9 @@ Vervolgens de **3 mappen** in de repository:
  - static
  - templates
 
-In de **doc-map** vind je twee mappen:
+In de **doc-map** vind je één map:
 
-/afbeeldingen: hierin staan alle afbeeldingen die gebruikt worden in de README file.
-
-/Textfiles: hierin staan de markdown-bestanden waarin je de gebruikte frameworks kunt vinden inclusief een description (Frameworks&Plugins.md), alle gebruikte functies in application.py inclusief uitleg (Functies.md) en de teamcharter (teamcharter(up-to-date).md) 
-
-Ook het losse bestand DESIGN.md staat in de '/doc' waarin een design in de vroege fase van het project staat.
-
+- /afbeeldingen: hierin staan alle afbeeldingen die gebruikt worden in de README file.
 
 In de **static-map** vind je:
 
@@ -116,6 +111,6 @@ elke mapjes er zijn.*
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkzMTYyNjk2LDE1NTYxOTgzMjksNDc4Nz
-E0NTQ4XX0=
+eyJoaXN0b3J5IjpbMTkxMzg4NDY2MSwxNTU2MTk4MzI5LDQ3OD
+cxNDU0OF19
 -->
