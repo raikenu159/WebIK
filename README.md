@@ -89,23 +89,25 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
  - Leaderboard
  - Database
- - layout
+ - Backend
  
 **Sem Kjaer**
 - Backend
 - javascript (frontend)
 - database
-- 
+
 **Una Garcia**
 - layout quiz
-- 
+- textfiles (README)
+
 **Soufiane Zouli**
 - Backend
 - javascript
+- textfiles (README)
 - layout
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyOTIxNzIxMCwtMTMyMDIwMDgsLTE0OT
-MyMTA2NjZdfQ==
+eyJoaXN0b3J5IjpbODkxNDU3MTY0LC0xMzIwMjAwOCwtMTQ5Mz
+IxMDY2Nl19
 -->
