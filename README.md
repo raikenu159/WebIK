@@ -102,13 +102,13 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 **Soufiane Zouli**
 - Quiz functionaliteit (javascript)
-- HTML & CSS
-- textfiles (README)
+- HTML & CSS (layout)
+- Textfiles bijgehouden (README)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTYzMzU2NDksMTc4OTI0NjgzNiwtMT
-M1Njk4OTM0NCwtNzcwMzk2ODg3LC0xMzIwMjAwOCwtMTQ5MzIx
-MDY2Nl19
+eyJoaXN0b3J5IjpbLTIwMTA3Njc3OCwtMTk1NjMzNTY0OSwxNz
+g5MjQ2ODM2LC0xMzU2OTg5MzQ0LC03NzAzOTY4ODcsLTEzMjAy
+MDA4LC0xNDkzMjEwNjY2XX0=
 -->
