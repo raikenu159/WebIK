@@ -135,7 +135,7 @@ button{
     overflow-y: auto;
     overflow-x: auto;
     margin: auto;
-    max-height: 60vh;
+    max-height: 60%;
 }
 
 #question_results_table{

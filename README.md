@@ -42,6 +42,14 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 
 ## Repository gids
 *Voeg een aantal punten toe die ons helpen snel de weg te vinden in je repository. Heb je bijvoorbeeld helpers gemaakt, leg dan uit wat we daar voor soort dingen kunnen vinden. En leg even uit welke mapjes er zijn.*
+Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repository staan er 6 items in de lijst. Drie van deze items zijn mappen, waar we zo op in gaan, de andere drie items zijn bestanden:
+
+ - application.py
+ - README.md
+ - trivia.db
+ 
+ Het eerste bestand 'Application.py' bevat de volledige backend code in python. V
+
 ## Werkverdeling
 **Daan van Baarsen**
 
@@ -53,5 +61,6 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjIwNDA1MzIsLTQyNjU2MDczN119
+eyJoaXN0b3J5IjpbLTExODI1Njc0MzQsLTE0MjIwNDA1MzIsLT
+QyNjU2MDczN119
 -->

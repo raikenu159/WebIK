@@ -109,7 +109,7 @@ def check():
 
         percentile = ((1-(ranking / len(leaderboard))) * 100)
 
-    if ranking < 10:
+    if ranking <= 10:
         return jsonify(['Congratulations! you are number ' + str(ranking) + ' on the leaderboard.', True])
     else:
         percentile = ((1-(ranking / len(leaderboard))) * 100)
