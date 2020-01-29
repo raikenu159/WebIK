@@ -48,9 +48,9 @@ Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repositor
  - README.md
  - trivia.db
  
- **Het eerste** bestand 'Application.py' bevat de volledige backend code in python. Voor alle functies  die gebruikt zijn in application.py inclusief de bijbehorende uitleg volg je het pad WebIKTrivia02/doc/Textfiles/Functies.md.
+ **Het eerste** bestand 'Application.py' bevat de volledige backend code in python. Uitleg van de functies zit in het commentaar binnen het bestand.
  
-**Het tweede** bestand 'README.md' is het huidige bestand.
+**Het tweede** bestand 'README.md' is het huidige bestand dat u nu leest.
 
 **Het derde** en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id) de username (mocht speler in de top 10 zitten) en natuurlijk de behaalde score, inclusief datum waarop, bijgehouden.
 
@@ -116,5 +116,6 @@ elke mapjes er zijn.*
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NjE5ODMyOSw0Nzg3MTQ1NDhdfQ==
+eyJoaXN0b3J5IjpbLTE2MzE2OTE2NzAsMTU1NjE5ODMyOSw0Nz
+g3MTQ1NDhdfQ==
 -->
