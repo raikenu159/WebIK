@@ -11,7 +11,7 @@ var checked = false;
 // Open popup if in top10
 function openPopup() {
   document.getElementById("top10form").style.display = "block";
-  document.getElementById("quizScreen").style.display = "none";
+  document.getElementById("quiz_screen").style.display = "none";
   document.getElementById('final_score').innerHTML = "Score:" + " " + score;
 }
 
@@ -30,8 +30,8 @@ setInterval(countdown, 1000);
 
 
 // Check the users' given answer
-function check(input) {
-  fetch('/check_answer?answer='+input+'&question_data='+encodeURIComponent(JSON.stringify(question_data))+'&index='+question_index.toString())
+function check_answer(input) {
+  fetch("/check_answer?answer="+input+"&question_data="+encodeURIComponent(JSON.stringify(question_data))+"&index="+question_index.toString())
   .then((response) => {
       return response.json();
   })
@@ -45,20 +45,20 @@ function check(input) {
     timer = timer + difficulty_score;
 
     // Display time added to timer
-    document.getElementById('timer_change').innerHTML = "+" + difficulty_score;
+    document.getElementById("timer_change").innerHTML = "+" + difficulty_score;
 
     // Turn the background of the time green to make the time increment visible
     document.getElementById("timer_change").style.backgroundColor = "LawnGreen";
 
     // Display the incremented score
-    document.getElementById('score').innerHTML = "Score:" + " " + score;
+    document.getElementById("score").innerHTML = "Score:" + " " + score;
   }
   else {
     // Subtract time if answer is incorrect
     timer = timer + (difficulty_score - 4);
 
     //Display time subtracted from timer
-    document.getElementById('timer_change').innerHTML = (difficulty_score - 4);
+    document.getElementById("timer_change").innerHTML = (difficulty_score - 4);
 
     // Display time is subtraction from timer
     document.getElementById("timer_change").style.backgroundColor = "red";
@@ -85,12 +85,12 @@ function reset_color() {
 
 // Decrement timer if page loaded or end quiz if time is up
 function countdown() {
-  if (!document.getElementById('answer4').innerHTML) {
+  if (!document.getElementById("answer4").innerHTML) {
     return;
   }
   else if (timer >= 0) {
-    document.getElementById("quizScreen").style.display = "block";
-    document.getElementById('time').innerHTML = timer;
+    document.getElementById("quiz_screen").style.display = "block";
+    document.getElementById("time").innerHTML = timer;
     timer--;
   }
   else if (timer <= 0) {
@@ -106,9 +106,9 @@ function countdown() {
 function check_score() {
   // Stop timer at 0
   if (timer < 0) {
-    document.getElementById('time').innerHTML = 0;
+    document.getElementById("time").innerHTML = 0;
     // Fetch response from backend for position in leaderboard
-    fetch('/check?score=' + score)
+    fetch("/check?score=" + score)
     .then((response) => {
       return response.json();
     })
@@ -173,20 +173,20 @@ function next(data) {
 
     // Remove the 3rd and 4th button if True/False question
     if (Question.answers.length == 2) {
-      document.getElementById('answer3').style.display = "none";
-      document.getElementById('answer4').style.display = "none";
+      document.getElementById("answer3").style.display = "none";
+      document.getElementById("answer4").style.display = "none";
     }
     else {
-      document.getElementById('answer3').style.display = "block";
-      document.getElementById('answer4').style.display = "block";
+      document.getElementById("answer3").style.display = "block";
+      document.getElementById("answer4").style.display = "block";
     }
     // Display question and answers
-    document.getElementById('question').innerHTML = Question.question;
-    document.getElementById('answer1').innerHTML = answers[0];
-    document.getElementById('answer2').innerHTML = answers[1];
-    document.getElementById('answer3').innerHTML = answers[2];
-    document.getElementById('answer4').innerHTML = answers[3];
-    document.getElementById('category').innerHTML = 'Category: ' + Question.category;
+    document.getElementById("question").innerHTML = Question.question;
+    document.getElementById("answer1").innerHTML = answers[0];
+    document.getElementById("answer2").innerHTML = answers[1];
+    document.getElementById("answer3").innerHTML = answers[2];
+    document.getElementById("answer4").innerHTML = answers[3];
+    document.getElementById("category").innerHTML = "Category: " + Question.category;
 }
 
 
@@ -196,5 +196,3 @@ function skip_question() {
   question_index++;
   next(questions);
 }
-
-

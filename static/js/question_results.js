@@ -1,5 +1,5 @@
 // Get given questions and answers of user from application.py
-fetch('/question_results')
+fetch("/question_results")
         .then((response) => {
         return response.json();
         })
