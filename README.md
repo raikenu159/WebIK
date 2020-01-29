@@ -8,6 +8,11 @@
 ## Samenvatting
 Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel is er een leaderboards-pagina , waar de tien hoogste scores getoond worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers. Na een quiz afgenomen te hebben kan de gebruiker grafieken zien die de behaalde score per onderdeel en soort vraag tonen. Ook kan de gebruiker een tabel zien met daarin alle beantwoorde vragen met het gegeven antwoord en het correcte antwoord.
 
+## Video
+
+[VIDEO](https://www.youtube.com/watch?v=GnmT6GnKVR8)
+
+
 ## Afbeeldingen
 **Homepagina met uitleg quiz**
 ![Homepagina](https://i.imgur.com/I1EepTC.png)
@@ -48,11 +53,11 @@ Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repositor
  - README.md
  - trivia.db
  
- **Het eerste** bestand 'Application.py' bevat de volledige backend code in python. Voor alle functies  die gebruikt zijn in application.py inclusief de bijbehorende uitleg volg je het pad WebIKTrivia02/doc/Textfiles/Functies.md.
+ **Het eerste** bestand 'Application.py' bevat de volledige backend code in python. Uitleg van de functies zit in het commentaar binnen het bestand.
  
-**Het tweede** bestand 'README.md' is het huidige bestand.
+**Het tweede** bestand 'README.md' is het huidige bestand dat u nu leest.
 
-**Het derde** en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id) de username (mocht speler in de top 10 zitten) en natuurlijk de behaalde score, inclusief datum waarop, bijgehouden.
+**Het derde** en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id), de username (mocht speler in de top 10 zitten) de behaalde score en de datum waarop de score is behaald, bijgehouden.
 
 Vervolgens de **3 mappen** in de repository:
 
@@ -60,30 +65,25 @@ Vervolgens de **3 mappen** in de repository:
  - static
  - templates
 
-In de **doc-map** vind je twee mappen:
+In de **doc-map** vind je één map:
 
-/afbeeldingen: hierin staan alle afbeeldingen die gebruikt worden in de README file.
-
-/Textfiles: hierin staan de markdown-bestanden waarin je de gebruikte frameworks kunt vinden inclusief een description (Frameworks&Plugins.md), alle gebruikte functies in application.py inclusief uitleg (Functies.md) en de teamcharter (teamcharter(up-to-date).md) 
-
-Ook het losse bestand DESIGN.md staat in de '/doc' waarin een design in de vroege fase van het project staat.
-
+- /afbeeldingen: hierin staan alle afbeeldingen die gebruikt worden in de README file.
 
 In de **static-map** vind je:
 
--/js: Hierin staan alle gebruikte javascript files opgeslagen.
+- /js: Hierin staan alle gebruikte javascript files opgeslagen.
 
--styles.css: het bestand voor de styling van de webpagina's.
+- styles.css: het bestand voor de styling van de webpagina's.
 
--Verder staan hier alle afbeeldingen die gebr*Voeg een aantal punten toe die ons helpen snel de weg te vinden in je repository. Heb je bijvoorbeeld helpers gemaakt, leg dan uit wat we daar voor soort dingen kunnen vinden. En leg even uikt worden op de webpagina's.
+- Verder staan hier alle afbeeldingen die gebruikt worden op de webpagina's.
 
 In de **templates-map** vind je:
 
-Alle HTML-files waaruit de trivia web-applicatie bestaat.
+* Alle HTML-files waaruit de trivia web-applicatie bestaat.
 
 ## Werkverdeling
 
-Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd en ook aan elk aspect van de applicatie gewerkt. Toch was er tussen de groepsleden enige vorm van specialisatie. 
+Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd en ook aan elk aspect van de applicatie gewerkt. Wel was er tussen de groepsleden enige vorm van specialisatie. 
  
 **Daan van Baarsen**
  - Backend/database communicatie
@@ -104,17 +104,9 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 - Javascript (frontend)
 - HTML & CSS (layout)
 - Textfiles bijgehouden (README)
-elke mapjes er zijn.*
-## Werkverdeling
-**Daan van Baarsen**
-
-**Sem Kjaer**
-
-**Una Garcia**
-
-**Soufiane Zouli**uit w
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NjE5ODMyOSw0Nzg3MTQ1NDhdfQ==
+eyJoaXN0b3J5IjpbMTI4Nzc0NTU0OCwxNTU2MTk4MzI5LDQ3OD
+cxNDU0OF19
 -->
