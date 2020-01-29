@@ -60,7 +60,11 @@ Vervolgens de 3 mappen in de repository:
  - static
  - templates
 
-In de doc-map vind je alle
+In de doc-map vind je twee mappen:
+
+/afbeeldingen: hierin staan alle afbeeldingen die gebruikt worden in de README file.
+
+/Textfiles: hierin staan de markdown-bestanden waarin je de gebruikte frameworks kunt vinden inclusief een description (Frameworks&Plugins.md), alle gebruikte functies in application.py inclusief uitleg (Functies.md) en de teamcharter (teamcharter(up-to-date).md) 
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -73,6 +77,7 @@ In de doc-map vind je alle
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMzkxMDg1NCwtMTQyMjA0MDUzMiwtND
-I2NTYwNzM3XX0=
+eyJoaXN0b3J5IjpbMzY4Nzc3NDMwLDIzNTc4NjYzNywtMTM0OT
+A5MzEwOSwxNTAzOTEwODU0LC0xNDIyMDQwNTMyLC00MjY1NjA3
+MzddfQ==
 -->
