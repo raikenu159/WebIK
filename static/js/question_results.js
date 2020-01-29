@@ -5,7 +5,6 @@ fetch('/question_results')
         })
         .then((data) => {
         questions = data;
-        console.log(questions)
         questions.forEach(question => add_question(question))
         });
 

@@ -20,7 +20,7 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 **Quizvraag pagina tijd verlopen top 10 score behaald**
 ![Quizvraag pagina tijd verlopen top 10 score behaald](https://i.imgur.com/oSkyIT5.png)
 **Leaderboards pagina**
-![Leaderboards pagina](https://i.imgur.com/cyqAbDQ.png)
+![Leaderboards pagina](https://i.imgur.com/1Ksmhjj.png)
 **Barcharts pagina**
 ![Barcharts pagina](https://i.imgur.com/IIAyq8s.png)![Barcharts pagina](https://i.imgur.com/5zJP0vX.png)
 **Question results pagina**
@@ -83,15 +83,30 @@ Alle HTML-files waaruit de trivia web-applicatie bestaat.
 
 ## Werkverdeling
 
+Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd en ook aan elk aspect van de applicatie gewerkt. Toch was er tussen de groepsleden enige vorm van specialisatie. 
+ 
 **Daan van Baarsen**
+ - Backend/database communicatie
+ - Layout homepage
+ - Leaderboard
 
 **Sem Kjaer**
+- Functies in de backend
+- Werken met de API
+- Backend/database communicatie
 
 **Una Garcia**
+- Quizpagina passend maken op verschillende apparaten
+- HTML & CSS
+- Projectvoorstel (README) 
 
 **Soufiane Zouli**
+- Javascript (frontend)
+- HTML & CSS (layout)
+- Textfiles bijgehouden (README)
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjAyMDA4LC0xNDkzMjEwNjY2XX0=
+eyJoaXN0b3J5IjpbNDc4NzE0NTQ4XX0=
 -->
