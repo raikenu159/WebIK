@@ -20,7 +20,7 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 **Quizvraag pagina tijd verlopen top 10 score behaald**
 ![Quizvraag pagina tijd verlopen top 10 score behaald](https://i.imgur.com/oSkyIT5.png)
 **Leaderboards pagina**
-![Leaderboards pagina](https://i.imgur.com/cyqAbDQ.png)
+![Leaderboards pagina](https://i.imgur.com/1Ksmhjj.png)
 **Barcharts pagina**
 ![Barcharts pagina](https://i.imgur.com/IIAyq8s.png)![Barcharts pagina](https://i.imgur.com/5zJP0vX.png)
 **Question results pagina**
@@ -108,7 +108,7 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTA3Njc3OCwtMTk1NjMzNTY0OSwxNz
-g5MjQ2ODM2LC0xMzU2OTg5MzQ0LC03NzAzOTY4ODcsLTEzMjAy
-MDA4LC0xNDkzMjEwNjY2XX0=
+eyJoaXN0b3J5IjpbNDc2ODY0MzUzLC0yMDEwNzY3NzgsLTE5NT
+YzMzU2NDksMTc4OTI0NjgzNiwtMTM1Njk4OTM0NCwtNzcwMzk2
+ODg3LC0xMzIwMjAwOCwtMTQ5MzIxMDY2Nl19
 -->
