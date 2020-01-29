@@ -90,6 +90,7 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
  - Leaderboard
  - Database
  - layout
+ - layout
  
 **Sem Kjaer**
 - Backend
@@ -97,11 +98,15 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 - database
 - 
 **Una Garcia**
--layou
+- layout
+- 
 **Soufiane Zouli**
+- Backend
+- javascript
+- layour
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc1OTU3ODgyLC0xMzIwMjAwOCwtMTQ5Mz
-IxMDY2Nl19
+eyJoaXN0b3J5IjpbLTg4MTczNTMyNCwtMTMyMDIwMDgsLTE0OT
+MyMTA2NjZdfQ==
 -->
