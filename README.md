@@ -83,22 +83,22 @@ Alle HTML-files waaruit de trivia web-applicatie bestaat.
 
 ## Werkverdeling
 
-Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd. Toch was er tussen de groepsleden enige vorm van specialisatie. 
+Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd en ook aan elk aspect van de applicatieToch was er tussen de groepsleden enige vorm van specialisatie. 
  
 **Daan van Baarsen**
  - Leaderboard
  - Database
- - Backend
+ - HTML & CSS
 
 **Sem Kjaer**
 - Functies in de backend
 - Werken met de API
-- backend/database communicatie
+- Backend/database communicatie
 
 **Una Garcia**
 - Quizpagina passend maken op verschillende apparaten
 - HTML & CSS
-- projectvoorstel (README) 
+- Projectvoorstel (README) 
 
 
 **Soufiane Zouli**
@@ -109,7 +109,7 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMTgwOTA2LDE3ODkyNDY4MzYsLTEzNT
+eyJoaXN0b3J5IjpbMTAxMDk5Njg4LDE3ODkyNDY4MzYsLTEzNT
 Y5ODkzNDQsLTc3MDM5Njg4NywtMTMyMDIwMDgsLTE0OTMyMTA2
 NjZdfQ==
 -->
