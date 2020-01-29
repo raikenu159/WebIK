@@ -83,6 +83,8 @@ Alle HTML-files waaruit de trivia web-applicatie bestaat.
 
 ## Werkverdeling
 
+Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd. Toch zijn er per persoon onderdelen geweest waarin hij/zij 
+ 
 **Daan van Baarsen**
 
 **Sem Kjaer**
@@ -93,5 +95,6 @@ Alle HTML-files waaruit de trivia web-applicatie bestaat.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjAyMDA4LC0xNDkzMjEwNjY2XX0=
+eyJoaXN0b3J5IjpbLTMyMzIwNjY1NSwtMTMyMDIwMDgsLTE0OT
+MyMTA2NjZdfQ==
 -->
