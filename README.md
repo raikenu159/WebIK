@@ -67,7 +67,8 @@ In de **doc-map** vind je twee mappen:
 /Textfiles: hierin staan de markdown-bestanden waarin je de gebruikte frameworks kunt vinden inclusief een description (Frameworks&Plugins.md), alle gebruikte functies in application.py inclusief uitleg (Functies.md) en de teamcharter (teamcharter(up-to-date).md) 
 
 Ook het losse bestand DESIGN.md staat in de '/doc' waarin een design in de vroege fase van het project staat.
-___
+
+
 In de **static-map** vind je:
 
 -/js: Hierin staan alle gebruikte javascript files opgeslagen.
@@ -75,6 +76,8 @@ In de **static-map** vind je:
 -styles.css: het bestand voor de styling van de webpagina's.
 
 -Verder staan hier alle afbeeldingen die gebruikt worden op de webpagina's.
+
+d
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -87,7 +90,7 @@ In de **static-map** vind je:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUwMDQ1NDYsMTI0OTY2MzQ4OSw3ODU2OD
-I3MTMsMjM1Nzg2NjM3LC0xMzQ5MDkzMTA5LDE1MDM5MTA4NTQs
-LTE0MjIwNDA1MzIsLTQyNjU2MDczN119
+eyJoaXN0b3J5IjpbLTEyMDM2MTMwOTUsMTI0OTY2MzQ4OSw3OD
+U2ODI3MTMsMjM1Nzg2NjM3LC0xMzQ5MDkzMTA5LDE1MDM5MTA4
+NTQsLTE0MjIwNDA1MzIsLTQyNjU2MDczN119
 -->
