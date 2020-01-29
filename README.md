@@ -24,7 +24,7 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 **Barcharts pagina**
 ![Barcharts pagina](https://i.imgur.com/IIAyq8s.png)![Barcharts pagina](https://i.imgur.com/5zJP0vX.png)
 **Question results pagina**
-![Question results pagina](https://i.imgur.com/H643Jcm.png)
+![Question results pagina](https://i.imgur.com/V60LQRy.png)
 ## Features
 1. De vragen in de quizzes komen uit Online Trivia Database (https://opentdb.com)
 2. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database.
@@ -116,5 +116,5 @@ elke mapjes er zijn.*
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NTc5MDQ0Niw0Nzg3MTQ1NDhdfQ==
+eyJoaXN0b3J5IjpbMTU1NjE5ODMyOSw0Nzg3MTQ1NDhdfQ==
 -->
