@@ -11,12 +11,9 @@ var category;
 var checked = false;
 
 
-// open popup if in top10
+// Open popup if in top10
 function openPopup() {
   document.getElementById("top10form").style.display = "block";
-  // document.getElementById("question").style.display = "none";
-  // document.getElementById("all_answers").style.display = "none";
-  // document.getElementById("stop").style.display = "none";
   document.getElementById("quizScreen").style.display = "none";
   document.getElementById('final_score').innerHTML = "Score:" + " " + score;
 }
