@@ -54,7 +54,13 @@ Het tweede bestand 'README.md' is het huidige bestand.
 
 Het derde en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id) de username (mocht speler in de top 10 zitten) en natuurlijk de behaalde score, inclusief datum waarop, bijgehouden.
 
+Vervolgens de 3 mappen in de repository:
 
+ - doc
+ - static
+ - templates
+
+In de doc-map vind je alle
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -67,6 +73,6 @@ Het derde en laatste bestand 'trivia.db' is de database waarop ons project werkt
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDc5MDU5MzcsLTE0MjIwNDA1MzIsLT
-QyNjU2MDczN119
+eyJoaXN0b3J5IjpbMTUwMzkxMDg1NCwtMTQyMjA0MDUzMiwtND
+I2NTYwNzM3XX0=
 -->
