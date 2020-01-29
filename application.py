@@ -230,16 +230,15 @@ def check_answer():
     """Checks every answer of correctness"""
 
     # get answer from frontend
+    index = int(request.args.get('index'))
     answer = request.args.get('answer')
-    correct_answer = session['correct_answers'][0]
+    correct_answer = session['correct_answers'][index]
 
     question_data = json.loads(request.args.get('question_data'))
     question_data['user_answer'] = answer
     question_data['correct_answer'] = correct_answer
 
     session['question_results'].append(question_data)
-
-    session['correct_answers'].remove(session['correct_answers'][0])
 
     # check if answer is correct and keep track of indiviual scores and return true
     if answer == correct_answer:

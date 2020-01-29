@@ -5,18 +5,12 @@ var question_index = 0;
 var questions;
 var question_data;
 var difficulty_score;
-var difficulty;
-var type;
-var category;
 var checked = false;
 
 
 // open popup if in top10
 function openPopup() {
   document.getElementById("top10form").style.display = "block";
-  // document.getElementById("question").style.display = "none";
-  // document.getElementById("all_answers").style.display = "none";
-  // document.getElementById("stop").style.display = "none";
   document.getElementById("quizScreen").style.display = "none";
   document.getElementById('final_score').innerHTML = "Score:" + " " + score;
 }
@@ -25,6 +19,7 @@ function openPopup() {
 // Display default values of the timer and score (60, 0)
 document.getElementById('time').innerHTML = timer;
 document.getElementById('score').innerHTML = "Score:" + " " + score;
+
 
 // Generate a question
 load_questions();
@@ -36,8 +31,8 @@ setInterval(countdown, 1000);
 
 // Check the users' given answer
 function check(input) {
-  console.log(question_data)
-  fetch('/check_answer?answer='+input+'&question_data='+encodeURIComponent(JSON.stringify(question_data)))
+  console.log(question_index);
+  fetch('/check_answer?answer='+input+'&question_data='+encodeURIComponent(JSON.stringify(question_data))+'&index='+question_index.toString())
   .then((response) => {
       return response.json();
   })
