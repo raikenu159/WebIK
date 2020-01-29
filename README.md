@@ -48,19 +48,19 @@ Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repositor
  - README.md
  - trivia.db
  
- **Het** eerste bestand 'Application.py' bevat de volledige backend code in python. Voor alle functies  die gebruikt zijn in application.py inclusief de bijbehorende uitleg volg je het pad WebIKTrivia02/doc/Textfiles/Functies.md.
+ **Het eerste** bestand 'Application.py' bevat de volledige backend code in python. Voor alle functies  die gebruikt zijn in application.py inclusief de bijbehorende uitleg volg je het pad WebIKTrivia02/doc/Textfiles/Functies.md.
  
-Het tweede bestand 'README.md' is het huidige bestand.
+**Het tweede** bestand 'README.md' is het huidige bestand.
 
-Het derde en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id) de username (mocht speler in de top 10 zitten) en natuurlijk de behaalde score, inclusief datum waarop, bijgehouden.
+**Het derde** en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id) de username (mocht speler in de top 10 zitten) en natuurlijk de behaalde score, inclusief datum waarop, bijgehouden.
 
-Vervolgens de 3 mappen in de repository:
+Vervolgens de **3 mappen** in de repository:
 
  - doc
  - static
  - templates
 
-In de doc-map vind je twee mappen:
+In de **doc-map** vind je twee mappen:
 
 /afbeeldingen: hierin staan alle afbeeldingen die gebruikt worden in de README file.
 
@@ -68,7 +68,9 @@ In de doc-map vind je twee mappen:
 
 Ook het losse bestand DESIGN.md staat in de '/doc' waarin een design in de vroege fase van het project staat.
 
+In de **static-map** vind je:
 
+/js:
 
 
 ## Werkverdeling
@@ -82,7 +84,7 @@ Ook het losse bestand DESIGN.md staat in de '/doc' waarin een design in de vroeg
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MjgyODM3Nyw3ODU2ODI3MTMsMjM1Nz
-g2NjM3LC0xMzQ5MDkzMTA5LDE1MDM5MTA4NTQsLTE0MjIwNDA1
-MzIsLTQyNjU2MDczN119
+eyJoaXN0b3J5IjpbLTE5NDI1NjIyMDQsNzg1NjgyNzEzLDIzNT
+c4NjYzNywtMTM0OTA5MzEwOSwxNTAzOTEwODU0LC0xNDIyMDQw
+NTMyLC00MjY1NjA3MzddfQ==
 -->
