@@ -100,6 +100,8 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 - HTML & CSS
 - textfiles (README)
 
+* Quizpagina passend maken op verschillende sche
+
 
 **Soufiane Zouli**
 - javascript (frontend)
@@ -109,6 +111,6 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTY5ODkzNDQsLTc3MDM5Njg4NywtMT
-MyMDIwMDgsLTE0OTMyMTA2NjZdfQ==
+eyJoaXN0b3J5IjpbLTYxODA1NTE4NywtMTM1Njk4OTM0NCwtNz
+cwMzk2ODg3LC0xMzIwMjAwOCwtMTQ5MzIxMDY2Nl19
 -->
