@@ -70,11 +70,11 @@ Ook het losse bestand DESIGN.md staat in de '/doc' waarin een design in de vroeg
 
 In de **static-map** vind je:
 
-/js: Hierin staan alle gebruikte javascript files opgeslagen.
+-/js: Hierin staan alle gebruikte javascript files opgeslagen.
 
-styles.css: het bestand voor de styling van de webpagina's.
+-styles.css: het bestand voor de styling van de webpagina's.
 
-Verder staan hier alle afbeeldingen gebruikt op de webpagina's
+-Verder staan hier alle afbeeldingen die gebruikt worden op de webpagina's.
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -87,7 +87,7 @@ Verder staan hier alle afbeeldingen gebruikt op de webpagina's
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjU1MDk2MDUsNzg1NjgyNzEzLDIzNT
-c4NjYzNywtMTM0OTA5MzEwOSwxNTAzOTEwODU0LC0xNDIyMDQw
-NTMyLC00MjY1NjA3MzddfQ==
+eyJoaXN0b3J5IjpbMTI0OTY2MzQ4OSw3ODU2ODI3MTMsMjM1Nz
+g2NjM3LC0xMzQ5MDkzMTA5LDE1MDM5MTA4NTQsLTE0MjIwNDA1
+MzIsLTQyNjU2MDczN119
 -->
