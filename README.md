@@ -48,7 +48,7 @@ Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repositor
  - README.md
  - trivia.db
  
- Het eerste bestand 'Application.py' bevat de volledige backend code in python. V
+ Het eerste bestand 'Application.py' bevat de volledige backend code in python. Voor alle functies  die gebruikt zijn in application.py inclusief de bijbehorende uitleg kun je te
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -61,6 +61,6 @@ Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repositor
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODI1Njc0MzQsLTE0MjIwNDA1MzIsLT
-QyNjU2MDczN119
+eyJoaXN0b3J5IjpbLTUyMzkwNjQ2NywtMTQyMjA0MDUzMiwtND
+I2NTYwNzM3XX0=
 -->
