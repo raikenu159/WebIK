@@ -35,23 +35,13 @@ db = SQL("sqlite:///trivia.db")
 @app.route("/")
 def homepage():
     """Homepage"""
-    # deze functie laadt alleen de homepage
     session.clear()
 
     # create table scores in database
     db.execute("CREATE TABLE if not exists 'scores' ('id' integer NOT NULL PRIMARY KEY, 'username' varchar(16), 'score' integer, 'date' DATE DEFAULT CURRENT_DATE)")
 
-    # return de index.html template
     return render_template("index.html")
 
-
-
-@app.route("/startquiz", methods=["GET","POST"])
-def startquiz():
-    """Explain quiz and start"""
-
-    # return de startquiz template
-    return render_template("startquiz.html")
 
 
 
@@ -59,7 +49,6 @@ def startquiz():
 def quiz():
     """Take quiz"""
 
-    # user reached route via POST meaning they placed in the top 10 and submitted a username
     if request.method == "POST":
 
         session['username'] = request.form.get("username")
@@ -290,11 +279,11 @@ def deletebutton_display():
 @app.route("/questions")
 def questions():
 
-    return render_template('question_results.html', data=session['question_results'])
+    return render_template('question_results.html')
 
 @app.route("/question_results")
 def question_results():
-    """Returns all taken question info in json format"""
+    """Returns question information"""
 
     return jsonify(session["question_results"])
 
