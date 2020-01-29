@@ -41,30 +41,43 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 14. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
 
 ## Repository gids
-*Voeg een aantal punten toe die ons helpen snel de weg te vinden in je repository. Heb je bijvoorbeeld helpers gemaakt, leg dan uit wat we daar voor soort dingen kunnen vinden. En leg even uit welke mapjes er zijn.*
+
 Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repository staan er 6 items in de lijst. Drie van deze items zijn mappen, waar we zo op in gaan, de andere drie items zijn bestanden:
 
  - application.py
  - README.md
  - trivia.db
  
- Het eerste bestand 'Application.py' bevat de volledige backend code in python. Voor alle functies  die gebruikt zijn in application.py inclusief de bijbehorende uitleg volg je het pad WebIKTrivia02/doc/Textfiles/Functies.md.
+ **Het eerste** bestand 'Application.py' bevat de volledige backend code in python. Voor alle functies  die gebruikt zijn in application.py inclusief de bijbehorende uitleg volg je het pad WebIKTrivia02/doc/Textfiles/Functies.md.
  
-Het tweede bestand 'README.md' is het huidige bestand.
+**Het tweede** bestand 'README.md' is het huidige bestand.
 
-Het derde en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id) de username (mocht speler in de top 10 zitten) en natuurlijk de behaalde score, inclusief datum waarop, bijgehouden.
+**Het derde** en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id) de username (mocht speler in de top 10 zitten) en natuurlijk de behaalde score, inclusief datum waarop, bijgehouden.
 
-Vervolgens de 3 mappen in de repository:
+Vervolgens de **3 mappen** in de repository:
 
  - doc
  - static
  - templates
 
-In de doc-map vind je twee mappen:
+In de **doc-map** vind je twee mappen:
 
 /afbeeldingen: hierin staan alle afbeeldingen die gebruikt worden in de README file.
 
 /Textfiles: hierin staan de markdown-bestanden waarin je de gebruikte frameworks kunt vinden inclusief een description (Frameworks&Plugins.md), alle gebruikte functies in application.py inclusief uitleg (Functies.md) en de teamcharter (teamcharter(up-to-date).md) 
+
+Ook het losse bestand DESIGN.md staat in de '/doc' waarin een design in de vroege fase van het project staat.
+
+
+In de **static-map** vind je:
+
+-/js: Hierin staan alle gebruikte javascript files opgeslagen.
+
+-styles.css: het bestand voor de styling van de webpagina's.
+
+-Verder staan hier alle afbeeldingen die gebruikt worden op de webpagina's.
+
+d
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -77,7 +90,7 @@ In de doc-map vind je twee mappen:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4Nzc3NDMwLDIzNTc4NjYzNywtMTM0OT
-A5MzEwOSwxNTAzOTEwODU0LC0xNDIyMDQwNTMyLC00MjY1NjA3
-MzddfQ==
+eyJoaXN0b3J5IjpbLTEyMDM2MTMwOTUsMTI0OTY2MzQ4OSw3OD
+U2ODI3MTMsMjM1Nzg2NjM3LC0xMzQ5MDkzMTA5LDE1MDM5MTA4
+NTQsLTE0MjIwNDA1MzIsLTQyNjU2MDczN119
 -->
