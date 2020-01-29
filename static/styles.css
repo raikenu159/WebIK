@@ -135,7 +135,6 @@ button{
     overflow-y: auto;
     overflow-x: auto;
     margin: auto;
-    max-width: 80%;
     max-height: 60%;
 }
 
