@@ -31,7 +31,6 @@ setInterval(countdown, 1000);
 
 // Check the users' given answer
 function check(input) {
-  console.log(question_index);
   fetch('/check_answer?answer='+input+'&question_data='+encodeURIComponent(JSON.stringify(question_data))+'&index='+question_index.toString())
   .then((response) => {
       return response.json();
