@@ -64,7 +64,7 @@ def quiz():
         # Forget any session
         session.clear()
 
-        # Set the category, difficulty and type sessions equal to 0
+        # Initialize session quiz data
         session["category_scores"] = {
         "General Knowledge" : 0,
         "Computer Science" : 0,
@@ -97,7 +97,7 @@ def load_questions():
     history = requests.get("https://opentdb.com/api.php?amount=50&category=23").json()["results"]
     animals = requests.get("https://opentdb.com/api.php?amount=50&category=27").json()["results"]
 
-    # Creating pseudo-random question order
+    # Create pseudo-random question order
     packages = []
     for i in range(50):
         computers[i]["category"] = "Computer Science"
@@ -116,7 +116,7 @@ def load_questions():
     session["correct_answers"] = []
     for question in questions:
 
-        # Combine correct and incorrect answers
+        # Shuffle order of answers
         if len(question["incorrect_answers"]) == 3:
             answers = question["incorrect_answers"]
             answers.append(question["correct_answer"])
@@ -142,15 +142,15 @@ def load_questions():
 
 @app.route("/check", methods=["GET"])
 def check():
-    """Return true if achieved score is in top 10"""
+    """Return user performance"""
 
-    # Get user score from frontend and update into DB
+    # Get user score from frontend and load all current scores
     session["score"] = int(request.args.get("score"))
     session["inserted"] = False
 
     leaderboard = db.execute("SELECT score FROM scores")
 
-    # Check position in current leaderboard and give the output for the position of the user
+    # Check position in current leaderboard and return the position (if top 10) or percentile (if not top 10) of the user
     ranking = 1
     for score in leaderboard:
         if session["score"] <= score["score"]:
@@ -171,7 +171,7 @@ def check():
 
 @app.route("/check_answer")
 def check_answer():
-    """Checks every answer of correctness"""
+    """Checks every answer for correctness"""
 
     # Get answer from frontend
     index = int(request.args.get("index"))
@@ -198,7 +198,7 @@ def check_answer():
 
 @app.route("/leaderboard")
 def leaderboard():
-    """Display the current leaderboard and some statistics about the users performance"""
+    """Display the current leaderboard"""
 
     # Select the top 10 scores from the scores database
     topscores = db.execute("SELECT * FROM scores ORDER BY score DESC, id ASC LIMIT 10")

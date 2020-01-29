@@ -1,4 +1,4 @@
-// Get given questions and answers of user from application.py
+// Get given questions and answers of user from backend
 fetch("/question_results")
         .then((response) => {
         return response.json();
