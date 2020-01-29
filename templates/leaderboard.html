@@ -39,21 +39,10 @@
 </div>
 
 <div class = "btn-group">
-  <form action="/" method="get">
-      <button type="submit" class="btn btn-danger">Home</button>
-  </form>
-
-  <form action="/quiz" method="get">
-      <button type="submit" class="btn btn-success"> {{played}} </button>
-  </form>
-
-  <form action="/barchart" method="get">
-      <button id="results" type="submit" class="btn btn-primary">Detailed results</button>
-  </form>
-
-  <form action="/delete_username" method="get">
-      <button id="delete-score" type="submit" class="btn btn-warning">Delete your score</button>
-  </form>
+    <button onclick="location.href = '/'" type="submit" class="btn btn-danger">Home</button>
+    <button onclick="location.href = '/quiz'" type="submit" class="btn btn-success"> {{played}} </button>
+    <button onclick="location.href = '/barchart'" id="results" type="submit" class="btn btn-primary">Detailed results</button>
+    <button onclick="location.href = '/delete_username'" id="delete-score" type="submit" class="btn btn-warning">Delete your score</button>
 </div>
 
 

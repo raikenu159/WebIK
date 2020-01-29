@@ -17,17 +17,9 @@
 </div>
 
 <div class="btn-group">
-    <form action="/quiz" method="get">
-        <button type="submit" class="btn btn-success">Play again!</button>
-    </form>
-
-    <form action="/" method="get">
-        <button type="submit" class="btn btn-danger">Home</button>
-    </form>
-
-    <form action="/leaderboard" method ="get">
-        <button type="submit" class="btn btn-primary">Leaderboard</button>
-    </form>
+    <button onclick="location.href = '/quiz'" type="submit" class="btn btn-success">Play again!</button>
+    <button onclick="location.href = '/'" type="submit" class="btn btn-danger">Home</button>
+    <button onclick="location.href = '/leaderboard'" type="submit" class="btn btn-primary">Leaderboard</button>
 </div>
 
 <script src="static/js/question_results.js"></script>

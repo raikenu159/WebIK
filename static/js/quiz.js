@@ -54,7 +54,7 @@ function check(input) {
     document.getElementById('timer_change').innerHTML = "+" + difficulty_score;
 
     // Turn the background of the time green to make the time increment visible
-    document.getElementById("timer_color").style.backgroundColor = "LawnGreen";
+    document.getElementById("timer_change").style.backgroundColor = "LawnGreen";
 
     // Display the incremented score
     document.getElementById('score').innerHTML = "Score:" + " " + score;
@@ -67,7 +67,7 @@ function check(input) {
     document.getElementById('timer_change').innerHTML = (difficulty_score - 4);
 
     // Display time is subtraction from timer
-    document.getElementById("timer_color").style.backgroundColor = "red";
+    document.getElementById("timer_change").style.backgroundColor = "red";
   }
   question_index++;
 
@@ -83,7 +83,7 @@ function check(input) {
 
 // Reset timer backgroundcolor and remove displayed incremented/subtracted time
 function reset_color() {
-  document.getElementById("timer_color").style.backgroundColor = "white";
+  document.getElementById("timer_change").style.backgroundColor = "white";
   document.getElementById("timer_change").innerHTML = " ";
 }
 
