@@ -1,17 +1,14 @@
-{% extends "layout.html" %}
-
-
-{% block main %}
-<div id = "barChart">
+{% extends "layout.html" %} {% block main %}
+<div id="barChart">
     <canvas id="myChart1"></canvas>
     <canvas id="myChart2"></canvas>
     <canvas id="myChart3"></canvas>
 </div>
 
 <div id="btn-group">
-        <button onclick="location.href = '/questions'" id="questions" type="submit" class="btn btn-primary">Review questions</button>
-        <button onclick="location.href = '/quiz'" type="submit" class="btn btn-success">Play again!</button>
-        <button onclick="location.href = '/'" type="submit" class="btn btn-danger">Home</button>
+    <button onclick="location.href = '/questions'" id="questions" type="submit" class="btn btn-primary">Review questions</button>
+    <button onclick="location.href = '/quiz'" type="submit" class="btn btn-success">Play again!</button>
+    <button onclick="location.href = '/'" type="submit" class="btn btn-danger">Home</button>
 </div>
 
 <script src="static/js/barchart.js"></script>
