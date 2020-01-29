@@ -108,8 +108,5 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc4NzE0NTQ4LDQ3Njg2NDM1MywtMjAxMD
-c2Nzc4LC0xOTU2MzM1NjQ5LDE3ODkyNDY4MzYsLTEzNTY5ODkz
-NDQsLTc3MDM5Njg4NywtMTMyMDIwMDgsLTE0OTMyMTA2NjZdfQ
-==
+eyJoaXN0b3J5IjpbNDc4NzE0NTQ4XX0=
 -->
