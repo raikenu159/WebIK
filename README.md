@@ -82,6 +82,7 @@ In de **templates-map** vind je:
 Alle HTML-files waaruit de trivia web-applicatie bestaat.
 
 ## Werkverdeling
+
 **Daan van Baarsen**
 
 **Sem Kjaer**
@@ -92,5 +93,5 @@ Alle HTML-files waaruit de trivia web-applicatie bestaat.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTMyMTA2NjZdfQ==
+eyJoaXN0b3J5IjpbLTEzMjAyMDA4LC0xNDkzMjEwNjY2XX0=
 -->
