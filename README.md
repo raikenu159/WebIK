@@ -91,17 +91,14 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
  - Backend
 
 **Sem Kjaer**
-- Fackend
+- Functies in de backend
 - Werken met de API
-- database
+- backend/database communicatie
 
 **Una Garcia**
-- layout
+- Quizpagina passend maken op verschillende apparaten
 - HTML & CSS
-- textfiles (README)
-
-* Quizpagina passend maken op verschillende apparaten
-* 
+- projectvoorstel (README) 
 
 
 **Soufiane Zouli**
@@ -112,7 +109,7 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2ODQ5ODA5MSwxNzg5MjQ2ODM2LC0xMz
-U2OTg5MzQ0LC03NzAzOTY4ODcsLTEzMjAyMDA4LC0xNDkzMjEw
-NjY2XX0=
+eyJoaXN0b3J5IjpbMTAwMTgwOTA2LDE3ODkyNDY4MzYsLTEzNT
+Y5ODkzNDQsLTc3MDM5Njg4NywtMTMyMDIwMDgsLTE0OTMyMTA2
+NjZdfQ==
 -->
