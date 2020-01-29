@@ -66,15 +66,15 @@ In de **doc-map** vind je één map:
 
 In de **static-map** vind je:
 
--/js: Hierin staan alle gebruikte javascript files opgeslagen.
+- /js: Hierin staan alle gebruikte javascript files opgeslagen.
 
--styles.css: het bestand voor de styling van de webpagina's.
+- styles.css: het bestand voor de styling van de webpagina's.
 
--Verder staan hier alle afbeeldingen die gebr*Voeg een aantal punten toe die ons helpen snel de weg te vinden in je repository. Heb je bijvoorbeeld helpers gemaakt, leg dan uit wat we daar voor soort dingen kunnen vinden. En leg even uikt worden op de webpagina's.
+- Verder staan hier alle afbeeldingen die gebruikt worden op de webpagina's.
 
 In de **templates-map** vind je:
 
-Alle HTML-files waaruit de trivia web-applicatie bestaat.
+* Alle HTML-files waaruit de trivia web-applicatie bestaat.
 
 ## Werkverdeling
 
@@ -100,17 +100,9 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 - HTML & CSS (layout)
 - Textfiles bijgehouden (README)
 elke mapjes er zijn.*
-## Werkverdeling
-**Daan van Baarsen**
-
-**Sem Kjaer**
-
-**Una Garcia**
-
-**Soufiane Zouli**uit w
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMzg4NDY2MSwxNTU2MTk4MzI5LDQ3OD
+eyJoaXN0b3J5IjpbMTM0MDM2NTc5NiwxNTU2MTk4MzI5LDQ3OD
 cxNDU0OF19
 -->
