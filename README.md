@@ -52,7 +52,7 @@ Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repositor
  
 **Het tweede** bestand 'README.md' is het huidige bestand dat u nu leest.
 
-**Het derde** en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id) de username (mocht speler in de top 10 zitten) en natuurlijk de behaalde score, inclusief datum waarop, bijgehouden.
+**Het derde** en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id), de username (mocht speler in de top 10 zitten) de behaalde score en de datum waarop de score is behaald, bijgehouden.
 
 Vervolgens de **3 mappen** in de repository:
 
@@ -116,6 +116,6 @@ elke mapjes er zijn.*
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzE2OTE2NzAsMTU1NjE5ODMyOSw0Nz
-g3MTQ1NDhdfQ==
+eyJoaXN0b3J5IjpbOTkzMTYyNjk2LDE1NTYxOTgzMjksNDc4Nz
+E0NTQ4XX0=
 -->
