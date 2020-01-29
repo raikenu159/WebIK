@@ -103,12 +103,12 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 **Soufiane Zouli**
 - javascript (frontend)
-- layout
+- HTML & CSS
 - textfiles (README)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNDE3MDgzOCwtNzcwMzk2ODg3LC0xMz
-IwMjAwOCwtMTQ5MzIxMDY2Nl19
+eyJoaXN0b3J5IjpbLTEzNTY5ODkzNDQsLTc3MDM5Njg4NywtMT
+MyMDIwMDgsLTE0OTMyMTA2NjZdfQ==
 -->
