@@ -18,8 +18,8 @@ function add_question(question) {
   var col2 = row.insertCell(1);
   var col3 = row.insertCell(2);
   col1.innerHTML = question.question;
-  col2.innerHTML = question.correct_answer;
-  col3.innerHTML = question.user_answer;
+  col2.innerHTML = question.user_answer;
+  col3.innerHTML = question.correct_answer;
 
   // Color background of row green if question was correct. Otherwise color background red.
   if (question.correct_answer == question.user_answer){
