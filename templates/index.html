@@ -1,21 +1,17 @@
-{% extends "layout.html" %}
-
-
-{% block main %}
+{% extends "layout.html" %} {% block main %}
 <div class="jumbotron">
     <p id="quizTitle">Kwik Kwiz</p>
 </div>
 
-<button onclick="location.href = '/quiz'" type="submit" class="btn btn-success">Go to Quiz!</button><br/>
-<button onclick="location.href = '/leaderboard'" type="submit" class="btn btn-primary">Leaderboard</button><br/>
+<button onclick="location.href = '/quiz'" type="submit" class="btn btn-success">Go to Quiz!</button>
+<br/>
+<button onclick="location.href = '/leaderboard'" type="submit" class="btn btn-primary">Leaderboard</button>
+<br/>
 <button onclick="toggle_guide()" class="btn btn-danger" margin="20px">Quiz guide</button>
 
 <div id="quizGuide">
     <p>
-        Each quiz contains questions from five categories: General Knowledge, Computer science, Geography, History and Animals
-        and each question can be of easy, medium or hard difficulty. You start with a one minute timer. Giving a correct answer grants extra time, based on the difficulty of the question.
-        On the other hand, giving a wrong answer costs you time, the amount of which also depends on the difficulty of the question.
-        The time distribution based on question difficulty is as follows:
+        Each quiz contains questions from five categories: General Knowledge, Computer science, Geography, History and Animals and each question can be of easy, medium or hard difficulty. You start with a one minute timer. Giving a correct answer grants extra time, based on the difficulty of the question. On the other hand, giving a wrong answer costs you time, the amount of which also depends on the difficulty of the question. The time distribution based on question difficulty is as follows:
     </p>
     <ul>
         <li><b>Easy questions.</b> Correct answers grant one extra second. Wrong answers deduct three seconds.</li>
@@ -25,7 +21,5 @@
 </div>
 
 <script src="static/js/index.js"></script>
-
-
 
 {% endblock %}

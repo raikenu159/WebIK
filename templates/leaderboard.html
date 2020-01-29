@@ -1,50 +1,44 @@
-{% extends "layout.html" %}
-
-
-{% block main %}
+{% extends "layout.html" %} {% block main %}
 
 <h1>Leaderboards</h1>
 <div id="leaderboard" class="row">
-  <div class="col-sm">
-    <table class="table table-striped">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Rank</th>
-          <th scope="col">Username</th>
-          <th scope="col">Score</th>
-          <th scope="col">Date</th>
-        </tr>
-      </thead>
-      <tbody>
+    <div class="col-sm">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Score</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
 
-        {% set count = namespace(value=1) %}
-        {% for score in scores %}
-        <tr>
-          <td>
-            <b>
+                {% set count = namespace(value=1) %} {% for score in scores %}
+                <tr>
+                    <td>
+                        <b>
             {{ count.value }}
             </b>
-          </td>
-          <td> {{score.username}} </td>
-          <td> {{score.score}} </td></td>
-          <td> {{score.date}} </td>
-        </tr>
-        {% set count.value = count.value + 1 %}
-        {% endfor %}
+                    </td>
+                    <td> {{score.username}} </td>
+                    <td> {{score.score}} </td>
+                    </td>
+                    <td> {{score.date}} </td>
+                </tr>
+                {% set count.value = count.value + 1 %} {% endfor %}
 
-
-      </tbody>
-    </table>
-  </div>
+            </tbody>
+        </table>
+    </div>
 </div>
 
-<div class = "btn-group">
+<div class="btn-group">
     <button onclick="location.href = '/'" type="submit" class="btn btn-danger">Home</button>
     <button onclick="location.href = '/quiz'" type="submit" class="btn btn-success"> {{played}} </button>
     <button onclick="location.href = '/barchart'" id="results" type="submit" class="btn btn-primary">Detailed results</button>
     <button onclick="location.href = '/delete_username'" id="delete-score" type="submit" class="btn btn-warning">Delete your score</button>
 </div>
-
 
 <script src="static/js/leaderboard.js"></script>
 {% endblock %}
