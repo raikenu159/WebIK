@@ -101,14 +101,15 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 - Projectvoorstel (README) 
 
 **Soufiane Zouli**
-- Quiz functionaliteit (javascript)
+- Javascript
 - HTML & CSS (layout)
 - Textfiles bijgehouden (README)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc2ODY0MzUzLC0yMDEwNzY3NzgsLTE5NT
-YzMzU2NDksMTc4OTI0NjgzNiwtMTM1Njk4OTM0NCwtNzcwMzk2
-ODg3LC0xMzIwMjAwOCwtMTQ5MzIxMDY2Nl19
+eyJoaXN0b3J5IjpbMjQzOTU1NTc3LDQ3Njg2NDM1MywtMjAxMD
+c2Nzc4LC0xOTU2MzM1NjQ5LDE3ODkyNDY4MzYsLTEzNTY5ODkz
+NDQsLTc3MDM5Njg4NywtMTMyMDIwMDgsLTE0OTMyMTA2NjZdfQ
+==
 -->
