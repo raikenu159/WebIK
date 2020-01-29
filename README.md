@@ -20,11 +20,11 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 **Quizvraag pagina tijd verlopen top 10 score behaald**
 ![Quizvraag pagina tijd verlopen top 10 score behaald](https://i.imgur.com/oSkyIT5.png)
 **Leaderboards pagina**
-![Leaderboards pagina](https://i.imgur.com/cyqAbDQ.png)
+![Leaderboards pagina](https://i.imgur.com/1Ksmhjj.png)
 **Barcharts pagina**
 ![Barcharts pagina](https://i.imgur.com/IIAyq8s.png)![Barcharts pagina](https://i.imgur.com/5zJP0vX.png)
 **Question results pagina**
-![Question results pagina](https://i.imgur.com/H643Jcm.png)
+![Question results pagina](https://i.imgur.com/V60LQRy.png)
 ## Features
 1. De vragen in de quizzes komen uit Online Trivia Database (https://opentdb.com)
 2. Alle gebruikers nemen een quiz af die vragen bevat uit een aantal verschillende categorieën die 45 of meer vragen bevatten in Open Trivia Database.
@@ -36,9 +36,9 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 8. Gebruikers behalen meer punten bij het goed beantwoorden van moeilijkere vragen.
 9. Er is een leaderboards-pagina met daarin de 10 gebruikers met de hoogste scores, hun scores en de datum waarop de score is behaald.
 11. Alleen als een gebruiker een score heeft behaald die in de top 10 zit, wordt er om een username gevraagd.
-12. Wanneer een gebruiker vanuit de quiz naar de leaderboards-pagina gaat, kan de net behaalde score verwijderd worden. 
+en gebruiker vanuit de quiz naar de leaderboards-pagina gaat, kan de net behaalde score verwijderd worden. 
 13. In de chart-page kan de gebruiker zien hoeveel punten die behaalde per categorie.
-14. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
+1. In de question_result-page kan de gebruiker alle vragen zien die die heeft beantwoord, met het gegeven antwoord en het correcte antwoord.
 
 ## Repository gids
 
@@ -75,7 +75,7 @@ In de **static-map** vind je:
 
 -styles.css: het bestand voor de styling van de webpagina's.
 
--Verder staan hier alle afbeeldingen die gebruikt worden op de webpagina's.
+-Verder staan hier alle afbeeldingen die gebr*Voeg een aantal punten toe die ons helpen snel de weg te vinden in je repository. Heb je bijvoorbeeld helpers gemaakt, leg dan uit wat we daar voor soort dingen kunnen vinden. En leg even uikt worden op de webpagina's.
 
 In de **templates-map** vind je:
 
@@ -83,15 +83,38 @@ Alle HTML-files waaruit de trivia web-applicatie bestaat.
 
 ## Werkverdeling
 
+Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd en ook aan elk aspect van de applicatie gewerkt. Toch was er tussen de groepsleden enige vorm van specialisatie. 
+ 
+**Daan van Baarsen**
+ - Backend/database communicatie
+ - Layout homepage
+ - Leaderboard
+
+**Sem Kjaer**
+- Functies in de backend
+- Werken met de API
+- Backend/database communicatie
+
+**Una Garcia**
+- Quizpagina passend maken op verschillende apparaten
+- HTML & CSS
+- Projectvoorstel (README) 
+
+**Soufiane Zouli**
+- Javascript (frontend)
+- HTML & CSS (layout)
+- Textfiles bijgehouden (README)
+elke mapjes er zijn.*
+## Werkverdeling
 **Daan van Baarsen**
 
 **Sem Kjaer**
 
 **Una Garcia**
 
-**Soufiane Zouli**
+**Soufiane Zouli**uit w
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjAyMDA4LC0xNDkzMjEwNjY2XX0=
+eyJoaXN0b3J5IjpbMTU1NjE5ODMyOSw0Nzg3MTQ1NDhdfQ==
 -->

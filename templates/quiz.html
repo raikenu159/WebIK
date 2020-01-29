@@ -1,81 +1,72 @@
-{% extends "layout.html" %}
-
-
-{% block main %}
+{% extends "layout.html" %} {% block main %}
 <div id="loader"></div>
 
 <div id="quizScreen">
 
-  <div id="questionInfo" class="row">
-    <div class="col-sm">
-      <p id='score'></p>
+    <div id="questionInfo" class="row">
+        <div class="col-sm">
+            <p id='score'></p>
 
-      <div id='timer_color' class="row">
-        <div class="col-sm-5"></div>
-          <div class="col-sm-2" >
-            <img id="clockImage" src="static/clock.jpeg" alt="clock image">
-            <div id='time'></div>
-          </div>
+            <div id='timer_color' class="row">
+                <div class="col-sm-5"></div>
+                <div class="col-sm-2">
+                    <img id="clockImage" src="static/clock.jpeg" alt="clock image">
+                    <div id='time'></div>
+                </div>
 
-          <div class="col-sm-0">
-            <p id='timer_change'></p>
-          </div>
-      </div>
+                <div class="col-sm-0">
+                    <p id='timer_change'></p>
+                </div>
+            </div>
 
+            <hr>
+            <p id="difficultyText">Question difficulty:</p>
+            <div id="difficulty"></div>
 
-      <hr>
-      <p id="difficultyText">Question difficulty:</p>
-      <div id="difficulty"></div>
-
-      <p id='category'></p>
-    </div>
-  </div>
-
-
-  <div id="questionBox" class="row">
-    <div class="col-sm">
-      <div id="question"></div>
-    </div>
-  </div>
-
-
-  <div id="allAnswers" class="row">
-    <div class="col-sm">
-        <button id='answer1' type="button" class="btn btn-primary btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-        <button id='answer2' type="button" class="btn btn-danger btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-        <button id='answer3' type="button" class="btn btn-info btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-        <button id='answer4' type="button" class="btn btn-warning btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
-    </div>
-  </div>
-
-  <br>
-
-  <hr>
-  <div id="skipStop" class="row">
-    <div class="col-sm">
-      <button id="skip_question" type="submit" class="btn btn-danger" onclick="skip_question()">Skip Question</button>
-      <button onclick="location.href = '/'" id="stop" type="submit" class="btn btn-danger">Stop Quiz</button>
+            <p id='category'></p>
+        </div>
     </div>
 
-  </div>
-  </div>
+    <div id="questionBox" class="row">
+        <div class="col-sm">
+            <div id="question"></div>
+        </div>
+    </div>
 
-  <div class="form-popup" id="top10form">
+    <div id="allAnswers" class="row">
+        <div class="col-sm">
+            <button id='answer1' type="button" class="btn btn-primary btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
+            <button id='answer2' type="button" class="btn btn-danger btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
+            <button id='answer3' type="button" class="btn btn-info btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
+            <button id='answer4' type="button" class="btn btn-warning btn-lg btn-block answerButtons" onclick='check(this.innerHTML)'></button>
+        </div>
+    </div>
+
+    <br>
+
+    <hr>
+    <div id="skipStop" class="row">
+        <div class="col-sm">
+            <button id="skip_question" type="submit" class="btn btn-danger" onclick="skip_question()">Skip Question</button>
+            <button onclick="location.href = '/'" id="stop" type="submit" class="btn btn-danger">Stop Quiz</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="form-popup" id="top10form">
     <p id='final_score'></p>
     <hr>
     <form action="/quiz" method="post">
-      <h2>Congratulations! You made the top 10!</h2>
+        <h2>Congratulations! You made the top 10!</h2>
 
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter username" name="username" required>
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter username" name="username" required>
 
-
-      <button type="submit" class="btn btn-success">See Results</button>
-      <hr>
+        <button type="submit" class="btn btn-success">See Results</button>
+        <hr>
     </form>
-  </div>
-
-
+</div>
 
 <script src="static/js/quiz.js"></script>
 

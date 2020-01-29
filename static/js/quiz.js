@@ -8,7 +8,7 @@ var difficulty_score;
 var checked = false;
 
 
-// open popup if in top10
+// Open popup if in top10
 function openPopup() {
   document.getElementById("top10form").style.display = "block";
   document.getElementById("quizScreen").style.display = "none";

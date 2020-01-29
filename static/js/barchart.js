@@ -12,6 +12,7 @@ fetch('/chart_values')
     scores.forEach(score => make_chart(score));
     });
 
+
 // Make chart with scores obtained from fetch
 function make_chart(score) {
     var ctx = document.getElementById('myChart'+index);
