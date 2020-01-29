@@ -52,7 +52,9 @@ Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repositor
  
 Het tweede bestand 'README.md' is het huidige bestand.
 
-Het derde en laatste bestand 'trivia.db' is de database waarop ons
+Het derde en laatste bestand 'trivia.db' is de database waarop ons project werkt. Hierin wordt de user id (en hiermee de session id) de username (mocht speler in de top 10 zitten) en natuurlijk de behaalde score, inclusief datum waarop, bijgehouden.
+
+
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -65,6 +67,6 @@ Het derde en laatste bestand 'trivia.db' is de database waarop ons
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU2MDAwMjY2LC0xNDIyMDQwNTMyLC00Mj
-Y1NjA3MzddfQ==
+eyJoaXN0b3J5IjpbLTE5NDc5MDU5MzcsLTE0MjIwNDA1MzIsLT
+QyNjU2MDczN119
 -->
