@@ -86,11 +86,9 @@ Alle HTML-files waaruit de trivia web-applicatie bestaat.
 Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen heeft aan elk onderdeel van het project een bijdrage geleverd. Toch was er tussen de groepsleden enige vorm van specialisatie. 
  
 **Daan van Baarsen**
-
  - Leaderboard
  - Database
  - Backend
- - Layout
 
 **Sem Kjaer**
 - Backend
@@ -99,17 +97,18 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 **Una Garcia**
 - layout
+- HTML & CSS
 - textfiles (README)
-- resultpage
+
 
 **Soufiane Zouli**
-- Backend
-- javascript
+- javascript (frontend)
+- layout
 - textfiles (README)
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcxNzIzODIyLC03NzAzOTY4ODcsLTEzMj
-AyMDA4LC0xNDkzMjEwNjY2XX0=
+eyJoaXN0b3J5IjpbLTQxNDE3MDgzOCwtNzcwMzk2ODg3LC0xMz
+IwMjAwOCwtMTQ5MzIxMDY2Nl19
 -->
