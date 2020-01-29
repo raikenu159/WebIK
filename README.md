@@ -8,6 +8,9 @@
 ## Samenvatting
 Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af te nemen onder een tijdslimiet. De quizzes worden individueel afgenomen, dus er is geen directe multiplayer. Wel is er een leaderboards-pagina , waar de tien hoogste scores getoond worden. Zo is er toch nog een vorm van concurrentie tussen verschillende spelers. Na een quiz afgenomen te hebben kan de gebruiker grafieken zien die de behaalde score per onderdeel en soort vraag tonen. Ook kan de gebruiker een tabel zien met daarin alle beantwoorde vragen met het gegeven antwoord en het correcte antwoord.
 
+## Video
+![https://www.youtube.com/watch?v=GnmT6GnKVR8](Video)
+
 ## Afbeeldingen
 **Homepagina met uitleg quiz**
 ![Homepagina](https://i.imgur.com/I1EepTC.png)
@@ -103,6 +106,6 @@ elke mapjes er zijn.*
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDM2NTc5NiwxNTU2MTk4MzI5LDQ3OD
-cxNDU0OF19
+eyJoaXN0b3J5IjpbMTE5MjU5MzUwLDE1NTYxOTgzMjksNDc4Nz
+E0NTQ4XX0=
 -->
