@@ -42,7 +42,7 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 
 ## Repository gids
 *Voeg een aantal punten toe die ons helpen snel de weg te vinden in je repository. Heb je bijvoorbeeld helpers gemaakt, leg dan uit wat we daar voor soort dingen kunnen vinden. En leg even uit welke mapjes er zijn.*
-Onze repository #'WebIKTrivia03'
+Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repository staan er 6 items in de lijst.  
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -55,6 +55,6 @@ Onze repository #'WebIKTrivia03'
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODcyNDczNSwtMTQyMjA0MDUzMiwtND
-I2NTYwNzM3XX0=
+eyJoaXN0b3J5IjpbNTUyMzEzODg0LC0xNDIyMDQwNTMyLC00Mj
+Y1NjA3MzddfQ==
 -->
