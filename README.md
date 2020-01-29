@@ -52,7 +52,7 @@ Onze repository heeft de naam 'WebIKTrivia02'. Bij het bezoeken van de repositor
  
 Het tweede bestand 'README.md' is het huidige bestand.
 
-Het derde en la'trivia.db' is het
+Het derde en laatste bestand 'trivia.db' is de database waarop ons
 
 ## Werkverdeling
 **Daan van Baarsen**
@@ -65,6 +65,6 @@ Het derde en la'trivia.db' is het
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc4NDI5MjM1LC0xNDIyMDQwNTMyLC00Mj
+eyJoaXN0b3J5IjpbODU2MDAwMjY2LC0xNDIyMDQwNTMyLC00Mj
 Y1NjA3MzddfQ==
 -->
