@@ -10,7 +10,7 @@ Op onze webapplicatie is het mogelijk zijn om  multiple choice trivia quizzes af
 
 ## Video
 
-[VIDEO](https://www.youtube.com/watch?v=GnmT6GnKVR8)
+[VIDEO](https://www.youtube.com/watch?v=rOrtwGgCPWo&feature=youtu.be)
 
 
 ## Afbeeldingen
@@ -107,6 +107,6 @@ Over het algemeen is het werk vrij goed verdeeld over de groepsleden. Iedereen h
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4Nzc0NTU0OCwxNTU2MTk4MzI5LDQ3OD
-cxNDU0OF19
+eyJoaXN0b3J5IjpbLTExNTQ4NTE0MjcsMTI4Nzc0NTU0OCwxNT
+U2MTk4MzI5LDQ3ODcxNDU0OF19
 -->
